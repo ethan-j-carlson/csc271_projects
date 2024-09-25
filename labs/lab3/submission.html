@@ -1,15 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>Submit Favorite Food</title>
+        <title>Favorite Food Submission</title>
         <meta charset="utf-8">
     </head>
     <h1>Submit your recipe</h1>
     <body>
-        <label for="username">Name:</label>
-        <input type="text" id="username" name="username"><br>
-        <label for="recipename">Recipe Name:</label>
-        <input type="text" id="username" name="username"><br>
-        <input type="submit" value="Submit">
+        <form action="index.html">
+            <label for="username">Name:</label>
+            <input type="text" id="username" name="username"><br>
+            <label for="recipename">Recipe Name:</label>
+            <input type="text" id="recipename" name="recipename"><br>
+            <label for="ingredients">Ingredients:</label>
+            <textarea id="ingredients" name="ingredients", rows="20", cols="80"></textarea><br>
+            <label for="ingredients">Instructions:</label>
+            <textarea id="ingredients" name="ingredients", rows="20", cols="80"></textarea><br>
+            <h4>Difficulty</h4>
+            <label for="easy">Easy</label>
+            <input type="radio" id="easy" name="difficulty" value="easy">
+            <label for="medium">Medium</label>
+            <input type="radio" id="medium" name="difficulty" value="medium">
+            <label for="hard">Hard</label>
+            <input type="radio" id="hard" name="difficulty" value="hard"><br>
+            <h4>Dietary Info</h4>
+            <label for="vegan">Vegan</label>
+            <input type="checkbox" id="vegan" name="vegan">
+            <label for="vegetarian">Vegetarian</label>
+            <input type="checkbox" id="vegetarian" name="vegetarian">
+            <label for="gluten_free">Gluten free</label>
+            <input type="checkbox" id="gluten_free" name="gluten_free"><br>
+            <input type="submit" value="Submit">
+        </form>
     </body>
 </html>
