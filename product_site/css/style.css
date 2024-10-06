@@ -13,7 +13,7 @@ h2 {
     color: #0b1e74;
 }
 
-h3 {
+h2 {
     background-color: #fddab6;
     color: #0b1e74;
 }
@@ -21,7 +21,7 @@ h3 {
 p {
     font-family: Verdana, sans-serif;
     color: #0c1742;
-    font-size: 1em;
+    size: 20px;
 }
 
 ul, ol {
@@ -51,7 +51,6 @@ th.navbar_title {
     color: #022add;
     font-weight: bold;
     font-family: 'Trebuchet MS', sans-serif;
-    font-size: 1.25em;
 }
 
 td.technical {
