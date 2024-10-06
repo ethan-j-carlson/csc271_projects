@@ -1,5 +1,6 @@
 body {
     background-color: #ffe9d4;
+    max-width:100ch;
 }
 
 h1 {
