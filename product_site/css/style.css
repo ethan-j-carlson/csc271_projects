@@ -1,6 +1,5 @@
 body {
     background-color: #ffe9d4;
-    max-width:100ch;
     text-size-adjust: none;
     -webkit-text-size-adjust: none;
 }
@@ -82,4 +81,179 @@ a:visited {
 
 #converter_intro {
     text-align: center;
+}
+
+img.header_logo {
+    max-width: 100px;
+    height: auto;
+    float: left;
+}
+
+#directory_title {
+    background-color: #f3c89e;
+}
+
+#directory_title_left_image {
+    float: left;
+    max-width: 125px;
+    height: auto;
+}
+
+#directory_title_right_image {
+    float: right;
+    max-width: 125px;
+    height: auto;
+}
+
+#directory_title_header {
+    text-align: center;
+    margin-bottom: 0px;
+}
+
+#directory_title_subheader {
+    margin-top: 0px;
+    text-align: center;
+    color: #022add;
+    background-color: #f3c89e;
+    padding-bottom: 25px;
+}
+
+#consonant_table_title {
+    text-align: center;
+    padding-left: 40px;
+}
+
+#vowel_table_title {
+    text-align: center;
+    padding-left: 20px;
+}
+
+#consonant_table {
+    margin-bottom: 20px;
+}
+
+#other_consonant_table_title {
+    text-align: center;
+}
+
+#left_tables {
+    float: left;
+}
+
+a.header_link {
+    padding-top: 35px;
+    padding-left: 20px;
+    float: right;
+}
+
+div.header {
+    padding-bottom: 95px;
+    margin-bottom: 10px;
+    background-color: #f3c596;
+}
+
+div.left_section {
+    float: left;
+}
+
+div.right_section {
+    float: right;
+}
+
+th.consonant_table_header {
+    max-width: 6ch;
+    font-size: 12px;
+    word-wrap: break-word;
+    background-color: #f7c797;
+}
+
+td.consonant_table_manner {
+    background-color: #f7c797;
+    font-size: 12px;
+}
+
+td.consonant_table_linked {
+    text-align: center;
+    background-color: #ffe7a5;
+    text-decoration: none;
+    padding-bottom: 5px;
+}
+
+td.consonant_table_possible {
+    text-align: center;
+    background-color: #f7f0dc;
+    text-decoration: none;
+    font-size: 20px;
+    padding-bottom: 5px;
+}
+
+td.consonant_table_impossible {
+    text-align: center;
+    background-color: #b1aea5;
+    text-decoration: none;
+    font-size: 20px;
+    padding-bottom: 5px;
+}
+
+th.other_consonant_table_header {
+    font-size: 12px;
+    word-wrap: break-word;
+    background-color: #f7c797;
+}
+
+td.other_consonant_table_place {
+    background-color: #f7c797;
+    font-size: 12px;
+}
+
+td.other_consonant_table_linked {
+    text-align: center;
+    background-color: #ffe7a5;
+    text-decoration: none;
+    font-size: 12px;
+    padding-bottom: 5px;
+}
+
+td.other_consonant_table_blank{
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    padding-bottom: 5px;
+}
+
+th.vowel_table_header {
+    font-size: 12px;
+    word-wrap: break-word;
+    background-color: #f7c797;
+}
+
+td.vowel_table_height {
+    background-color: #f7c797;
+    font-size: 12px;
+}
+
+td.vowel_table_linked {
+    text-align: center;
+    background-color: #ffe7a5;
+    text-decoration: none;
+    padding-bottom: 5px;
+}
+
+td.vowel_table_possible {
+    text-align: center;
+    background-color: #f7f0dc;
+    text-decoration: none;
+    font-size: 20px;
+    padding-bottom: 5px;
+}
+
+a.symbol_link {
+    font-size: 20px;
+    text-decoration: none;
+}
+
+@media only screen and (max-width: 600px) {
+    div.right_section {
+        float: none;
+    }
 }
