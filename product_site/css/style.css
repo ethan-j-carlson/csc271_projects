@@ -94,6 +94,7 @@ img.header_logo {
     max-width: 100px;
     height: auto;
     margin: 0px;
+    float:inline-start;
 }
 
 #directory_title {
