@@ -267,9 +267,9 @@ a:hover {
 div.header {
     padding-left:10px;
     margin-top: auto;
+    padding-bottom: 100px;
     margin-bottom: 5px;
     background-color: #f3c596;
-    overflow-x: scroll;
     white-space: nowrap;
 }
 
@@ -373,65 +373,12 @@ img {
         text-decoration: none;
     }
 
-    div.header a{
-        float: none;
-        display: inline-block;
-    }
-
-    div.main_content p{
-        font-size: 20px;
+    div.header{
+        padding-bottom: 0px;
     }
 }
 
 @media only screen and (max-width: 900px) {
-    div.right_section {
-        float: unset;
-    }
-
-    div.left_section {
-        float: unset;
-    }
-    
-    #consonant_table {
-        margin-bottom: 20px;
-        margin-left: auto;
-        margin-right: auto;
-        border: black 1px;
-    }
-
-    th.corner {
-        background-color: transparent;
-    }
-
-    td.linked {
-        font-size: 15px;
-    }
-    
-    td.possible {
-        font-size: 20px;
-    }
-    
-    td.impossible {
-        font-size: 20px;
-    }
-    
-    #vowel_table {
-        margin-bottom: 20px;
-        margin-left: auto;
-        margin-right: auto;
-    }
-    
-    #other_consonant_table {
-        margin-bottom: 20px;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    a.symbol_link {
-        font-size: 20px;
-        text-decoration: none;
-    }
-
     div.header a{
         float: none;
         display: inline-block;
