@@ -320,7 +320,10 @@ a.symbol_link {
 img {
     max-width: 100%;
     height: auto;
-    float: center;
+    /*I did not add float since it would disrupt many things
+    for an example of being able to do this, see the open book
+    images in directory.html*/
+    float: none;
     margin: 20px;
 }
 
