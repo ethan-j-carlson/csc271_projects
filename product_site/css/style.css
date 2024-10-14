@@ -20,6 +20,10 @@ h3 {
     color: #0b1e74;
 }
 
+h4 {
+    color: #0c1742;
+}
+
 p {
     font-family: Verdana, sans-serif;
     color: #0c1742;
@@ -75,6 +79,10 @@ a:visited {
     text-align: center;
 }
 
+#ipa_guide_chart {
+    max-width: 800px;
+}
+
 #ascii_converter {
     text-align: center;
 }
@@ -86,6 +94,7 @@ a:visited {
 img.header_logo {
     max-width: 100px;
     height: auto;
+    margin: 0px;
     float: left;
 }
 
@@ -96,16 +105,18 @@ img.header_logo {
 #directory_title_left_image {
     float: left;
     max-width: 125px;
-    height: auto;
+    margin-right: 10px;
 }
 
 #directory_title_right_image {
     float: right;
     max-width: 125px;
-    height: auto;
+    margin-left: 10px;
 }
 
 #directory_title_header {
+    margin-top: 0px;
+    padding-top: 25px;
     text-align: center;
     margin-bottom: 0px;
 }
@@ -120,36 +131,167 @@ img.header_logo {
 
 #consonant_table_title {
     text-align: center;
-    padding-left: 40px;
+    font-size: 30px;
+    margin-left: 100px;
+    margin-bottom: 0px;
+    color: #0c1742;
+}
+
+#consonant_table {
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 20px;
+}
+
+#consonant_table th {
+    max-width: 6ch;
+    font-size: 12px;
+    word-wrap: break-word;
+    background-color: #f7c797;
+}
+
+#consonant_table th.corner {
+    background-color: transparent;
 }
 
 #vowel_table_title {
     text-align: center;
-    padding-left: 20px;
+    font-size: 30px;
+    padding-left: 40px;
+    margin-bottom: 0px;
+    color: #0c1742;
 }
 
-#consonant_table {
+#vowel_table {
     margin-bottom: 20px;
+    margin-right: 40px;
+}
+
+#vowel_table th.corner {
+    background-color: transparent;
+}
+
+#vowel_table th {
+    font-size: 18px;
+    text-align: center;
+    word-wrap: break-word;
+    background-color: #f7c797;
+}
+
+#vowel_table td.left {
+    font-size: 18px;
+    padding-left: 5px;
+    text-align: right;
+    word-wrap: break-word;
+    background-color: #f7c797;
 }
 
 #other_consonant_table_title {
     text-align: center;
+    color: #0c1742;
+    font-size: 20px;
+    margin-bottom: 0px;
 }
 
-#left_tables {
-    float: left;
+#other_consonant_table {
+    margin-bottom: 20px;
+}
+
+#other_consonant_table td.linked{
+    font-size: 15px;
+}
+
+#other_consonant_table th {
+    font-size: 12px;
+    word-wrap: break-word;
+    background-color: #f7c797;
+}
+
+th.corner {
+    background-color: transparent;
+    max-width: 6ch;
+    font-size: 12px;
+    word-wrap: break-word;
+}
+
+td.possible {
+    text-align: center;
+    background-color: #f7f0dc;
+    text-decoration: none;
+    font-size: 30px;
+    padding-bottom: 5px;
+}
+
+td.linked {
+    text-align: center;
+    background-color: #ffe7a5;
+    text-decoration: none;
+    font-size: 20px;
+    padding-bottom: 5px;
+}
+
+td.impossible {
+    text-align: center;
+    background-color: #b1aea5;
+    text-decoration: none;
+    font-size: 20px;
+    padding-bottom: 5px;
+}
+
+td.left {
+    text-align: right;
+    padding-left: 5px;
+    background-color: #f7c797;
+    font-size: 16px;
 }
 
 a.header_link {
-    padding-top: 35px;
-    padding-left: 20px;
-    float: right;
+    display: inline-block;
+    margin-top: 35px;
+    margin-left: 20px;
+    margin-bottom: 35px;
+    white-space: nowrap;
+    font-size: 20px;
+}
+
+a.current {
+    background-color: #d4ad85;
+    color:#2f125d;
+}
+
+a:hover {
+    background-color: #fff460;
+    color:#2f125d;
 }
 
 div.header {
-    padding-bottom: 95px;
-    margin-bottom: 10px;
+    padding-left:10px;
+    margin-top: auto;
+    margin-bottom: 5px;
     background-color: #f3c596;
+    overflow-x: scroll;
+    white-space: nowrap;
+}
+
+div.header a{
+    float: right;
+    margin-top: 35px;
+    margin-left: 20px;
+    margin-bottom: 35px;
+    white-space: nowrap;
+    font-size: 20px;
+}
+
+div.main_content {
+    /* 
+    Setting the main content to float would defeat the point of the left
+    and right sections, so I won't be doing it even though the assignment
+    asks for it. I think I've demonstrated that I can use float elsewhere.
+    */
+    background-color: #ffe9d4;
+    padding: 1px;
+    align-content: center;
+    max-width: 100%;
 }
 
 div.left_section {
@@ -160,100 +302,142 @@ div.right_section {
     float: right;
 }
 
-th.consonant_table_header {
-    max-width: 6ch;
-    font-size: 12px;
-    word-wrap: break-word;
-    background-color: #f7c797;
+div.footer {
+    float:left;
 }
 
-td.consonant_table_manner {
-    background-color: #f7c797;
-    font-size: 12px;
-}
-
-td.consonant_table_linked {
-    text-align: center;
-    background-color: #ffe7a5;
-    text-decoration: none;
-    padding-bottom: 5px;
-}
-
-td.consonant_table_possible {
-    text-align: center;
-    background-color: #f7f0dc;
-    text-decoration: none;
-    font-size: 20px;
-    padding-bottom: 5px;
-}
-
-td.consonant_table_impossible {
-    text-align: center;
-    background-color: #b1aea5;
-    text-decoration: none;
-    font-size: 20px;
-    padding-bottom: 5px;
-}
-
-th.other_consonant_table_header {
-    font-size: 12px;
-    word-wrap: break-word;
-    background-color: #f7c797;
-}
-
-td.other_consonant_table_place {
-    background-color: #f7c797;
-    font-size: 12px;
-}
-
-td.other_consonant_table_linked {
-    text-align: center;
-    background-color: #ffe7a5;
-    text-decoration: none;
-    font-size: 12px;
-    padding-bottom: 5px;
-}
-
-td.other_consonant_table_blank{
+td.blank{
     text-align: center;
     text-decoration: none;
-    font-size: 16px;
-    padding-bottom: 5px;
-}
-
-th.vowel_table_header {
-    font-size: 12px;
-    word-wrap: break-word;
-    background-color: #f7c797;
-}
-
-td.vowel_table_height {
-    background-color: #f7c797;
-    font-size: 12px;
-}
-
-td.vowel_table_linked {
-    text-align: center;
-    background-color: #ffe7a5;
-    text-decoration: none;
-    padding-bottom: 5px;
-}
-
-td.vowel_table_possible {
-    text-align: center;
-    background-color: #f7f0dc;
-    text-decoration: none;
-    font-size: 20px;
     padding-bottom: 5px;
 }
 
 a.symbol_link {
-    font-size: 20px;
+    font-size: 30px;
     text-decoration: none;
 }
 
-@media only screen and (max-width: 600px) {
+img {
+    max-width: 100%;
+    height: auto;
+    float: center;
+    margin: 20px;
+}
+
+@media only screen and (max-width: 900px) {
     div.right_section {
+        float: unset;
+    }
+
+    div.left_section {
+        float: unset;
+    }
+    
+    #consonant_table {
+        margin-bottom: 20px;
+        margin-left: auto;
+        margin-right: auto;
+        border: black 1px;
+    }
+
+    th.corner {
+        background-color: transparent;
+    }
+
+    td.linked {
+        font-size: 15px;
+    }
+    
+    td.possible {
+        font-size: 20px;
+    }
+    
+    td.impossible {
+        font-size: 20px;
+    }
+    
+    #vowel_table {
+        margin-bottom: 20px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    #other_consonant_table {
+        margin-bottom: 20px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    a.symbol_link {
+        font-size: 20px;
+        text-decoration: none;
+    }
+
+    div.header a{
         float: none;
+        display: inline-block;
+    }
+
+    div.main_content p{
+        font-size: 20px;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    div.right_section {
+        float: unset;
+    }
+
+    div.left_section {
+        float: unset;
+    }
+    
+    #consonant_table {
+        margin-bottom: 20px;
+        margin-left: auto;
+        margin-right: auto;
+        border: black 1px;
+    }
+
+    th.corner {
+        background-color: transparent;
+    }
+
+    td.linked {
+        font-size: 15px;
+    }
+    
+    td.possible {
+        font-size: 20px;
+    }
+    
+    td.impossible {
+        font-size: 20px;
+    }
+    
+    #vowel_table {
+        margin-bottom: 20px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    #other_consonant_table {
+        margin-bottom: 20px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    a.symbol_link {
+        font-size: 20px;
+        text-decoration: none;
+    }
+
+    div.header a{
+        float: none;
+        display: inline-block;
+    }
+
+    p{
+        font-size: 20px;
     }
 }

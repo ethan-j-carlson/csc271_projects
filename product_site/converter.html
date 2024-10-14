@@ -7,97 +7,92 @@
     </head>
 
     <body>
-        <table class="navbar">
-            <tr>
-                <th class="navbar_title">Quick Phonetics&emsp;</th>
-                <th class="navbar_link">
-                    <a href="index.html">Homepage</a>&emsp;
-                </th>
-                <th class="navbar_link">
-                    <a href="converter.html">ASCII to IPA Converter</a>&emsp;
-                </th>
-                <th class="navbar_link">
-                    <a href="ipa_guide.html">Intro to the IPA</a>&emsp;
-                </th>
-            </tr>
-        </table>
-        <div id="converter_intro">
-        <h1>ASCII to IPA Converter</h1>
-        <img src="images/sh.png" alt="Arrow from s H to esh">
-        <p>
-            This page allows you to convert a custom ASCII writing system
-            called TIPO (Typeable International Phonetic Orthography)
-            into usable International Phonetic Alphabet text. A Google Doc
-            that explains how the system is used can be found
-            <a href="https://docs.google.com/document/d/1iQWEtJ35SSIBtPZA9xKoJoD6rnc6tHB_05NQ4WwEPW0/edit?usp=sharing">here.</a> 
-        </p>
+        <div class = "header">
+            <img class="header_logo" src="images/logo.png" alt="Quick Phonetics logo, a book with a speaking head">
+            <a href="index.html">Home</a>
+            <a href="ipa_guide.html">IPA Guide</a>
+            <a class="current" href="converter.html">ASCII Converter</a>
+            <a href="directory.html">IPA Symbols</a>
         </div>
+        <div class="main_content">
+            <div id="converter_intro">
+                <h1>ASCII to IPA Converter</h1>
+                <img src="images/sh.png" alt="Arrow from s H to esh">
+                <p>
+                    This page allows you to convert a custom ASCII writing system
+                    called TIPO (Typeable International Phonetic Orthography)
+                    into usable International Phonetic Alphabet text. A Google Doc
+                    that explains how the system is used can be found
+                    <a href="https://docs.google.com/document/d/1iQWEtJ35SSIBtPZA9xKoJoD6rnc6tHB_05NQ4WwEPW0/edit?usp=sharing">here.</a> 
+                </p>
+            </div>
 
-        <form id="ascii_converter" action="converter.html" method="post">
-            <label for="tipo_input">TIPO Input:</label>
-            <textarea id="tipo_input" name="tipo_input" rows="10" cols="80" required></textarea>
+            <form id="ascii_converter" action="converter.html" method="post">
+                <label for="tipo_input">TIPO Input:</label>
+                <textarea id="tipo_input" name="tipo_input" rows="10" cols="80" required></textarea>
 
-            <p>Put text between...</p>
-            <label for="nothing">Nothing</label>
-            <input type="radio" id="nothing" name="wrapper" value="nothing" checked>
-            <label for="apostrophes">' '</label>
-            <input type="radio" id="apostrophes" name="wrapper" value="apostrophes">
-            <label for="quotes">" "</label>
-            <input type="radio" id="quotes" name="wrapper" value="quotes">
-            <label for="slashes">/ /</label>
-            <input type="radio" id="slashes" name="wrapper" value="slashes">
-            <label for="brackets">[ ]</label>
-            <input type="radio" id="brackets" name="wrapper" value="brackets">
+                <p>Put text between...</p>
+                <label for="nothing">Nothing</label>
+                <input type="radio" id="nothing" name="wrapper" value="nothing" checked>
+                <label for="apostrophes">' '</label>
+                <input type="radio" id="apostrophes" name="wrapper" value="apostrophes">
+                <label for="quotes">" "</label>
+                <input type="radio" id="quotes" name="wrapper" value="quotes">
+                <label for="slashes">/ /</label>
+                <input type="radio" id="slashes" name="wrapper" value="slashes">
+                <label for="brackets">[ ]</label>
+                <input type="radio" id="brackets" name="wrapper" value="brackets">
 
-            <input type="submit" value="Convert!">
-            <p>(The output will go here.)</p>
-        </form>
+                <input type="submit" value="Convert!">
+                <p>(The output will go here.)</p>
+            </form>
 
-        <p>
-            A table showing some example conversions can be found below.
-            The accent used for the (broad) transcription is
-            <a href="https://en.wikipedia.org/wiki/General_American_English">"General American English".</a>
-        </p>
-        <table class="default">
-            <tr>
-                <th class="default">English</th>
-                <th class="default">TIPO</th>
-                <th class="default">IPA</th>
-            </tr>
-            <tr>
-                <td class="default">The quick brown fox jumps over the lazy dog.</td>
-                <td class="technical">
-                    dHe" kwIk br"aU/%n fAks d.=zHe"mps OU/%ve"/R dHe" leI/%zi dOg
-                </td>
-                <td class="default">ðə kwɪk bɹaʊ̯n fɑks d͡ʒəmps ɔʊ̯və˞ ðə leɪ̯zi dɔg</td>
-            </tr>
-            <tr>
-                <td class="default">
-                    While the mouse was exploring north to get a treasured cheese,
-                    it stopped by a yummy looking onion and just helped itself.
-                </td>
-                <td class="technical">
-                    waI/%l dHe" maU/%s we"z EksplOr"InG nOr"tH tu gEt eI/% t.=sHr"EzHe"`Rd
-                    t.=sHiz.| It stApt OU/%ve`R baI e" je"mi lUkInG e"nJI`~n In
-                    dHe"sHeI/%d @`~nd d.=zHe"st hElpt It.=sElf
-                </td>
-                <td class="default">
-                    waɪ̯l ðə maʊ̯s wəz ɛksplɔɹɪŋ nɔɹθ tu gɛt eɪ̯ t͡ʃɹɛʒə˞d t͡ʃiz|ɪt
-                    stɑpt ɔʊ̯ve˞ baɪ ə jəmi lʊkɪŋ əɲɪ̃n ɪn ðə ʃeɪ̯d æ̃nd d͡ʒəst hɛlpt ɪt͡sɛlf
-                </td>
-            </tr>
-            <tr>
-                <td class="default">A B C D E F G H I J K L M N O P Q R S T U V W X Y Z</td>
-                <td class="technical">
-                    eI/% bi si di i Ef d.=zHi eI/%t.=sH aI/% d.=zHeI/% keI
-                    El Em En OU/% pi kju Ar" Es ti ju vi de"bl ju eks waI/% zi
-                </td>
-                <td class="default">
-                    eɪ̯ bi si di i ɛf d͡ʒi eɪ̯t͡ʃ aɪ̯ d͡ʒeɪ̯ keɪ
-                    ɛl ɛm ɛn ɔʊ̯ pi kju ɑɹ ɛs ti ju vi dəbl ju eks waɪ̯ zi
-                </td>
-            </tr>
-        </table>
-        <h3><a href="index.html">Back to Homepage</a></h3>
+            <p>
+                A table showing some example conversions can be found below.
+                The accent used for the (broad) transcription is
+                <a href="https://en.wikipedia.org/wiki/General_American_English">"General American English".</a>
+            </p>
+            <table class="default">
+                <tr>
+                    <th class="default">English</th>
+                    <th class="default">TIPO</th>
+                    <th class="default">IPA</th>
+                </tr>
+                <tr>
+                    <td class="default">The quick brown fox jumps over the lazy dog.</td>
+                    <td class="technical">
+                        dHe" kwIk br"aU/%n fAks d.=zHe"mps OU/%ve"/R dHe" leI/%zi dOg
+                    </td>
+                    <td class="default">ðə kwɪk bɹaʊ̯n fɑks d͡ʒəmps ɔʊ̯və˞ ðə leɪ̯zi dɔg</td>
+                </tr>
+                <tr>
+                    <td class="default">
+                        While the mouse was exploring north to get a treasured cheese,
+                        it stopped by a yummy looking onion and just helped itself.
+                    </td>
+                    <td class="technical">
+                        waI/%l dHe" maU/%s we"z EksplOr"InG nOr"tH tu gEt eI/% t.=sHr"EzHe"`Rd
+                        t.=sHiz.| It stApt OU/%ve`R baI e" je"mi lUkInG e"nJI`~n In
+                        dHe"sHeI/%d @`~nd d.=zHe"st hElpt It.=sElf
+                    </td>
+                    <td class="default">
+                        waɪ̯l ðə maʊ̯s wəz ɛksplɔɹɪŋ nɔɹθ tu gɛt eɪ̯ t͡ʃɹɛʒə˞d t͡ʃiz|ɪt
+                        stɑpt ɔʊ̯ve˞ baɪ ə jəmi lʊkɪŋ əɲɪ̃n ɪn ðə ʃeɪ̯d æ̃nd d͡ʒəst hɛlpt ɪt͡sɛlf
+                    </td>
+                </tr>
+                <tr>
+                    <td class="default">A B C D E F G H I J K L M N O P Q R S T U V W X Y Z</td>
+                    <td class="technical">
+                        eI/% bi si di i Ef d.=zHi eI/%t.=sH aI/% d.=zHeI/% keI
+                        El Em En OU/% pi kju Ar" Es ti ju vi de"bl ju eks waI/% zi
+                    </td>
+                    <td class="default">
+                        eɪ̯ bi si di i ɛf d͡ʒi eɪ̯t͡ʃ aɪ̯ d͡ʒeɪ̯ keɪ
+                        ɛl ɛm ɛn ɔʊ̯ pi kju ɑɹ ɛs ti ju vi dəbl ju eks waɪ̯ zi
+                    </td>
+                </tr>
+            </table>
+            <h3><a href="index.html">Back to Homepage</a></h3>
+        </div>
     </body>
 </html>
