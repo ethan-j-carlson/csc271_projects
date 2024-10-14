@@ -1,7 +1,6 @@
 body {
     background-color: #ffe9d4;
     text-size-adjust: none;
-    -webkit-text-size-adjust: none;
 }
 
 h1 {
@@ -95,7 +94,6 @@ img.header_logo {
     max-width: 100px;
     height: auto;
     margin: 0px;
-    float: left;
 }
 
 #directory_title {
