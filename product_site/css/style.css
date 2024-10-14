@@ -138,9 +138,9 @@ img.header_logo {
 }
 
 #consonant_table {
-    margin-right: auto;
-    margin-left: auto;
-    margin-bottom: 20px;
+    padding-right: auto;
+    padding-left: auto;
+    padding-bottom: 20px;
 }
 
 #consonant_table th {
@@ -163,8 +163,8 @@ img.header_logo {
 }
 
 #vowel_table {
-    margin-bottom: 20px;
-    margin-right: 40px;
+    padding-bottom: 20px;
+    padding-right: 40px;
 }
 
 #vowel_table th.corner {
@@ -194,7 +194,7 @@ img.header_logo {
 }
 
 #other_consonant_table {
-    margin-bottom: 20px;
+    padding-bottom: 20px;
 }
 
 #other_consonant_table td.linked{
@@ -337,9 +337,9 @@ img {
     }
     
     #consonant_table {
-        margin-bottom: 20px;
-        margin-left: auto;
-        margin-right: auto;
+        padding-bottom: 20px;
+        padding-left: auto;
+        padding-right: auto;
         border: black 1px;
     }
 
@@ -361,14 +361,14 @@ img {
     
     #vowel_table {
         margin-bottom: 20px;
-        margin-left: auto;
-        margin-right: auto;
+        padding-left: auto;
+        padding-right: auto;
     }
     
     #other_consonant_table {
         margin-bottom: 20px;
-        margin-left: auto;
-        margin-right: auto;
+        padding-left: auto;
+        padding-right: auto;
     }
 
     a.symbol_link {
