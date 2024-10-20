@@ -2,34 +2,48 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
+        <meta name="description"
+        content="A converter that lets you use ASCII to transcribe IPA, from Quick Phonetics">
+        <meta name="keywords" 
+        content="transcription, IPA, International Phonetic Alphabet">
         <title>ASCII to IPA Converter - Quick Phonetics</title>
         <link href="css/style.css" rel="stylesheet">
     </head>
 
     <body>
         <div class = "header">
-            <img class="header_logo" src="images/logo.png" alt="Quick Phonetics logo, a book with a speaking head">
+            <a class="header_logo" href="index.html">
+                <img class="header_logo" src="images/logo.png"
+                     alt="Quick Phonetics logo, a book with a speaking head">
+            </a>
             <a href="index.html">Home</a>
-            <a href="ipa_guide.html">IPA Guide</a>
-            <a class="current" href="converter.html">ASCII Converter</a>
-            <a href="directory.html">IPA Symbols</a>
+            <a href="phonetic_alphabet_guide.html">IPA Guide</a>
+            <a class="current" href="ipa_converter.html">ASCII to IPA</a>
+            <a href="ipa_chart_directory.html">IPA Chart</a>
+            <span class="clear"></span>
         </div>
         <div class="main_content">
             <div id="converter_intro">
-                <h1>ASCII to IPA Converter</h1>
+                <h1>ASCII to International Phonetic Alphabet Converter</h1>
                 <img src="images/sh.png" alt="Arrow from s H to esh">
                 <p>
                     This page allows you to convert a custom ASCII writing system
                     called TIPO (Typeable International Phonetic Orthography)
-                    into usable International Phonetic Alphabet text. A Google Doc
-                    that explains how the system is used can be found
-                    <a href="https://docs.google.com/document/d/1iQWEtJ35SSIBtPZA9xKoJoD6rnc6tHB_05NQ4WwEPW0/edit?usp=sharing">here.</a> 
+                    into usable IPA (International Phonetic Alphabet) text.
+                    Using TIPO to transcribe the IPA is far more convenient
+                    than manual IPA transcription, since TIPO was designed to
+                    only use printable ASCII characters.<br>
+                    A Google Doc that explains how the system is used can be
+                    found
+                    <a href="https://docs.google.com/document/d/1iQWEtJ35SSIBtPZA9xKoJoD6rnc6tHB_05NQ4WwEPW0/edit?usp=sharing">
+                        here.
+                    </a> 
                 </p>
             </div>
 
-            <form id="ascii_converter" action="converter.html" method="post">
-                <label for="tipo_input">TIPO Input:</label>
-                <textarea id="tipo_input" name="tipo_input" rows="10" cols="80" required></textarea>
+            <form id="ascii_converter" action="ipa_converter.html" method="post">
+                <label for="tipo_input">TIPO Input:</label><br>
+                <textarea id="tipo_input" name="tipo_input" rows="10" cols="120" required></textarea>
 
                 <p>Put text between...</p>
                 <label for="nothing">Nothing</label>
@@ -44,7 +58,7 @@
                 <input type="radio" id="brackets" name="wrapper" value="brackets">
 
                 <input type="submit" value="Convert!">
-                <p>(The output will go here.)</p>
+                <p id="converter_output">(The output will go here.)</p>
             </form>
 
             <p>
@@ -84,15 +98,14 @@
                     <td class="default">A B C D E F G H I J K L M N O P Q R S T U V W X Y Z</td>
                     <td class="technical">
                         eI/% bi si di i Ef d.=zHi eI/%t.=sH aI/% d.=zHeI/% keI
-                        El Em En OU/% pi kju Ar" Es ti ju vi de"bl ju eks waI/% zi
+                        El Em En OU/% pi kju Ar" Es ti ju vi de"bl.ju eks waI/% zi
                     </td>
                     <td class="default">
                         eɪ̯ bi si di i ɛf d͡ʒi eɪ̯t͡ʃ aɪ̯ d͡ʒeɪ̯ keɪ
-                        ɛl ɛm ɛn ɔʊ̯ pi kju ɑɹ ɛs ti ju vi dəbl ju eks waɪ̯ zi
+                        ɛl ɛm ɛn ɔʊ̯ pi kju ɑɹ ɛs ti ju vi dəbl.ju eks waɪ̯ zi
                     </td>
                 </tr>
             </table>
-            <h3><a href="index.html">Back to Homepage</a></h3>
         </div>
     </body>
 </html>

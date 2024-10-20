@@ -6,7 +6,7 @@ body {
 h1 {
     font-family: 'Trebuchet MS', sans-serif;
     color: #022add;
-    background-color: #f3c89e;
+    background-color: #fdc288;
 }
 
 h2 {
@@ -27,11 +27,25 @@ p {
     font-family: Verdana, sans-serif;
     color: #0c1742;
     font-size: 1em;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+label {
+    font-family: Verdana, sans-serif;
+    color: #0c1742;
+    font-size: 1em;
+}
+
+p.center {
+    text-align: center;
 }
 
 ul, ol {
     font-family: Verdana, sans-serif;
     color: #0c1742;
+    font-size: 1em;
+    margin-left: 2%;
     list-style-position: inside;
 }
 
@@ -39,6 +53,8 @@ table.default, td.default, th.default {
     font-family: Verdana, sans-serif;
     color: #0c1742;
     border: 1px solid;
+    margin-left: 5%;
+    margin-right: 5%;
 }
 
 table.default {
@@ -70,7 +86,17 @@ a:link {
 }
 
 a:visited {
-    color: #120494;
+    color: #022add;
+}
+
+a:hover {
+    background-color: #fff460;
+    color:#2f125d;
+}
+
+a:active {
+    color: blue;
+    background-color: orange;
 }
 
 #homepage {
@@ -94,11 +120,21 @@ img.header_logo {
     max-width: 100px;
     height: auto;
     margin: 0px;
-    float:inline-start;
+    float:left;
 }
 
+p.img_footer {
+    font-family: Verdana, sans-serif;
+    color: #0c1742;
+    margin-top: 0px;
+    font-size: 10px;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+
 #directory_title {
-    background-color: #f3c89e;
+    background-color: #fdc288;
 }
 
 #directory_title_left_image {
@@ -124,21 +160,21 @@ img.header_logo {
     margin-top: 0px;
     text-align: center;
     color: #022add;
-    background-color: #f3c89e;
-    padding-bottom: 25px;
+    background-color: #fdc288;
+    padding-bottom: 0px;
 }
 
 #consonant_table_title {
     text-align: center;
     font-size: 30px;
-    margin-left: 100px;
+    padding-left: 150px;
     margin-bottom: 0px;
     color: #0c1742;
 }
 
 #consonant_table {
     padding-right: auto;
-    padding-left: auto;
+    padding-left: 75px;
     padding-bottom: 20px;
 }
 
@@ -146,7 +182,7 @@ img.header_logo {
     max-width: 6ch;
     font-size: 12px;
     word-wrap: break-word;
-    background-color: #f7c797;
+    background-color: #ffc890;
 }
 
 #consonant_table th.corner {
@@ -156,14 +192,15 @@ img.header_logo {
 #vowel_table_title {
     text-align: center;
     font-size: 30px;
-    padding-left: 40px;
+    padding-left: 10px;
     margin-bottom: 0px;
     color: #0c1742;
 }
 
 #vowel_table {
     padding-bottom: 20px;
-    padding-right: 40px;
+    padding-right: 75px;
+    padding-left: auto;
 }
 
 #vowel_table th.corner {
@@ -174,7 +211,7 @@ img.header_logo {
     font-size: 18px;
     text-align: center;
     word-wrap: break-word;
-    background-color: #f7c797;
+    background-color: #ffc890;
 }
 
 #vowel_table td.left {
@@ -182,18 +219,21 @@ img.header_logo {
     padding-left: 5px;
     text-align: right;
     word-wrap: break-word;
-    background-color: #f7c797;
+    background-color: #ffc890;
 }
 
 #other_consonant_table_title {
     text-align: center;
     color: #0c1742;
     font-size: 20px;
+    padding-left: 50px;
     margin-bottom: 0px;
 }
 
 #other_consonant_table {
     padding-bottom: 20px;
+    padding-left: 75px;
+    padding-right: auto;
 }
 
 #other_consonant_table td.linked{
@@ -203,7 +243,7 @@ img.header_logo {
 #other_consonant_table th {
     font-size: 12px;
     word-wrap: break-word;
-    background-color: #f7c797;
+    background-color: #ffc890;
 }
 
 th.corner {
@@ -215,7 +255,7 @@ th.corner {
 
 td.possible {
     text-align: center;
-    background-color: #f7f0dc;
+    background-color: #fff9c9;
     text-decoration: none;
     font-size: 30px;
     padding-bottom: 5px;
@@ -240,35 +280,20 @@ td.impossible {
 td.left {
     text-align: right;
     padding-left: 5px;
-    background-color: #f7c797;
+    background-color: #ffc890;
     font-size: 16px;
 }
 
-a.header_link {
-    display: inline-block;
-    margin-top: 35px;
-    margin-left: 20px;
-    margin-bottom: 35px;
-    white-space: nowrap;
-    font-size: 20px;
-}
-
 a.current {
-    background-color: #d4ad85;
-    color:#2f125d;
-}
-
-a:hover {
-    background-color: #fff460;
-    color:#2f125d;
+    color: purple;
+    background-color: orange;
 }
 
 div.header {
     padding-left:10px;
     margin-top: auto;
-    padding-bottom: 100px;
     margin-bottom: 5px;
-    background-color: #f3c596;
+    background-color: #ffb265;
     white-space: nowrap;
 }
 
@@ -276,9 +301,18 @@ div.header a{
     float: right;
     margin-top: 35px;
     margin-left: 20px;
-    margin-bottom: 35px;
     white-space: nowrap;
     font-size: 20px;
+}
+
+div.header a.header_logo{
+    float: left;
+    margin-top: 0px;
+    margin-left: 0px;
+}
+
+div.header a:hover, a:active{
+    font-size: 25px;
 }
 
 div.main_content {
@@ -326,7 +360,148 @@ img {
     margin: 20px;
 }
 
-@media only screen and (max-width: 900px) {
+img.default {
+    max-width: 100%;
+    height: auto;
+    /*I did not add float since it would disrupt many things
+    for an example of being able to do this, see the open book
+    images in directory.html*/
+    float: none;
+    margin: 20px;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+/*https://stackoverflow.com/questions/2062258/floating-elements-within-a-div-floats-outside-of-div-why*/
+span.clear {
+    clear: both;
+    display: block;
+}
+
+#converter_output {
+    background-color: white;
+    margin-left: 150px;
+    margin-right: 150px;
+}
+
+p.copyright_footer {
+    font-size: 12px;
+}
+
+@media only screen and ((max-width: 900px) or (max-device-width:900px)) {
+    div.right_section {
+        float: unset;
+    }
+
+    div.left_section {
+        float: unset;
+    }
+
+    th.corner {
+        background-color: transparent;
+    }
+
+    td.linked {
+        font-size: 35px;
+    }
+    
+    td.possible {
+        font-size: 35px;
+    }
+    
+    td.impossible {
+        font-size: 35px;
+    }
+
+    #consonant_table {
+        margin-bottom: 20px;
+        padding-left: 75px;
+        padding-right: auto;
+        border: black 1px;
+    }
+    
+    #vowel_table {
+        margin-bottom: 20px;
+        padding-left: 75px;
+        padding-right: auto;
+    }
+    
+    #other_consonant_table {
+        margin-bottom: 20px;
+        padding-left: 75px;
+        padding-right: auto;
+    }
+
+    a.symbol_link {
+        font-size: 35px;
+        text-decoration: none;
+    }
+
+    div.header{
+        padding-bottom: 0px;
+        overflow-x: scroll;
+    }
+
+    #other_consonant_table_title {
+        text-align: left;
+        color: #0c1742;
+        font-size: 20px;
+        padding-left: 315px;
+        margin-bottom: 0px;
+    }
+
+    #consonant_table_title {
+        text-align: left;
+        font-size: 30px;
+        padding-left: 300px;
+        margin-bottom: 0px;
+        color: #0c1742;
+    }
+
+    #vowel_table_title {
+        text-align: left;
+        font-size: 30px;
+        padding-left: 280px;
+        margin-bottom: 0px;
+        color: #0c1742;
+    }
+
+    #tipo_input {
+        max-width: 100%;
+    }
+    
+}
+
+@media only screen and ((max-width: 720px) or (max-device-width: 720px)) {
+    #consonant_table {
+        margin-bottom: 10px;
+        padding-left: 1%;
+        padding-right: auto;
+        border: black 1px;
+    }
+
+    #vowel_table {
+        margin-bottom: 10px;
+        padding-left: 1%;
+        padding-right: auto;
+    }
+    
+    #other_consonant_table {
+        margin-bottom: 20px;
+        padding-left: 1%;
+        padding-right: auto;
+    }
+
+    #consonant_table_title {
+        text-align: left;
+        padding-left: 220px;
+    }
+
+    #vowel_table_title, #other_consonant_table_title {
+        text-align: left;
+        padding-left: 210px;
+    }
+
     div.right_section {
         float: unset;
     }
@@ -335,58 +510,16 @@ img {
         float: unset;
     }
     
-    #consonant_table {
-        padding-bottom: 20px;
-        padding-left: auto;
-        padding-right: auto;
-        border: black 1px;
-    }
-
-    th.corner {
-        background-color: transparent;
-    }
-
-    td.linked {
-        font-size: 15px;
-    }
-    
-    td.possible {
-        font-size: 20px;
-    }
-    
-    td.impossible {
-        font-size: 20px;
-    }
-    
-    #vowel_table {
-        margin-bottom: 20px;
-        padding-left: auto;
-        padding-right: auto;
-    }
-    
-    #other_consonant_table {
-        margin-bottom: 20px;
-        padding-left: auto;
-        padding-right: auto;
-    }
-
-    a.symbol_link {
-        font-size: 20px;
-        text-decoration: none;
-    }
-
-    div.header{
-        padding-bottom: 0px;
-    }
-}
-
-@media only screen and (max-width: 900px) {
     div.header a{
         float: none;
         display: inline-block;
     }
 
-    p{
+    ol, ul, p{
         font-size: 20px;
+    }
+
+    table {
+        overflow-x: scroll;
     }
 }
