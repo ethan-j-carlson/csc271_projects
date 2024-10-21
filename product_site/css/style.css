@@ -410,15 +410,15 @@ p.copyright_footer {
     }
 
     td.linked {
-        font-size: 35px;
+        font-size: 40px;
     }
     
     td.possible {
-        font-size: 35px;
+        font-size: 40px;
     }
     
     td.impossible {
-        font-size: 35px;
+        font-size: 40px;
     }
 
     a.symbol_link {
@@ -470,6 +470,10 @@ p.copyright_footer {
         float: none;
         display: inline-block;
         font-size: 30px;
+    }
+    
+    div.header a:hover, a:active{
+        font-size: 35px;
     }
 
     ol, ul, p{
