@@ -56,6 +56,14 @@ table.default, td.default, th.default {
     margin-right: 5%;
 }
 
+td.ipa {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #0c1742;
+    border: 1px solid;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
 table.default {
     border-collapse: collapse;
 }
@@ -120,12 +128,16 @@ a:active {
     text-align: center;
 }
 
-#converter_output {
+.convert_button {
     font-size: 20px;
+    background-color: #fdc288;
+    color: blue;
 }
 
-#convert_button {
+.convert_button:hover {
     font-size: 20px;
+    background-color: rgb(255, 253, 159);
+    color: rgb(68, 0, 255);
 }
 
 img.header_logo {
@@ -256,6 +268,10 @@ p.img_footer {
     font-size: 12px;
     word-wrap: break-word;
     background-color: #ffc890;
+}
+
+.ipa {
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 th.corner {
@@ -394,6 +410,9 @@ span.clear {
     background-color: white;
     margin-left: 150px;
     margin-right: 150px;
+    padding: 10px;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 p.copyright_footer {
