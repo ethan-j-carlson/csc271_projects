@@ -120,14 +120,6 @@ a:active {
     text-align: center;
 }
 
-#converter_output {
-    font-size: 20px;
-}
-
-#convert_button {
-    font-size: 20px;
-}
-
 img.header_logo {
     max-width: 100px;
     height: auto;
@@ -529,13 +521,5 @@ p.copyright_footer {
 
     table {
         overflow-x: scroll;
-    }
-
-    #converter_output {
-        font-size: 30px;
-    }
-    
-    #convert_button {
-        font-size: 30px;
     }
 }
