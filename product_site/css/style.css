@@ -1,6 +1,5 @@
 body {
     background-color: #ffe9d4;
-    text-size-adjust: none;
 }
 
 h1 {
@@ -79,6 +78,11 @@ td.technical {
     font-family: 'Courier New', Courier, monospace;
     color: #0c1742;
     border: 1px solid;
+}
+
+textarea {
+    font-family: 'Courier New', Courier, monospace;
+    color: black;
 }
 
 a:link {
@@ -409,15 +413,11 @@ p.copyright_footer {
         float: unset;
     }
 
-    td.linked {
-        font-size: 40px;
+    table.default, td.default, th.default, td.technical {
+        border: 2px solid;
     }
-    
-    td.possible {
-        font-size: 40px;
-    }
-    
-    td.impossible {
+
+    td.linked, td.possible, td.impossible {
         font-size: 40px;
     }
 
@@ -471,13 +471,30 @@ p.copyright_footer {
         display: inline-block;
         font-size: 30px;
     }
-    
+
     div.header a:hover, a:active{
         font-size: 35px;
     }
 
-    ol, ul, p{
+    ol, ul, p, td, th, textarea{
         font-size: 25px;
+    }
+
+    p.copyright_footer {
+        font-size: 18px;
+    }
+
+    p.img_footer {
+        font-family: Verdana, sans-serif;
+        color: #0c1742;
+        margin-top: 0px;
+        font-size: 16px;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+
+    label {
+        font-size: 20px;
     }
 
     table {
