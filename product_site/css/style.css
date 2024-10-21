@@ -481,14 +481,14 @@ p.copyright_footer {
     }
 
     p.copyright_footer {
-        font-size: 18px;
+        font-size: 16px;
     }
 
     p.img_footer {
         font-family: Verdana, sans-serif;
         color: #0c1742;
         margin-top: 0px;
-        font-size: 16px;
+        font-size: 12px;
         margin-left: 5%;
         margin-right: 5%;
     }
