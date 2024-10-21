@@ -128,13 +128,13 @@ a:active {
     text-align: center;
 }
 
-.convert_button {
+.submit {
     font-size: 20px;
     background-color: #fdc288;
     color: blue;
 }
 
-.convert_button:hover {
+.submit:hover {
     font-size: 20px;
     background-color: rgb(255, 253, 159);
     color: rgb(68, 0, 255);
@@ -554,7 +554,7 @@ p.copyright_footer {
         font-size: 30px;
     }
     
-    #convert_button {
+    .submit {
         font-size: 30px;
     }
     
