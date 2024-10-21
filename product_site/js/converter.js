@@ -359,7 +359,7 @@ function parse(string){
                 i += 1;
             }else {
                 //https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals
-                return output + `There was an error at character ${i}`;
+                return `There was an error at character ${i}`;
             }
         }
     }
