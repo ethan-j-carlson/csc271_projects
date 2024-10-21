@@ -422,7 +422,7 @@ p.copyright_footer {
     }
 
     a.symbol_link {
-        font-size: 35px;
+        font-size: 40px;
         text-decoration: none;
     }
 
@@ -444,20 +444,37 @@ p.copyright_footer {
 
     #consonant_table_title {
         text-align: center;
-        margin-left: -50px;
-        
+        margin-left: 0px;
     }
 
     #vowel_table_title {
         text-align: center;
-        padding-left: 80px;
+        margin-left: 0px;
+        margin-right: 0px;
     }
 
     #other_consonant_table_title {
         text-align: center;
-        padding-left: 40px;
+        font-size: 30px;
+        margin-left: 40px;
     }
 
+    #other_consonant_table th {
+        font-size: 20px;
+    }
+
+    #consonant_table th {
+        font-size: 20px;
+    }
+
+    #other_consonant_table td.linked{
+        font-size: 20px;
+    }
+
+    td.left {
+        font-size: 20px;
+    }
+    
     div.right_section {
         float: unset;
     }
