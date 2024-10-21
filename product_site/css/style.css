@@ -522,4 +522,13 @@ p.copyright_footer {
     table {
         overflow-x: scroll;
     }
+
+    #converter_output {
+        font-size: 30px;
+    }
+    
+    #convert_button {
+        font-size: 30px;
+    }
+    
 }
