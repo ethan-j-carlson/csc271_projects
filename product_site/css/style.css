@@ -171,15 +171,15 @@ p.img_footer {
 #consonant_table_title {
     text-align: center;
     font-size: 30px;
-    padding-left: 150px;
+    margin-left: 115px;
     margin-bottom: 0px;
     color: #0c1742;
 }
 
 #consonant_table {
     padding-right: auto;
-    padding-left: 75px;
-    padding-bottom: 20px;
+    margin-left: 25px;
+    margin-bottom: 20px;
 }
 
 #consonant_table th {
@@ -196,15 +196,15 @@ p.img_footer {
 #vowel_table_title {
     text-align: center;
     font-size: 30px;
-    padding-left: 10px;
+    margin-left: 3px;
     margin-bottom: 0px;
     color: #0c1742;
 }
 
 #vowel_table {
-    padding-bottom: 20px;
-    padding-right: 75px;
-    padding-left: auto;
+    margin-bottom: 20px;
+    margin-right: 25px;
+    margin-left: 0px;
 }
 
 #vowel_table th.corner {
@@ -219,8 +219,9 @@ p.img_footer {
 }
 
 #vowel_table td.left {
+    max-width: 6ch;
     font-size: 18px;
-    padding-left: 5px;
+    padding-left: 2px;
     text-align: right;
     word-wrap: break-word;
     background-color: #ffc890;
@@ -230,14 +231,14 @@ p.img_footer {
     text-align: center;
     color: #0c1742;
     font-size: 20px;
-    padding-left: 50px;
+    margin-left: 0px;
     margin-bottom: 0px;
 }
 
 #other_consonant_table {
-    padding-bottom: 20px;
-    padding-left: 75px;
-    padding-right: auto;
+    margin-bottom: 20px;
+    margin-left: 25px;
+    margin-right: auto;
 }
 
 #other_consonant_table td.linked{
@@ -283,7 +284,7 @@ td.impossible {
 
 td.left {
     text-align: right;
-    padding-left: 5px;
+    padding-left: 2px;
     background-color: #ffc890;
     font-size: 16px;
 }
