@@ -389,16 +389,24 @@ p.copyright_footer {
 }
 
 @media only screen and ((max-width: 900px) or (max-device-width:900px)) {
+    h1{
+        font-size: 50px;
+    }
+
+    h2 {
+        font-size: 40px;
+    }
+
+    h3 {
+        font-size: 35px;
+    }
+
     div.right_section {
         float: unset;
     }
 
     div.left_section {
         float: unset;
-    }
-
-    th.corner {
-        background-color: transparent;
     }
 
     td.linked {
@@ -413,25 +421,6 @@ p.copyright_footer {
         font-size: 35px;
     }
 
-    #consonant_table {
-        margin-bottom: 20px;
-        padding-left: 75px;
-        padding-right: auto;
-        border: black 1px;
-    }
-    
-    #vowel_table {
-        margin-bottom: 20px;
-        padding-left: 75px;
-        padding-right: auto;
-    }
-    
-    #other_consonant_table {
-        margin-bottom: 20px;
-        padding-left: 75px;
-        padding-right: auto;
-    }
-
     a.symbol_link {
         font-size: 35px;
         text-decoration: none;
@@ -442,64 +431,31 @@ p.copyright_footer {
         overflow-x: scroll;
     }
 
-    #other_consonant_table_title {
-        text-align: left;
-        color: #0c1742;
-        font-size: 20px;
-        padding-left: 315px;
-        margin-bottom: 0px;
+    #tipo_input {
+        max-width: 98%;
+    }
+
+    #consonant_table, #vowel_table, #other_consonant_table {
+        margin-bottom: 20px;
+        padding: 0px;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     #consonant_table_title {
-        text-align: left;
-        font-size: 30px;
-        padding-left: 300px;
-        margin-bottom: 0px;
-        color: #0c1742;
+        text-align: center;
+        margin-left: -50px;
+        
     }
 
     #vowel_table_title {
-        text-align: left;
-        font-size: 30px;
-        padding-left: 280px;
-        margin-bottom: 0px;
-        color: #0c1742;
+        text-align: center;
+        padding-left: 80px;
     }
 
-    #tipo_input {
-        max-width: 100%;
-    }
-    
-}
-
-@media only screen and ((max-width: 720px) or (max-device-width: 720px)) {
-    #consonant_table {
-        margin-bottom: 10px;
-        padding-left: 1%;
-        padding-right: auto;
-        border: black 1px;
-    }
-
-    #vowel_table {
-        margin-bottom: 10px;
-        padding-left: 1%;
-        padding-right: auto;
-    }
-    
-    #other_consonant_table {
-        margin-bottom: 20px;
-        padding-left: 1%;
-        padding-right: auto;
-    }
-
-    #consonant_table_title {
-        text-align: left;
-        padding-left: 220px;
-    }
-
-    #vowel_table_title, #other_consonant_table_title {
-        text-align: left;
-        padding-left: 210px;
+    #other_consonant_table_title {
+        text-align: center;
+        padding-left: 40px;
     }
 
     div.right_section {
@@ -513,10 +469,11 @@ p.copyright_footer {
     div.header a{
         float: none;
         display: inline-block;
+        font-size: 30px;
     }
 
     ol, ul, p{
-        font-size: 20px;
+        font-size: 25px;
     }
 
     table {
