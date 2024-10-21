@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+        <script src="js/converter.js"></script>
         <meta charset="utf-8">
         <meta name="description"
         content="A converter that lets you use ASCII to transcribe IPA, from Quick Phonetics">
@@ -41,7 +42,8 @@
                 </p>
             </div>
 
-            <form id="ascii_converter" action="ipa_converter.html" method="post">
+            <form id="ascii_converter" action="ipa_converter.html" method="post"
+                  onsubmit="return input_to_output()">
                 <label for="tipo_input">TIPO Input:</label><br>
                 <textarea id="tipo_input" name="tipo_input" rows="10" cols="120" required></textarea>
 
@@ -55,9 +57,16 @@
                 <label for="slashes">/ /</label>
                 <input type="radio" id="slashes" name="wrapper" value="slashes">
                 <label for="brackets">[ ]</label>
-                <input type="radio" id="brackets" name="wrapper" value="brackets">
+                <input type="radio" id="brackets" name="wrapper" value="brackets"><br>
 
-                <input type="submit" value="Convert!">
+                <p>Copy output to clipboard?</p>
+                <label for="yes">Yes</label>
+                <input type="radio" id="yes" name="copy" value="yes" checked>
+                <label for="no">No</label>
+                <input type="radio" id="no" name="copy" value="no">
+
+                <br><br>
+                <input id="convert_button" type="submit" value="Convert!">
                 <p id="converter_output">(The output will go here.)</p>
             </form>
 
