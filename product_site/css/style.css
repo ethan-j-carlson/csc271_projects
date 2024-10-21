@@ -465,10 +465,15 @@ p.copyright_footer {
     div.left_section {
         float: unset;
     }
+
+    div.header {
+        text-align: left;
+    }
     
     div.header a{
         float: none;
         display: inline-block;
+        text-align: left;
         font-size: 30px;
     }
 
