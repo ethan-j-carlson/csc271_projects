@@ -543,8 +543,10 @@ p.copyright_footer {
     }
 
     label {
-        font-size: 20px;
+        font-size: 30px;
     }
+
+
 
     table {
         overflow-x: scroll;
@@ -562,4 +564,9 @@ p.copyright_footer {
         font-size: 30px;
     }
     
+    /*https://stackoverflow.com/questions/4920281/how-to-change-the-size-of-the-radio-button-using-css*/
+    input[type=radio] {
+        height: 2em;
+        width: 2em;
+    }
 }
