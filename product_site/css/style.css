@@ -557,5 +557,9 @@ p.copyright_footer {
     .submit {
         font-size: 30px;
     }
+
+    .submit:hover {
+        font-size: 30px;
+    }
     
 }
