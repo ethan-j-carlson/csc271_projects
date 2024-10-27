@@ -501,7 +501,7 @@ function input_to_output() {
             size_str += "<em> (" + (output_bytes*100/input_bytes ).toFixed(1);
             size_str += "% bigger)</em>.";
         } else if (size_diff < 0) {
-            size_str += -1*output_bytes;
+            size_str += -1*size_diff;
             size_str +=  "</strong> less bytes than the input";
             size_str += "<em> (" + (input_bytes*100/output_bytes ).toFixed(1);
             size_str += "% smaller)</em>.";
