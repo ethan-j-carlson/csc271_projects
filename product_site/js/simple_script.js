@@ -193,7 +193,7 @@ var graphemes = {' ': ' ',
     '\\Y': 'Y',
     '\\Z': 'Z',
     '\\[': '[',
-    '\\\\': '\\\\',
+    '\\\\': '\\',
     '\\]': ']',
     '\\^': '^',
     '\\_': '_',
@@ -407,19 +407,29 @@ function parse(input){
         }
     }
 
-    //Technically, if the last grapheme was a digraph, our last character
-    //won't be a valid monograph unless it was \ + an ascii character.
-    //Regardless, we want to ignore the second character, since it was
-    //already used.
-    if (last_digraph == false) {
-        let substr = input.substring(input.length - 1, input.length);
-        let monograph_result = graphemes[substr];
-        if (monograph_result != null) {
-            output += monograph_result;
-        } else{
-            //However, if the second to last character was a monograph, and we
-            //still have a non-monographic character at the end, that means
-            //that the input was invalid.
+    let substr = input.substring(input.length - 1, input.length);
+    let monograph_result = graphemes[substr];
+    let semifinal_backslash = (input.length > 1 &&
+        input.substring(input.length - 2, input.length - 1) == '\\');
+    let semifinal_double_backslash = (input.length > 2 &&
+        input.substring(input.length - 3, input.length - 1) === '\\\\');
+    //We ignore the last character if it was preceded by a backslash,
+    //since that's used as an escape character, possibly used with
+    //"primary" characters (characters that are first in digraphs).
+    //However, there's an edge case where the last 2 characters are backslashes
+    //which should result in the last character being its own grapheme.
+    if (monograph_result != null &&
+        !(semifinal_backslash && !semifinal_double_backslash)){
+        output += monograph_result;
+    } else{
+        //Technically, if the last grapheme was a digraph, our last character
+        //won't be a valid monograph unless it was \ + an ascii character.
+        //Regardless, we want to ignore the second character, since it was
+        //already used.
+        //However, if the second to last character was a monograph, and we
+        //still have a non-monographic character at the end, that means
+        //that the input was invalid.
+        if (!last_digraph) {
             parsing_error = true;
             //https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals
             let error_msg = `There was an error at character ${i}:<br><br>`;
@@ -432,7 +442,7 @@ function parse(input){
                 error_msg +=  input.substr(i + 1, input.length);
             }
             return error_msg;
-        }
+        } 
     }
 
     return output;
