@@ -59,7 +59,8 @@ table.default, td.default, th.default {
     margin-right: 5%;
 }
 
-td.arial, td.noto_sans {
+td.ipa {
+    font-family: Arial, Helvetica, sans-serif;
     color: #0c1742;
     border: 1px solid;
     margin-left: 5%;
