@@ -1,3 +1,6 @@
+/*https://stackoverflow.com/questions/14676613/how-to-import-google-web-font-in-css-file*/
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans&display=swap');
+
 body {
     background-color: #ffe9d4;
 }
@@ -134,8 +137,14 @@ a:active {
     color: blue;
 }
 
-.submit:hover {
-    font-size: 20px;
+input[type="button"] {
+    margin: 5px;
+    font-size: 16px;
+    background-color: #fdc288;
+    color: blue;
+}
+
+input[type="button"]:hover {
     background-color: rgb(255, 253, 159);
     color: rgb(68, 0, 255);
 }
@@ -270,8 +279,12 @@ p.img_footer {
     background-color: #ffc890;
 }
 
-.ipa {
+.arial {
     font-family: Arial, Helvetica, sans-serif;
+}
+
+.noto_sans {
+    font-family: 'Noto Sans', Arial, sans-serif;
 }
 
 th.corner {
@@ -412,7 +425,6 @@ span.clear {
     margin-right: 150px;
     padding: 10px;
     font-size: 20px;
-    font-family: Arial, Helvetica, sans-serif;
 }
 
 p.copyright_footer {
@@ -555,12 +567,12 @@ p.copyright_footer {
     #converter_output {
         font-size: 30px;
     }
-    
-    .submit {
-        font-size: 30px;
+
+    input[type=button] {
+        font-size: 25px;
     }
 
-    .submit:hover {
+    .submit {
         font-size: 30px;
     }
     

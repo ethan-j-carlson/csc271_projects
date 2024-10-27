@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <script src="js/converter.js"></script>
+        <script src="js/simple_script.js"></script>
         <meta charset="utf-8">
         <meta name="description"
         content="A converter that lets you use ASCII to transcribe IPA, from Quick Phonetics">
@@ -44,10 +44,13 @@
 
             <form id="ascii_converter" action="ipa_converter.html" method="post"
                   onsubmit="return input_to_output()">
-                <label for="tipo_input">TIPO Input:</label><br>
+                <label for="tipo_input"><strong>TIPO Input:</strong></label><br>
                 <textarea id="tipo_input" name="tipo_input" rows="10" cols="120" required></textarea>
+                <br>
+                <input type="button" value="Clear input" onclick="clear_textareas()">
+                <br>
 
-                <p>Put text between...</p>
+                <label for="wrapper"><strong>Put text between...</strong></label>
                 <label for="nothing">Nothing</label>
                 <input type="radio" id="nothing" name="wrapper" value="nothing" checked>
                 <label for="apostrophes">' '</label>
@@ -59,7 +62,7 @@
                 <label for="brackets">[ ]</label>
                 <input type="radio" id="brackets" name="wrapper" value="brackets"><br>
 
-                <p>Copy output to clipboard?</p>
+                <label for="copy"><strong>Copy output to clipboard?</strong></label>
                 <label for="yes">Yes</label>
                 <input type="radio" id="yes" name="copy" value="yes" checked>
                 <label for="no">No</label>
@@ -67,7 +70,16 @@
 
                 <br><br>
                 <input class="submit" type="submit" value="Convert!">
-                <p id="converter_output">(The output will go here.)</p>
+                <p class="arial" id="converter_output">(The output will go here.)</p>
+                <p id="size_difference"></p>
+                
+                <label for="font"><strong>IPA Font: </strong></label>
+                <label for="arial">Arial</label>
+                <input type="radio" id="arial" name="font" value="arial" checked
+                       onclick="switch_fonts()">
+                <label for="no">Noto Sans</label>
+                <input type="radio" id="noto_sans" name="font" value="noto_sans"
+                       onclick="switch_fonts()">
             </form>
 
             <p>
@@ -86,7 +98,7 @@
                     <td class="technical">
                         dHe" kwIk br"aU/%n fAks d.=zHe"mps OU/%ve"/R dHe" leI/%zi dOg
                     </td>
-                    <td class="ipa">ðə kwɪk bɹaʊ̯n fɑks d͡ʒəmps ɔʊ̯və˞ ðə leɪ̯zi dɔg</td>
+                    <td class="arial">ðə kwɪk bɹaʊ̯n fɑks d͡ʒəmps ɔʊ̯və˞ ðə leɪ̯zi dɔg</td>
                 </tr>
                 <tr>
                     <td class="default">
@@ -98,7 +110,7 @@
                         t.=sHiz.| It stApt OU/%ve'R baI e" je"mi lUkInG e"nJI'~n In
                         dHe" sHeI/%d @'~nd d.=zHe"st hElpt It.=sElf
                     </td>
-                    <td class="ipa">
+                    <td class="arial">
                         waɪ̯l ðə maʊ̯s wəz ɛksplɔɹɪŋ nɔɹθ tu gɛt eɪ̯ t͡ʃɹɛʒə˞d t͡ʃiz|ɪt
                         stɑpt ɔʊ̯ve˞ baɪ ə jəmi lʊkɪŋ əɲɪ̃n ɪn ðə ʃeɪ̯d æ̃nd d͡ʒəst hɛlpt ɪt͡sɛlf
                     </td>
@@ -109,7 +121,7 @@
                         eI/% bi si di i Ef d.=zHi eI/%t.=sH aI/% d.=zHeI/% keI
                         El Em En OU/% pi kju Ar" Es ti ju vi de"bl.ju eks waI/% zi
                     </td>
-                    <td class="ipa">
+                    <td class="arial">
                         eɪ̯ bi si di i ɛf d͡ʒi eɪ̯t͡ʃ aɪ̯ d͡ʒeɪ̯ keɪ
                         ɛl ɛm ɛn ɔʊ̯ pi kju ɑɹ ɛs ti ju vi dəbl.ju eks waɪ̯ zi
                     </td>
