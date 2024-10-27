@@ -334,21 +334,27 @@ var graphemes = {' ': ' ',
 //When the page first loads, all the text boxes with IPA text start as
 //having the "arial" class.
 var current_font_class = 'arial';
+//I didn't feel like having parse return a tuple, so I store whether or not
+//there was an error here
+var parsing_error = false;
 
 //https://www.w3schools.com/js/js_functions.asp
 //Convert the input TIPO string to IPA and return it.
-function parse(string){
+function parse(input){
     //Some context for non-phoneticians:
     //Grapheme = unit of writing representing a single sound
     //e.g. In English, "s", "sh", and "h" are single graphemes.
     //Digraph = A grapheme consisting of two symbols.
     //Monograph = A grapheme consisting of one symbol.
 
+    //Start by assuming there was no error
+    parsing_error = false;
+
     //https://www.w3schools.com/js/js_if_else.asp
     //https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/length
     //"" in TIPO is "" in IPA
-    if (string.length == 0){
-        return string;
+    if (input.length == 0){
+        return input;
     }
         
     let output = "";
@@ -359,10 +365,10 @@ function parse(string){
     //https://www.w3schools.com/js/js_loop_while.asp
     //We shouldn't use a for loop, since we don't always increment by a fixed
     //amount every iteration
-    while (i < string.length - 1) {
+    while (i < input.length - 1) {
         //https://www.w3schools.com/jsref/jsref_substring.asp
         //https://sentry.io/answers/difference-between-let-and-var-in-javascript/
-        let substr = string.substring(i,i+2);
+        let substr = input.substring(i,i+2);
         let digraph_result = graphemes[substr];
         
         //https://stackoverflow.com/questions/19317943/why-referencing-non-existent-property-of-an-object-in-javascript-doesnt-return
@@ -376,7 +382,7 @@ function parse(string){
             i += 2;
         } else {
             last_digraph = false;
-            let substr = string.substring(i, i+1);
+            let substr = input.substring(i, i+1);
             let monograph_result = graphemes[substr];
             if (monograph_result != null) {
                 output += monograph_result;
@@ -385,24 +391,47 @@ function parse(string){
             //is not valid TIPO. We let the user know where the error was
             //so they can fix it.
             }else {
+                parsing_error = true;
                 //https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals
-                return `There was an error at character ${i}`;
+                let error_msg = `There was an error at character ${i}:<br><br>`;
+                //On top of giving the index, we show the input with the
+                //erroneous character emphasized.
+                error_msg += input.substring(0, i);
+                error_msg += "<strong><em><u>" + input.substring(i, i + 1); 
+                error_msg += "</strong></em></u>"
+                if (i != input.length - 1) {
+                    error_msg +=  input.substr(i + 1, input.length);
+                }
+                return error_msg;
             }
         }
     }
-    //When we stop, right before the last character, we may need to parse the
-    //last character.
-    let substr = string.substring(string.length - 1, string.length);
-    let monograph_result = graphemes[substr];
-    if (monograph_result != null) {
-        output += monograph_result;
-    } else{
-        //Technically, if the last grapheme was a digraph, our last character
-        //won't be a valid monograph unless it was \ + an ascii character.
-        //Regardless, we want to ignore the second character, since it was
-        //already used.
-        if (last_digraph == false) {
-            return `There was an error at character ${i}`;
+
+    //Technically, if the last grapheme was a digraph, our last character
+    //won't be a valid monograph unless it was \ + an ascii character.
+    //Regardless, we want to ignore the second character, since it was
+    //already used.
+    if (last_digraph == false) {
+        let substr = input.substring(input.length - 1, input.length);
+        let monograph_result = graphemes[substr];
+        if (monograph_result != null) {
+            output += monograph_result;
+        } else{
+            //However, if the second to last character was a monograph, and we
+            //still have a non-monographic character at the end, that means
+            //that the input was invalid.
+            parsing_error = true;
+            //https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals
+            let error_msg = `There was an error at character ${i}:<br><br>`;
+            //On top of giving the index, we show the input with the
+            //erroneous character emphasized.
+            error_msg += input.substring(0, i);
+            error_msg += "<strong><em><u>" + input.substring(i, i + 1); 
+            error_msg += "</strong></em></u>"
+            if (i != input.length - 1) {
+                error_msg +=  input.substr(i + 1, input.length);
+            }
+            return error_msg;
         }
     }
 
@@ -462,41 +491,57 @@ function input_to_output() {
 
     //Generate the string for the size difference, wrapping the difference in
     //a <strong> tag.
-    let size_str = "The output has <strong>";
-    if (size_diff > 0) {
-        size_str += output_bytes + "</strong> more bytes than the input";
-        //https://stackoverflow.com/questions/11832914/how-to-round-to-at-most-2-decimal-places-if-necessary
-        size_str += "<em> (" + (output_bytes*100/input_bytes ).toFixed(1);
-        size_str += "% bigger)</em>."
-    } else if (size_diff < 0) {
-        size_str += -1*output_bytes + "</strong> less bytes than the input";
-        size_str += "<em> (" + (input_bytes*100/output_bytes ).toFixed(1);
-        size_str += "% smaller)</em>."
-    } else {
-        size_str += " the same</strong> number of bytes as the input."
+    let size_str = "";
+    //There's no point in making a comparison with an error message.
+    if (!parsing_error) {
+        size_str = "The output has <strong>";
+        if (size_diff > 0) {
+            size_str += output_bytes + "</strong> more bytes than the input";
+            //https://stackoverflow.com/questions/11832914/how-to-round-to-at-most-2-decimal-places-if-necessary
+            size_str += "<em> (" + (output_bytes*100/input_bytes ).toFixed(1);
+            size_str += "% bigger)</em>.";
+        } else if (size_diff < 0) {
+            size_str += -1*output_bytes;
+            size_str +=  "</strong> less bytes than the input";
+            size_str += "<em> (" + (input_bytes*100/output_bytes ).toFixed(1);
+            size_str += "% smaller)</em>.";
+        } else {
+            size_str += " the same</strong> number of bytes as the input.";
+        }
     }
+    
     
     //We use innerHTML instead of textContent so that the strong tags work.
     document.querySelector("#size_difference").innerHTML = size_str;
 
-    let wrapper = form_data.get("wrapper");
+    //There's also no point in wrapping the error message with anything.
+    if (!parsing_error) {
+        let wrapper = form_data.get("wrapper");
 
-    if (wrapper == "apostrophes") {
-        output = "'" + output + "'";
-    } else if (wrapper == "quotes") {
-        output = '"' + output + '"';
-    } else if (wrapper == "slashes") {
-        output = '/' + output + '/';
-    } else if (wrapper == "brackets") {
-        output = '[' + output + ']';
+        if (wrapper == "apostrophes") {
+            output = "'" + output + "'";
+        } else if (wrapper == "quotes") {
+            output = '"' + output + '"';
+        } else if (wrapper == "slashes") {
+            output = '/' + output + '/';
+        } else if (wrapper == "brackets") {
+            output = '[' + output + ']';
+        }
     }
 
-    //We change the textContent out the output paragraph because we are not
-    //formatting it with tags at all.
-    document.getElementById("converter_output").textContent = output;
+    if (!parsing_error) {
+        //We change the textContent out the output paragraph because we are not
+        //formatting it with tags at all.
+        document.getElementById("converter_output").textContent = output;
+    } else {
+        //However, there is formatting in the error message.
+        document.getElementById("converter_output").innerHTML = output;
+    }
+
 
     //https://www.w3schools.com/howto/howto_js_copy_clipboard.asp
-    if (form_data.get("copy") == "yes") {
+    //We don't want to have the user copy something unexpectedly.
+    if (form_data.get("copy") == "yes" && !parsing_error) {
         navigator.clipboard.writeText(output);
     }
 
