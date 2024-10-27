@@ -325,20 +325,40 @@ var graphemes = {' ': ' ',
     'zJ': 'ʑ',
     'zL': 'ɮ',
     'z-': 'ʐ',
-    'zH': 'ʒ'};
+    'zH': 'ʒ',
+    '{': '⟨',
+    '}': '⟩',
+    '[': '[',
+    ']': ']'};
+
+//When the page first loads, all the text boxes with IPA text start as
+//having the "arial" class.
+var current_font_class = 'arial';
 
 //https://www.w3schools.com/js/js_functions.asp
+//Convert the input TIPO string to IPA and return it.
 function parse(string){
+    //Some context for non-phoneticians:
+    //Grapheme = unit of writing representing a single sound
+    //e.g. In English, "s", "sh", and "h" are single graphemes.
+    //Digraph = A grapheme consisting of two symbols.
+    //Monograph = A grapheme consisting of one symbol.
+
     //https://www.w3schools.com/js/js_if_else.asp
     //https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/length
+    //"" in TIPO is "" in IPA
     if (string.length == 0){
         return string;
     }
         
-    var output = "";
-    var last_digraph = false;
-    var i = 0;
+    let output = "";
+    //We cache whether or not the last scanned grapheme was a digraph so
+    //we can make some checks after the while loop.
+    let last_digraph = false;
+    let i = 0;
     //https://www.w3schools.com/js/js_loop_while.asp
+    //We shouldn't use a for loop, since we don't always increment by a fixed
+    //amount every iteration
     while (i < string.length - 1) {
         //https://www.w3schools.com/jsref/jsref_substring.asp
         //https://sentry.io/answers/difference-between-let-and-var-in-javascript/
@@ -346,6 +366,10 @@ function parse(string){
         let digraph_result = graphemes[substr];
         
         //https://stackoverflow.com/questions/19317943/why-referencing-non-existent-property-of-an-object-in-javascript-doesnt-return
+        //We check for graphemes of length 2 first, since digraphs can
+        //and almost always do contain a valid monograph.
+        //Also, if a object does not have what we query it for, the result is
+        //false-y/null-y. If it's not null, our digraph exists.
         if (digraph_result != null) {
             last_digraph = true;
             output += digraph_result;
@@ -357,35 +381,105 @@ function parse(string){
             if (monograph_result != null) {
                 output += monograph_result;
                 i += 1;
+            //If neither the digraph or monograph exist, that means the input
+            //is not valid TIPO. We let the user know where the error was
+            //so they can fix it.
             }else {
                 //https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals
                 return `There was an error at character ${i}`;
             }
         }
     }
-    if (i == string.length - 1) {
-        let substr = string.substring(string.length - 1, string.length);
-        let monograph_result = graphemes[substr];
-        if (monograph_result != null) {
-            output += monograph_result;
-        } else{
-            if (last_digraph == false) {
-                return `There was an error at character ${i}`;
-            }
+    //When we stop, right before the last character, we may need to parse the
+    //last character.
+    let substr = string.substring(string.length - 1, string.length);
+    let monograph_result = graphemes[substr];
+    if (monograph_result != null) {
+        output += monograph_result;
+    } else{
+        //Technically, if the last grapheme was a digraph, our last character
+        //won't be a valid monograph unless it was \ + an ascii character.
+        //Regardless, we want to ignore the second character, since it was
+        //already used.
+        if (last_digraph == false) {
+            return `There was an error at character ${i}`;
         }
     }
 
     return output;
 }
 
-function input_to_output() {
-    var converter_form = document.getElementById("ascii_converter");
+//Switch the font of all text whose purpose is to display IPA text.
+function switch_fonts() {
+    //We need to get the new font from the form.
+    let converter_form = document.getElementById("ascii_converter");
     //https://developer.mozilla.org/en-US/docs/Web/API/FormData/get
-    var form_data = new FormData(converter_form);
+    let form_data = new FormData(converter_form);
+    //Cache the old font class for comparison.
+    let old_font_class = current_font_class
+    let ipa_texts = document.getElementsByClassName(old_font_class);
+    current_font_class = form_data.get("font");
+
+    //If we don't make this check, the while loop inside could go infinitely
+    if (old_font_class != current_font_class) {
+        //https://stackoverflow.com/questions/54404940/set-attributes-of-html-tag-using-pure-javascript
+        //Apparently, the result of `getElementsByClassName`changes based on
+        //the current state of the page and not the state when it was called.
+        //Therefore, we need a while loop and not a for loop. I found this out
+        //by debugging.
+        while (ipa_texts.length > 0) {
+            ipa_texts[0].className = current_font_class;
+        }
+    }
+}
+
+
+//Clear the current text of ALL textarea elements on the page.
+function clear_textareas() {
+    let textareas = document.getElementsByTagName('textarea');
+
+    //https://www.w3schools.com/js/js_loop_for.asp
+    for (let i = 0; i < textareas.length; i++) {
+        //https://stackoverflow.com/questions/14939010/get-value-from-text-area
+        textareas[i].value = "";
+    }
+}
+
+//Take input from the text area, parse it, and display the corresponding IPA.
+//Additionally, display the difference in size between the input and output.
+function input_to_output() {
+    let converter_form = document.getElementById("ascii_converter");
+    //https://developer.mozilla.org/en-US/docs/Web/API/FormData/get
+    let form_data = new FormData(converter_form);
+    let input = form_data.get("tipo_input");
+    //https://labex.io/tutorials/javascript-calculating-string-byte-size-28182
+    let input_bytes = new Blob([input]).size;
 
     var output = parse(form_data.get("tipo_input"));
 
-    var wrapper = form_data.get("wrapper");
+    let output_bytes = new Blob([output]).size;
+    let size_diff = output_bytes - input_bytes;
+
+    //Generate the string for the size difference, wrapping the difference in
+    //a <strong> tag.
+    let size_str = "The output has <strong>";
+    if (size_diff > 0) {
+        size_str += output_bytes + "</strong> more bytes than the input";
+        //https://stackoverflow.com/questions/11832914/how-to-round-to-at-most-2-decimal-places-if-necessary
+        size_str += "<em> (" + (output_bytes*100/input_bytes ).toFixed(1);
+        size_str += "% bigger)</em>."
+    } else if (size_diff < 0) {
+        size_str += -1*output_bytes + "</strong> less bytes than the input";
+        size_str += "<em> (" + (input_bytes*100/output_bytes ).toFixed(1);
+        size_str += "% smaller)</em>."
+    } else {
+        size_str += " the same</strong> number of bytes as the input."
+    }
+    
+    //We use innerHTML instead of textContent so that the strong tags work.
+    document.querySelector("#size_difference").innerHTML = size_str;
+
+    let wrapper = form_data.get("wrapper");
 
     if (wrapper == "apostrophes") {
         output = "'" + output + "'";
@@ -397,8 +491,9 @@ function input_to_output() {
         output = '[' + output + ']';
     }
 
-    //https://stackoverflow.com/questions/52097840/how-to-overwrite-text-in-p-tag-using-javascript
-    document.getElementById("converter_output").innerText = output;
+    //We change the textContent out the output paragraph because we are not
+    //formatting it with tags at all.
+    document.getElementById("converter_output").textContent = output;
 
     //https://www.w3schools.com/howto/howto_js_copy_clipboard.asp
     if (form_data.get("copy") == "yes") {
