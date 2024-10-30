@@ -65,7 +65,7 @@ for (let i = 0; i < review_cards.length; i++) {
 		if (j < ratings[i]) {
 			stars += "★";
 		} else {
-			rating_html += "☆";
+			stars += "☆";
 		}
 	}
 	rating_node.textContent = stars;
@@ -73,7 +73,7 @@ for (let i = 0; i < review_cards.length; i++) {
 
 	let name_node =  review_cards[i].querySelector("p.review-username");
 	name_node.textContent = names[i] + " ";
-	name_node.querySelector("span").innerText = dates[i];
+	name_node.firstChild.innerText = dates[i];
 	review_cards[i].querySelector("p.review-text").textContent = reviews[i];
 
 }
@@ -102,6 +102,3 @@ filterDropdown.addEventListener('change', function() {
 	*/
 
 });
-
-
-
