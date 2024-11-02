@@ -338,6 +338,36 @@ var current_font_class = 'arial';
 //there was an error here
 var parsing_error = false;
 
+function error_message(input, i) {
+    //https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals
+    let error_msg = `There was an error at character ${i}:<br><br>`;
+
+    //On top of giving the index, we show the input with the
+    //erroneous character emphasized.
+        
+    //https://developer.mozilla.org/en-US/docs/Web/HTML/Element/pre
+    //We must avoid users putting in html code that works.
+    //https://en.wikipedia.org/wiki/Private_Use_Areas
+    let left = input.substring(0, i);
+    left = left.replaceAll("<", "\uF8FF");
+    left = left.replaceAll(">", "<pre style=\"display: inline\">&gt;</pre>");
+    left = left.replaceAll("\uF8FF",
+        "<pre style=\"display: inline\">&lt;</pre>");
+    error_msg += left
+    error_msg += "<strong><em><u>" + input.substring(i, i+1);
+    error_msg += "</strong></em></u>";
+    if (i != input.length - 1) {
+        let right = input.substr(i + 1, input.length);
+        right = right.replaceAll("<", "\uF8FF");
+        right = right.replaceAll(">",
+            "<pre style=\"display: inline\">&gt;</pre>");
+        right = right.replaceAll("\uF8FF",
+            "<pre style=\"display: inline\">&lt;</pre>");
+        error_msg += right;
+    }
+    return error_msg;
+}
+
 //https://www.w3schools.com/js/js_functions.asp
 //Convert the input TIPO string to IPA and return it.
 function parse(input){
@@ -392,17 +422,7 @@ function parse(input){
             //so they can fix it.
             }else {
                 parsing_error = true;
-                //https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals
-                let error_msg = `There was an error at character ${i}:<br><br>`;
-                //On top of giving the index, we show the input with the
-                //erroneous character emphasized.
-                error_msg += input.substring(0, i);
-                error_msg += "<strong><em><u>" + input.substring(i, i + 1); 
-                error_msg += "</strong></em></u>"
-                if (i != input.length - 1) {
-                    error_msg +=  input.substr(i + 1, input.length);
-                }
-                return error_msg;
+                return error_message(input, i);
             }
         }
     }
@@ -431,17 +451,7 @@ function parse(input){
         //that the input was invalid.
         if (!last_digraph) {
             parsing_error = true;
-            //https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals
-            let error_msg = `There was an error at character ${i}:<br><br>`;
-            //On top of giving the index, we show the input with the
-            //erroneous character emphasized.
-            error_msg += input.substring(0, i);
-            error_msg += "<strong><em><u>" + input.substring(i, i + 1); 
-            error_msg += "</strong></em></u>"
-            if (i != input.length - 1) {
-                error_msg +=  input.substr(i + 1, input.length);
-            }
-            return error_msg;
+            return error_message(input, i);
         } 
     }
 
@@ -466,9 +476,9 @@ function switch_fonts() {
         //the current state of the page and not the state when it was called.
         //Therefore, we need a while loop and not a for loop. I found this out
         //by debugging.
-        while (ipa_texts.length > 0) {
+        do {
             ipa_texts[0].className = current_font_class;
-        }
+        } while (ipa_texts.length > 0)
     }
 }
 
@@ -528,14 +538,21 @@ function input_to_output() {
     if (!parsing_error) {
         let wrapper = form_data.get("wrapper");
 
-        if (wrapper == "apostrophes") {
-            output = "'" + output + "'";
-        } else if (wrapper == "quotes") {
-            output = '"' + output + '"';
-        } else if (wrapper == "slashes") {
-            output = '/' + output + '/';
-        } else if (wrapper == "brackets") {
-            output = '[' + output + ']';
+        switch (wrapper){
+            case "apostrophes":
+                output = "'" + output + "'";
+                break;
+            case "quotes":
+                output = '"' + output + '"';
+                break;
+            case "slashes":
+                output = '/' + output + '/';
+                break;
+            case "brackets":
+                output = '[' + output + ']';
+                break;
+            default:
+                break;
         }
     }
 
