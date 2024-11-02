@@ -356,11 +356,6 @@ div.header a:hover, a:active{
 }
 
 div.main_content {
-    /* 
-    Setting the main content to float would defeat the point of the left
-    and right sections, so I won't be doing it even though the assignment
-    asks for it. I think I've demonstrated that I can use float elsewhere.
-    */
     background-color: #ffe9d4;
     padding: 1px;
     align-content: center;
@@ -393,9 +388,6 @@ a.symbol_link {
 img {
     max-width: 100%;
     height: auto;
-    /*I did not add float since it would disrupt many things
-    for an example of being able to do this, see the open book
-    images in directory.html*/
     float: none;
     margin: 20px;
 }
@@ -403,9 +395,6 @@ img {
 img.default {
     max-width: 100%;
     height: auto;
-    /*I did not add float since it would disrupt many things
-    for an example of being able to do this, see the open book
-    images in directory.html*/
     float: none;
     margin: 20px;
     margin-left: 5%;
@@ -556,8 +545,6 @@ p.copyright_footer {
     label {
         font-size: 30px;
     }
-
-
 
     table {
         overflow-x: scroll;
