@@ -345,12 +345,12 @@ function error_message(input, i) {
     //On top of giving the index, we show the input with the
     //erroneous character emphasized.
         
-    //https://developer.mozilla.org/en-US/docs/Web/HTML/Element/pre
     //We must avoid users putting in html code that works.
-    //https://en.wikipedia.org/wiki/Private_Use_Areas
     let left = input.substring(0, i);
+    //https://en.wikipedia.org/wiki/Private_Use_Areas
     //https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replaceAll
     left = left.replaceAll("<", "\uF8FF");
+    //https://developer.mozilla.org/en-US/docs/Web/HTML/Element/pre
     left = left.replaceAll(">", "<pre style=\"display: inline\">&gt;</pre>");
     left = left.replaceAll("\uF8FF",
         "<pre style=\"display: inline\">&lt;</pre>");
