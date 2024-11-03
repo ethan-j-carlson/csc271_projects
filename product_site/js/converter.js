@@ -349,6 +349,7 @@ function error_message(input, i) {
     //We must avoid users putting in html code that works.
     //https://en.wikipedia.org/wiki/Private_Use_Areas
     let left = input.substring(0, i);
+    //https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replaceAll
     left = left.replaceAll("<", "\uF8FF");
     left = left.replaceAll(">", "<pre style=\"display: inline\">&gt;</pre>");
     left = left.replaceAll("\uF8FF",
