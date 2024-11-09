@@ -483,6 +483,33 @@ function switch_fonts() {
     }
 }
 
+function display_size_difference(input_size, output_size) {
+        let size_diff = output_size - input_size;
+    
+        //Generate the string for the size difference, wrapping the difference in
+        //a <strong> tag.
+        let size_str = "";
+        //There's no point in making a comparison with an error message.
+        if (!parsing_error) {
+            size_str = "The output has <strong>";
+            if (size_diff > 0) {
+                size_str += size_diff + "</strong> more bytes than the input";
+                //https://stackoverflow.com/questions/11832914/how-to-round-to-at-most-2-decimal-places-if-necessary
+                size_str += "<em> (" + (output_size*100/input_size ).toFixed(1);
+                size_str += "% bigger)</em>.";
+            } else if (size_diff < 0) {
+                size_str += -1*size_diff;
+                size_str +=  "</strong> less bytes than the input";
+                size_str += "<em> (" + (input_size*100/output_size ).toFixed(1);
+                size_str += "% smaller)</em>.";
+            } else {
+                size_str += " the same</strong> number of bytes as the input.";
+            }
+        }
+        
+        //We use innerHTML instead of textContent so that the strong tags work.
+        document.querySelector("#size_difference").innerHTML = size_str;
+}
 
 //Clear the current text of ALL textarea elements on the page.
 function clear_textareas() {
@@ -502,38 +529,10 @@ function input_to_output() {
     //https://developer.mozilla.org/en-US/docs/Web/API/FormData/get
     let form_data = new FormData(converter_form);
     let input = form_data.get("tipo_input");
-    //https://labex.io/tutorials/javascript-calculating-string-byte-size-28182
-    let input_bytes = new Blob([input]).size;
-
     var output = parse(form_data.get("tipo_input"));
 
-    let output_bytes = new Blob([output]).size;
-    let size_diff = output_bytes - input_bytes;
-
-    //Generate the string for the size difference, wrapping the difference in
-    //a <strong> tag.
-    let size_str = "";
-    //There's no point in making a comparison with an error message.
-    if (!parsing_error) {
-        size_str = "The output has <strong>";
-        if (size_diff > 0) {
-            size_str += size_diff + "</strong> more bytes than the input";
-            //https://stackoverflow.com/questions/11832914/how-to-round-to-at-most-2-decimal-places-if-necessary
-            size_str += "<em> (" + (output_bytes*100/input_bytes ).toFixed(1);
-            size_str += "% bigger)</em>.";
-        } else if (size_diff < 0) {
-            size_str += -1*size_diff;
-            size_str +=  "</strong> less bytes than the input";
-            size_str += "<em> (" + (input_bytes*100/output_bytes ).toFixed(1);
-            size_str += "% smaller)</em>.";
-        } else {
-            size_str += " the same</strong> number of bytes as the input.";
-        }
-    }
-    
-    
-    //We use innerHTML instead of textContent so that the strong tags work.
-    document.querySelector("#size_difference").innerHTML = size_str;
+    //https://labex.io/tutorials/javascript-calculating-string-byte-size-28182
+    display_size_difference(new Blob([input]).size, new Blob([output]).size);
 
     //There's also no point in wrapping the error message with anything.
     if (!parsing_error) {
