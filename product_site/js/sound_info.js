@@ -570,6 +570,16 @@ var info_dictionary = {
         "phonation": "Constricted",
         "place": "None (Possibly Glottal)"
     },
+    "?P": {
+        "ipa": "\u02a1",
+        "hex": "0x02a1",
+        "unicode": "LATIN LETTER GLOTTAL STOP WITH STROKE",
+        "tipo": "?+",
+        "fa": "?P",
+        "manner": "Stop",
+        "phonation": "Voiceless",
+        "place": "Pharyngeal/Epiglottal"
+    },
     "hH": {
         "ipa": "h",
         "hex": "0x0068",
