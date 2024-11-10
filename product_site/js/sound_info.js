@@ -1,4 +1,14 @@
-//I stared into the abyss, and the abyss stared back at me.
+//This dictionary maps the Featural ASCII representation of every IPA sound
+//to a bunch of information about the symbol.
+//
+//ipa = the IPA symbol of the character.
+//hex = the UTF-8 of the character in hexadecimal.
+//unicode = the name of the character given by the Unicode Consortium.
+//tipo = The representation of the sound in TIPO (the ASCII script).
+//fa = The representation of the sound in Featural ASCII
+//manner = Manner of articulation. "How" the sound is made
+//place = Place of articulation. "Where" the sound is made
+//phonation = Voicing/phonation.
 var info_dictionary = {
     "pP": {
         "ipa": "p",
@@ -1072,27 +1082,36 @@ var info_dictionary = {
     }
 }
 
+//Turn a 4 digit hex string into a 2 character ASCII string.
 function hex_string_to_str(hex) {
+    //Add "0x" to the string so it can be an proper literal and get converted.
     let number = Number("0x" + hex);
+    //Get the rightmost 8 digits.
     let second = number & 0xff;
+    //Get the leftmost 8 digits.
     let first = (number >> 8) & 0xff;
     //https://www.tutorialspoint.com/convert-number-to-characters-in-javascript
-    //https://www.freecodecamp.org/news/javascript-add-to-an-array-js-append/
+    //Use an ASCII code to get an ASCII character.
     let output = String.fromCharCode(first);
     output += String.fromCharCode(second);
 
     return output;
 }
 
+//Take in a description, label, and the key for the info being displayed that
+//serves as an element id and a key into an info dictionary.
 function update_info(label, info) {
     document.getElementById(info)
         .innerHTML = `<strong>${label}</strong>` + info_dictionary[fa_key][info]
 }
 
 //https://www.sitepoint.com/get-url-parameters-with-javascript/
-let params = new URLSearchParams(window.location.search);
-let code = params.get('code');
-let fa_key = hex_string_to_str(code);
+//Get the URL of the page, and turn it into an object that stores the
+//parameters stored in the URL.
+var params = new URLSearchParams(window.location.search);
+var code = params.get('code'); //4 digit hex representation of FA grapheme.
+//This global variable gets used in update_info.
+var fa_key = hex_string_to_str(code);
 update_info("IPA Symbol: ", "ipa")
 update_info("TIPO Representation: ", "tipo")
 update_info("Place of Articulation/Vowel Depth: ", "place")
@@ -1101,6 +1120,5 @@ update_info("Phonation (Voicing): ", "phonation")
 update_info("Name in Unicode: ", "unicode")
 update_info("UTF-8 Hexadecimal Representation: ", "hex")
 update_info("Representation in Featural ASCII: ", "fa")
-//TO-DO: Get recording of every sound, programmatically name/link them
-document.getElementById("ipa_sound").href = ""
 document.getElementById("ipa_sound").textContent = info_dictionary[fa_key]["ipa"]
+//TO-DO: Get recording of every sound, programmatically name & link them
