@@ -10,7 +10,7 @@
 //manner = Manner of articulation. "How" the sound is made
 //place = Place of articulation. "Where" the sound is made
 //phonation = Voicing/phonation.
-var info_dictionary = {
+const info_dictionary = {
     "pP": {
         "ipa": "p",
         "hex": "0x0070",

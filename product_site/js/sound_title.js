@@ -1,7 +1,7 @@
 //https://docs.google.com/document/d/1t2nbwt5Skm46R-5bR7zJ92Bn43Xmbyv1Gd_FZLGooX4/edit?usp=sharing
 //0 = place, 1 = height, manner = 2, 3 = depth, 4 = other, 5 = suprasegmental,
 //6 = lower diacritic, 7 = non-joining diacritic, 8 = higher diacritic
-var letter_info = {
+const letter_info = {
     "a": {"class": 1, "descriptors": ["Open", "Unrounded Vowel"]},
     "b": {"class": 0, "descriptors": ["Voiced", "Bilabial"]},
     "c": {"class": 0, "descriptors": ["Voiceless", "Palatal"]},
