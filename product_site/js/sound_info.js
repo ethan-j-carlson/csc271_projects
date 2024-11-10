@@ -17,9 +17,9 @@ var info_dictionary = {
         "unicode": "LATIN SMALL LETTER P",
         "tipo": "p",
         "fa": "pP",
-        "manner": "Stop",
         "phonation": "Voiceless",
-        "place": "Bilabial"
+        "place": "Bilabial",
+        "manner": "Stop"
     },
     "bP": {
         "ipa": "b",
@@ -27,9 +27,9 @@ var info_dictionary = {
         "unicode": "LATIN SMALL LETTER B",
         "tipo": "b",
         "fa": "bP",
-        "manner": "Stop",
         "phonation": "Voiced",
-        "place": "Bilabial"
+        "place": "Bilabial",
+        "manner": "Stop"
     },
     "bN": {
         "ipa": "m",
@@ -37,9 +37,9 @@ var info_dictionary = {
         "unicode": "LATIN SMALL LETTER M",
         "tipo": "m",
         "fa": "bN",
-        "manner": "Nasal",
         "phonation": "Voiced",
-        "place": "Bilabial"
+        "place": "Bilabial",
+        "manner": "Nasal"
     },
     "bR": {
         "ipa": "\u0299",
@@ -47,9 +47,9 @@ var info_dictionary = {
         "unicode": "LATIN LETTER SMALL CAPITAL B",
         "tipo": "bB",
         "fa": "bR",
-        "manner": "Trill",
         "phonation": "Voiced",
-        "place": "Bilabial"
+        "place": "Bilabial",
+        "manner": "Trill"
     },
     "bH": {
         "ipa": "\u03b2",
@@ -57,9 +57,9 @@ var info_dictionary = {
         "unicode": "GREEK SMALL LETTER BETA",
         "tipo": "bH",
         "fa": "bH",
-        "manner": "Fricative",
         "phonation": "Voiced",
-        "place": "Bilabial"
+        "place": "Bilabial",
+        "manner": "Fricative"
     },
     "pH": {
         "ipa": "\u0278",
@@ -67,9 +67,9 @@ var info_dictionary = {
         "unicode": "LATIN SMALL LETTER PHI",
         "tipo": "pH",
         "fa": "pH",
-        "manner": "Fricative",
         "phonation": "Voiceless",
-        "place": "Bilabial"
+        "place": "Bilabial",
+        "manner": "Fricative"
     },
     "vN": {
         "ipa": "\u0271",
@@ -77,9 +77,9 @@ var info_dictionary = {
         "unicode": "LATIN SMALL LETTER M WITH HOOK",
         "tipo": "m-",
         "fa": "vN",
-        "manner": "Nasal",
         "phonation": "Voiced",
-        "place": "Labiodental"
+        "place": "Labiodental",
+        "manner": "Nasal"
     },
     "vT": {
         "ipa": "\u2c71",
@@ -87,9 +87,9 @@ var info_dictionary = {
         "unicode": "LATIN SMALL LETTER V WITH RIGHT HOOK",
         "tipo": "v`",
         "fa": "vT",
-        "manner": "Tap/Flap",
         "phonation": "Voiced",
-        "place": "Labiodental"
+        "place": "Labiodental",
+        "manner": "Tap/Flap"
     },
     "fH": {
         "ipa": "f",
@@ -97,9 +97,9 @@ var info_dictionary = {
         "unicode": "LATIN SMALL LETTER F",
         "tipo": "f",
         "fa": "fH",
-        "manner": "Fricative",
         "phonation": "Voiceless",
-        "place": "Labiodental"
+        "place": "Labiodental",
+        "manner": "Fricative"
     },
     "vH": {
         "ipa": "v",
@@ -107,9 +107,9 @@ var info_dictionary = {
         "unicode": "LATIN SMALL LETTER V",
         "tipo": "v",
         "fa": "vH",
-        "manner": "Fricative",
         "phonation": "Voiced",
-        "place": "Labiodental"
+        "place": "Labiodental",
+        "manner": "Fricative"
     },
     "vW": {
         "ipa": "\u028b",
@@ -117,9 +117,9 @@ var info_dictionary = {
         "unicode": "LATIN SMALL LETTER V WITH HOOK",
         "tipo": "vW",
         "fa": "vW",
-        "manner": "Approximant",
         "phonation": "Voiced",
-        "place": "Labiodental"
+        "place": "Labiodental",
+        "manner": "Approximant"
     },
     "tH": {
         "ipa": "\u03b8",
@@ -127,9 +127,9 @@ var info_dictionary = {
         "unicode": "GREEK SMALL LETTER THETA",
         "tipo": "tH",
         "fa": "tH",
-        "manner": "Fricative",
         "phonation": "Voiceless",
-        "place": "Dental"
+        "place": "Dental",
+        "manner": "Fricative"
     },
     "dH": {
         "ipa": "\u00f0",
@@ -137,9 +137,9 @@ var info_dictionary = {
         "unicode": "LATIN SMALL LETTER ETH",
         "tipo": "dH",
         "fa": "dH",
-        "manner": "Fricative",
         "phonation": "Voiced",
-        "place": "Dental"
+        "place": "Dental",
+        "manner": "Fricative"
     },
     "sP": {
         "ipa": "t",
@@ -147,9 +147,9 @@ var info_dictionary = {
         "unicode": "LATIN SMALL LETTER T",
         "tipo": "t",
         "fa": "sP",
-        "manner": "Stop",
         "phonation": "Voiceless",
-        "place": "Alveolar"
+        "place": "Alveolar",
+        "manner": "Stop"
     },
     "zP": {
         "ipa": "d",
@@ -157,9 +157,9 @@ var info_dictionary = {
         "unicode": "LATIN SMALL LETTER D",
         "tipo": "d",
         "fa": "zP",
-        "manner": "Stop",
         "phonation": "Voiced",
-        "place": "Alveolar"
+        "place": "Alveolar",
+        "manner": "Stop"
     },
     "zN": {
         "ipa": "n",
@@ -167,9 +167,9 @@ var info_dictionary = {
         "unicode": "LATIN SMALL LETTER N",
         "tipo": "n",
         "fa": "zN",
-        "manner": "Nasal",
         "phonation": "Voiced",
-        "place": "Alveolar"
+        "place": "Alveolar",
+        "manner": "Nasal"
     },
     "zR": {
         "ipa": "r",
@@ -177,9 +177,9 @@ var info_dictionary = {
         "unicode": "LATIN SMALL LETTER R",
         "tipo": "r",
         "fa": "zR",
-        "manner": "Trill",
         "phonation": "Voiced",
-        "place": "Alveolar"
+        "place": "Alveolar",
+        "manner": "Trill"
     },
     "zT": {
         "ipa": "\u027e",
@@ -187,9 +187,9 @@ var info_dictionary = {
         "unicode": "LATIN SMALL LETTER R WITH FISHHOOK",
         "tipo": "r`",
         "fa": "zT",
-        "manner": "Tap/Flap",
         "phonation": "Voiced",
-        "place": "Alveolar"
+        "place": "Alveolar",
+        "manner": "Tap/Flap"
     },
     "sS": {
         "ipa": "s",
@@ -197,9 +197,9 @@ var info_dictionary = {
         "unicode": "LATIN SMALL LETTER S",
         "tipo": "s",
         "fa": "sS",
-        "manner": "Sibilant",
         "phonation": "Voiceless",
-        "place": "Alveolar"
+        "place": "Alveolar",
+        "manner": "Sibilant"
     },
     "zS": {
         "ipa": "z",
@@ -207,9 +207,9 @@ var info_dictionary = {
         "unicode": "LATIN SMALL LETTER Z",
         "tipo": "z",
         "fa": "zS",
-        "manner": "Sibilant",
         "phonation": "Voiced",
-        "place": "Alveolar"
+        "place": "Alveolar",
+        "manner": "Sibilant"
     },
     "cS": {
         "ipa": "\u0255",
@@ -217,9 +217,9 @@ var info_dictionary = {
         "unicode": "LATIN SMALL LETTER C WITH CURL",
         "tipo": "sJ",
         "fa": "cS",
-        "manner": "Sibilant",
         "phonation": "Voiceless",
-        "place": "Palatal"
+        "place": "Palatal",
+        "manner": "Sibilant"
     },
     "jS": {
         "ipa": "\u0291",
@@ -227,9 +227,9 @@ var info_dictionary = {
         "unicode": "LATIN SMALL LETTER Z WITH CURL",
         "tipo": "zJ",
         "fa": "jS",
-        "manner": "Sibilant",
         "phonation": "Voiced",
-        "place": "Palatal"
+        "place": "Palatal",
+        "manner": "Sibilant"
     },
     "sZ": {
         "ipa": "\u026c",
@@ -237,9 +237,9 @@ var info_dictionary = {
         "unicode": "LATIN SMALL LETTER L WITH BELT",
         "tipo": "sL",
         "fa": "sZ",
-        "manner": "Lateral Fricative",
         "phonation": "Voiceless",
-        "place": "Alveolar"
+        "place": "Alveolar",
+        "manner": "Lateral Fricative"
     },
     "zZ": {
         "ipa": "\u026e",
@@ -247,9 +247,9 @@ var info_dictionary = {
         "unicode": "LATIN SMALL LETTER LEZH",
         "tipo": "zL",
         "fa": "zZ",
-        "manner": "Lateral Fricative",
         "phonation": "Voiced",
-        "place": "Alveolar"
+        "place": "Alveolar",
+        "manner": "Lateral Fricative"
     },
     "zW": {
         "ipa": "\u0279",
@@ -257,9 +257,9 @@ var info_dictionary = {
         "unicode": "LATIN SMALL LETTER TURNED R",
         "tipo": "r\"",
         "fa": "zW",
-        "manner": "Approximant",
         "phonation": "Voiced",
-        "place": "Alveolar"
+        "place": "Alveolar",
+        "manner": "Approximant"
     },
     "zL": {
         "ipa": "l",
@@ -267,9 +267,9 @@ var info_dictionary = {
         "unicode": "LATIN SMALL LETTER L",
         "tipo": "l",
         "fa": "zL",
-        "manner": "Lateral Approximant",
         "phonation": "Voiced",
-        "place": "Alveolar"
+        "place": "Alveolar",
+        "manner": "Lateral Approximant"
     },
     "lP": {
         "ipa": "\u0288",
@@ -277,9 +277,9 @@ var info_dictionary = {
         "unicode": "LATIN SMALL LETTER T WITH RETROFLEX HOOK",
         "tipo": "t-",
         "fa": "lP",
-        "manner": "Stop",
         "phonation": "Voiceless",
-        "place": "Retroflex"
+        "place": "Retroflex",
+        "manner": "Stop"
     },
     "rP": {
         "ipa": "\u0256",
@@ -287,9 +287,9 @@ var info_dictionary = {
         "unicode": "LATIN SMALL LETTER D WITH TAIL",
         "tipo": "d-",
         "fa": "rP",
-        "manner": "Stop",
         "phonation": "Voiced",
-        "place": "Retroflex"
+        "place": "Retroflex",
+        "manner": "Stop"
     },
     "rN": {
         "ipa": "\u0273",
@@ -297,9 +297,9 @@ var info_dictionary = {
         "unicode": "LATIN SMALL LETTER N WITH RETROFLEX HOOK",
         "tipo": "n-",
         "fa": "rN",
-        "manner": "Nasal",
         "phonation": "Voiced",
-        "place": "Retroflex"
+        "place": "Retroflex",
+        "manner": "Nasal"
     },
     "rT": {
         "ipa": "\u027d",
@@ -307,9 +307,9 @@ var info_dictionary = {
         "unicode": "LATIN SMALL LETTER R WITH TAIL",
         "tipo": "rT",
         "fa": "rT",
-        "manner": "Tap/Flap",
         "phonation": "Voiced",
-        "place": "Retroflex"
+        "place": "Retroflex",
+        "manner": "Tap/Flap"
     },
     "$S": {
         "ipa": "\u0283",
@@ -317,9 +317,9 @@ var info_dictionary = {
         "unicode": "LATIN SMALL LETTER ESH",
         "tipo": "sH",
         "fa": "$S",
-        "manner": "Sibilant",
         "phonation": "Voiceless",
-        "place": "Postalveolar"
+        "place": "Postalveolar",
+        "manner": "Sibilant"
     },
     "nS": {
         "ipa": "\u0292",
@@ -327,9 +327,9 @@ var info_dictionary = {
         "unicode": "LATIN SMALL LETTER EZH",
         "tipo": "zH",
         "fa": "nS",
-        "manner": "Sibilant",
         "phonation": "Voiced",
-        "place": "Postalveolar"
+        "place": "Postalveolar",
+        "manner": "Sibilant"
     },
     "lS": {
         "ipa": "\u0282",
@@ -337,9 +337,9 @@ var info_dictionary = {
         "unicode": "LATIN SMALL LETTER S WITH HOOK",
         "tipo": "s-",
         "fa": "lS",
-        "manner": "Sibilant",
         "phonation": "Voiceless",
-        "place": "Retroflex"
+        "place": "Retroflex",
+        "manner": "Sibilant"
     },
     "rS": {
         "ipa": "\u0290",
@@ -347,9 +347,9 @@ var info_dictionary = {
         "unicode": "LATIN SMALL LETTER Z WITH RETROFLEX HOOK",
         "tipo": "z-",
         "fa": "rS",
-        "manner": "Sibilant",
         "phonation": "Voiced",
-        "place": "Retroflex"
+        "place": "Retroflex",
+        "manner": "Sibilant"
     },
     "rW": {
         "ipa": "\u027b",
@@ -357,9 +357,9 @@ var info_dictionary = {
         "unicode": "LATIN SMALL LETTER TURNED R WITH HOOK",
         "tipo": "r-",
         "fa": "rW",
-        "manner": "Approximant",
         "phonation": "Voiced",
-        "place": "Retroflex"
+        "place": "Retroflex",
+        "manner": "Approximant"
     },
     "rL": {
         "ipa": "\u026d",
@@ -367,9 +367,9 @@ var info_dictionary = {
         "unicode": "LATIN SMALL LETTER L WITH RETROFLEX HOOK",
         "tipo": "l-",
         "fa": "rL",
-        "manner": "Lateral Approximant",
         "phonation": "Voiced",
-        "place": "Retroflex"
+        "place": "Retroflex",
+        "manner": "Lateral Approximant"
     },
     "cP": {
         "ipa": "c",
@@ -377,9 +377,9 @@ var info_dictionary = {
         "unicode": "LATIN SMALL LETTER C",
         "tipo": "c",
         "fa": "cP",
-        "manner": "Stop",
         "phonation": "Voiceless",
-        "place": "Palatal"
+        "place": "Palatal",
+        "manner": "Stop"
     },
     "jP": {
         "ipa": "\u025f",
@@ -387,9 +387,9 @@ var info_dictionary = {
         "unicode": "LATIN SMALL LETTER DOTLESS J WITH STROKE",
         "tipo": "gJ",
         "fa": "jP",
-        "manner": "Stop",
         "phonation": "Voiced",
-        "place": "Palatal"
+        "place": "Palatal",
+        "manner": "Stop"
     },
     "jN": {
         "ipa": "\u0272",
@@ -397,9 +397,9 @@ var info_dictionary = {
         "unicode": "LATIN SMALL LETTER N WITH LEFT HOOK",
         "tipo": "nJ",
         "fa": "jN",
-        "manner": "Nasal",
         "phonation": "Voiced",
-        "place": "Palatal"
+        "place": "Palatal",
+        "manner": "Nasal"
     },
     "cH": {
         "ipa": "\u00e7",
@@ -407,9 +407,9 @@ var info_dictionary = {
         "unicode": "LATIN SMALL LETTER C WITH CEDILLA",
         "tipo": "cH",
         "fa": "cH",
-        "manner": "Fricative",
         "phonation": "Voiceless",
-        "place": "Palatal"
+        "place": "Palatal",
+        "manner": "Fricative"
     },
     "jH": {
         "ipa": "\u029d",
@@ -417,9 +417,9 @@ var info_dictionary = {
         "unicode": "LATIN SMALL LETTER J WITH CROSSED-TAIL",
         "tipo": "jH",
         "fa": "jH",
-        "manner": "Fricative",
         "phonation": "Voiced",
-        "place": "Palatal"
+        "place": "Palatal",
+        "manner": "Fricative"
     },
     "jW": {
         "ipa": "j",
@@ -427,9 +427,9 @@ var info_dictionary = {
         "unicode": "LATIN SMALL LETTER J",
         "tipo": "j",
         "fa": "jW",
-        "manner": "Approximant",
         "phonation": "Voiced",
-        "place": "Palatal"
+        "place": "Palatal",
+        "manner": "Approximant"
     },
     "jL": {
         "ipa": "\u028e",
@@ -437,9 +437,9 @@ var info_dictionary = {
         "unicode": "LATIN SMALL LETTER TURNED Y",
         "tipo": "jL",
         "fa": "jL",
-        "manner": "Lateral Approximant",
         "phonation": "Voiced",
-        "place": "Palatal"
+        "place": "Palatal",
+        "manner": "Lateral Approximant"
     },
     "kP": {
         "ipa": "k",
@@ -447,9 +447,9 @@ var info_dictionary = {
         "unicode": "LATIN SMALL LETTER K",
         "tipo": "k",
         "fa": "kP",
-        "manner": "Stop",
         "phonation": "Voiceless",
-        "place": "Velar"
+        "place": "Velar",
+        "manner": "Stop"
     },
     "gP": {
         "ipa": "g",
@@ -457,9 +457,9 @@ var info_dictionary = {
         "unicode": "LATIN SMALL LETTER G",
         "tipo": "g",
         "fa": "gP",
-        "manner": "Stop",
         "phonation": "Voiced",
-        "place": "Velar"
+        "place": "Velar",
+        "manner": "Stop"
     },
     "gN": {
         "ipa": "\u014b",
@@ -467,9 +467,9 @@ var info_dictionary = {
         "unicode": "LATIN SMALL LETTER ENG",
         "tipo": "nG",
         "fa": "gN",
-        "manner": "Nasal",
         "phonation": "Voiced",
-        "place": "Velar"
+        "place": "Velar",
+        "manner": "Nasal"
     },
     "kH": {
         "ipa": "x",
@@ -477,9 +477,9 @@ var info_dictionary = {
         "unicode": "LATIN SMALL LETTER X",
         "tipo": "x",
         "fa": "kH",
-        "manner": "Fricative",
         "phonation": "Voiceless",
-        "place": "Velar"
+        "place": "Velar",
+        "manner": "Fricative"
     },
     "gH": {
         "ipa": "\u0263",
@@ -487,9 +487,9 @@ var info_dictionary = {
         "unicode": "LATIN SMALL LETTER GAMMA",
         "tipo": "gH",
         "fa": "gH",
-        "manner": "Fricative",
         "phonation": "Voiced",
-        "place": "Velar"
+        "place": "Velar",
+        "manner": "Fricative"
     },
     "gW": {
         "ipa": "\u0270",
@@ -497,9 +497,9 @@ var info_dictionary = {
         "unicode": "LATIN SMALL LETTER TURNED M WITH LONG LEG",
         "tipo": "w(",
         "fa": "gW",
-        "manner": "Approximant",
         "phonation": "Voiced",
-        "place": "Velar"
+        "place": "Velar",
+        "manner": "Approximant"
     },
     "gL": {
         "ipa": "\u029f",
@@ -507,9 +507,9 @@ var info_dictionary = {
         "unicode": "LATIN LETTER SMALL CAPITAL L",
         "tipo": "gL",
         "fa": "gL",
-        "manner": "Lateral Approximant",
         "phonation": "Voiced",
-        "place": "Velar"
+        "place": "Velar",
+        "manner": "Lateral Approximant"
     },
     "qP": {
         "ipa": "q",
@@ -517,9 +517,9 @@ var info_dictionary = {
         "unicode": "LATIN SMALL LETTER Q",
         "tipo": "q",
         "fa": "qP",
-        "manner": "Stop",
         "phonation": "Voiceless",
-        "place": "Uvular"
+        "place": "Uvular",
+        "manner": "Stop"
     },
     "GP": {
         "ipa": "\u0262",
@@ -527,9 +527,9 @@ var info_dictionary = {
         "unicode": "LATIN LETTER SMALL CAPITAL G",
         "tipo": "g-",
         "fa": "GP",
-        "manner": "Stop",
         "phonation": "Voiced",
-        "place": "Uvular"
+        "place": "Uvular",
+        "manner": "Stop"
     },
     "GN": {
         "ipa": "\u0274",
@@ -537,9 +537,9 @@ var info_dictionary = {
         "unicode": "LATIN LETTER SMALL CAPITAL N",
         "tipo": "nQ",
         "fa": "GN",
-        "manner": "Nasal",
         "phonation": "Voiced",
-        "place": "Uvular"
+        "place": "Uvular",
+        "manner": "Nasal"
     },
     "GR": {
         "ipa": "\u0280",
@@ -547,9 +547,9 @@ var info_dictionary = {
         "unicode": "LATIN LETTER SMALL CAPITAL R",
         "tipo": "qR",
         "fa": "GR",
-        "manner": "Trill",
         "phonation": "Voiced",
-        "place": "Uvular"
+        "place": "Uvular",
+        "manner": "Trill"
     },
     "qH": {
         "ipa": "\u03c7",
@@ -557,9 +557,9 @@ var info_dictionary = {
         "unicode": "GREEK SMALL LETTER CHI",
         "tipo": "x-",
         "fa": "qH",
-        "manner": "Fricative",
         "phonation": "Voiceless",
-        "place": "Uvular"
+        "place": "Uvular",
+        "manner": "Fricative"
     },
     "GH": {
         "ipa": "\u0281",
@@ -567,9 +567,9 @@ var info_dictionary = {
         "unicode": "LATIN LETTER SMALL CAPITAL INVERTED R",
         "tipo": "rH",
         "fa": "GH",
-        "manner": "Fricative",
         "phonation": "Voiced",
-        "place": "Uvular"
+        "place": "Uvular",
+        "manner": "Fricative"
     },
     "?H": {
         "ipa": "\u0127",
@@ -577,9 +577,9 @@ var info_dictionary = {
         "unicode": "LATIN SMALL LETTER H WITH STROKE",
         "tipo": "h+",
         "fa": "?H",
-        "manner": "Fricative",
         "phonation": "Voiceless",
-        "place": "Pharyngeal/Epiglottal"
+        "place": "Pharyngeal/Epiglottal",
+        "manner": "Fricative"
     },
     "(H": {
         "ipa": "\u0295",
@@ -587,9 +587,9 @@ var info_dictionary = {
         "unicode": "LATIN LETTER PHARYNGEAL VOICED FRICATIVE",
         "tipo": "?H",
         "fa": "(H",
-        "manner": "Fricative",
         "phonation": "Voiced",
-        "place": "Pharyngeal/Epiglottal"
+        "place": "Pharyngeal/Epiglottal",
+        "manner": "Fricative"
     },
     "0K": {
         "ipa": "\u0294",
@@ -597,9 +597,9 @@ var info_dictionary = {
         "unicode": "LATIN LETTER GLOTTAL STOP",
         "tipo": "?",
         "fa": "0K",
-        "manner": "Ejective Stop",
         "phonation": "Constricted",
-        "place": "None (Possibly Glottal)"
+        "place": "None (Possibly Glottal)",
+        "manner": "Ejective Stop"
     },
     "?P": {
         "ipa": "\u02a1",
@@ -607,9 +607,9 @@ var info_dictionary = {
         "unicode": "LATIN LETTER GLOTTAL STOP WITH STROKE",
         "tipo": "?+",
         "fa": "?P",
-        "manner": "Stop",
         "phonation": "Voiceless",
-        "place": "Pharyngeal/Epiglottal"
+        "place": "Pharyngeal/Epiglottal",
+        "manner": "Stop"
     },
     "hH": {
         "ipa": "h",
@@ -617,9 +617,9 @@ var info_dictionary = {
         "unicode": "LATIN SMALL LETTER H",
         "tipo": "h",
         "fa": "hH",
-        "manner": "Fricative",
         "phonation": "Aspirated",
-        "place": "Glottal"
+        "place": "Glottal",
+        "manner": "Fricative"
     },
     "?R": {
         "ipa": "\u029c",
@@ -627,9 +627,9 @@ var info_dictionary = {
         "unicode": "LATIN LETTER SMALL CAPITAL H",
         "tipo": "hH",
         "fa": "?R",
-        "manner": "Trill",
         "phonation": "Voiceless",
-        "place": "Pharyngeal/Epiglottal"
+        "place": "Pharyngeal/Epiglottal",
+        "manner": "Trill"
     },
     "\"H": {
         "ipa": "\u0266",
@@ -637,9 +637,9 @@ var info_dictionary = {
         "unicode": "LATIN SMALL LETTER H WITH HOOK",
         "tipo": "h\"",
         "fa": "\"H",
-        "manner": "Fricative",
         "phonation": "Breathy Voiced",
-        "place": "Glottal"
+        "place": "Glottal",
+        "manner": "Fricative"
     },
     "(R": {
         "ipa": "\u02a2",
@@ -647,9 +647,9 @@ var info_dictionary = {
         "unicode": "LATIN LETTER REVERSED GLOTTAL STOP WITH STROKE",
         "tipo": "?;",
         "fa": "(R",
-        "manner": "Trill",
         "phonation": "Voiced",
-        "place": "Pharyngeal/Epiglottal"
+        "place": "Pharyngeal/Epiglottal",
+        "manner": "Trill"
     },
     "xH": {
         "ipa": "\u028d",
@@ -657,9 +657,9 @@ var info_dictionary = {
         "unicode": "LATIN SMALL LETTER TURNED W",
         "tipo": "xW",
         "fa": "xH",
-        "manner": "Fricative",
         "phonation": "Voiceless",
-        "place": "Labial-velar"
+        "place": "Labial-velar",
+        "manner": "Fricative"
     },
     "wW": {
         "ipa": "w",
@@ -667,9 +667,9 @@ var info_dictionary = {
         "unicode": "LATIN SMALL LETTER W",
         "tipo": "w",
         "fa": "wW",
-        "manner": "Approximant",
         "phonation": "Voiced",
-        "place": "Labial-velar"
+        "place": "Labial-velar",
+        "manner": "Approximant"
     },
     "yW": {
         "ipa": "\u0265",
@@ -677,9 +677,9 @@ var info_dictionary = {
         "unicode": "LATIN SMALL LETTER TURNED H",
         "tipo": "jW",
         "fa": "yW",
-        "manner": "Approximant",
         "phonation": "Voiced",
-        "place": "Labial-palatal"
+        "place": "Labial-palatal",
+        "manner": "Approximant"
     },
     "lZ": {
         "ipa": "\ua78e",
@@ -687,9 +687,9 @@ var info_dictionary = {
         "unicode": "LATIN SMALL LETTER L WITH RETROFLEX HOOK AND BELT",
         "tipo": "*S",
         "fa": "lZ",
-        "manner": "Lateral Fricative",
         "phonation": "Voiceless",
-        "place": "Retroflex"
+        "place": "Retroflex",
+        "manner": "Lateral Fricative"
     },
     "xS": {
         "ipa": "\u0267",
@@ -697,9 +697,9 @@ var info_dictionary = {
         "unicode": "LATIN SMALL LETTER HENG WITH HOOK",
         "tipo": "xH",
         "fa": "xS",
-        "manner": "Sibilant",
         "phonation": "Voiceless",
-        "place": "Labial-velar"
+        "place": "Labial-velar",
+        "manner": "Sibilant"
     },
     "pQ": {
         "ipa": "\u0298",
@@ -707,9 +707,9 @@ var info_dictionary = {
         "unicode": "LATIN LETTER BILABIAL CLICK",
         "tipo": "b!",
         "fa": "pQ",
-        "manner": "Click",
         "phonation": "Voiceless",
-        "place": "Bilabial"
+        "place": "Bilabial",
+        "manner": "Click"
     },
     "tQ": {
         "ipa": "\u01c0",
@@ -717,9 +717,9 @@ var info_dictionary = {
         "unicode": "LATIN LETTER DENTAL CLICK",
         "tipo": "d!",
         "fa": "tQ",
-        "manner": "Click",
         "phonation": "Voiceless",
-        "place": "Dental"
+        "place": "Dental",
+        "manner": "Click"
     },
     "sQ": {
         "ipa": "\u01c3",
@@ -727,9 +727,9 @@ var info_dictionary = {
         "unicode": "LATIN LETTER RETROFLEX CLICK",
         "tipo": "t!",
         "fa": "sQ",
-        "manner": "Click",
         "phonation": "Voiceless",
-        "place": "Alveolar"
+        "place": "Alveolar",
+        "manner": "Click"
     },
     "lQ": {
         "ipa": "\u203c",
@@ -737,9 +737,9 @@ var info_dictionary = {
         "unicode": "DOUBLE EXCLAMATION MARK",
         "tipo": "r!",
         "fa": "lQ",
-        "manner": "Click",
         "phonation": "Voiceless",
-        "place": "Retroflex"
+        "place": "Retroflex",
+        "manner": "Click"
     },
     "cQ": {
         "ipa": "\u01c2",
@@ -747,9 +747,9 @@ var info_dictionary = {
         "unicode": "LATIN LETTER ALVEOLAR CLICK",
         "tipo": "c!",
         "fa": "cQ",
-        "manner": "Click",
         "phonation": "Voiceless",
-        "place": "Palatal"
+        "place": "Palatal",
+        "manner": "Click"
     },
     "bB": {
         "ipa": "\u0253",
@@ -757,9 +757,9 @@ var info_dictionary = {
         "unicode": "LATIN SMALL LETTER B WITH HOOK",
         "tipo": "b<",
         "fa": "bB",
-        "manner": "Implosive",
         "phonation": "Voiced",
-        "place": "Bilabial"
+        "place": "Bilabial",
+        "manner": "Implosive"
     },
     "zB": {
         "ipa": "\u0257",
@@ -767,9 +767,9 @@ var info_dictionary = {
         "unicode": "LATIN SMALL LETTER D WITH HOOK",
         "tipo": "d<",
         "fa": "zB",
-        "manner": "Implosive",
         "phonation": "Voiced",
-        "place": "Alveolar"
+        "place": "Alveolar",
+        "manner": "Implosive"
     },
     "jB": {
         "ipa": "\u0284",
@@ -777,9 +777,9 @@ var info_dictionary = {
         "unicode": "LATIN SMALL LETTER DOTLESS J WITH STROKE AND HOOK",
         "tipo": "c<",
         "fa": "jB",
-        "manner": "Implosive",
         "phonation": "Voiced",
-        "place": "Palatal"
+        "place": "Palatal",
+        "manner": "Implosive"
     },
     "gB": {
         "ipa": "\u0260",
@@ -787,9 +787,9 @@ var info_dictionary = {
         "unicode": "LATIN SMALL LETTER G WITH HOOK",
         "tipo": "g<",
         "fa": "gB",
-        "manner": "Implosive",
         "phonation": "Voiced",
-        "place": "Velar"
+        "place": "Velar",
+        "manner": "Implosive"
     },
     "GB": {
         "ipa": "\u029b",
@@ -797,9 +797,9 @@ var info_dictionary = {
         "unicode": "LATIN LETTER SMALL CAPITAL G WITH HOOK",
         "tipo": "q<",
         "fa": "GB",
-        "manner": "Implosive",
         "phonation": "Voiced",
-        "place": "Uvular"
+        "place": "Uvular",
+        "manner": "Implosive"
     },
     "z6": {
         "ipa": "\u027a",
@@ -807,9 +807,19 @@ var info_dictionary = {
         "unicode": "LATIN SMALL LETTER TURNED R WITH LONG LEG",
         "tipo": "l`",
         "fa": "z6",
-        "manner": "Lateral Tap",
         "phonation": "Voiced",
-        "place": "Alveolar"
+        "place": "Alveolar",
+        "manner": "Lateral Tap"
+    },
+    "z!": {
+        "ipa": "\u01c1",
+        "hex": "0x01c1",
+        "unicode": "LATIN LETTER LATERAL CLICK",
+        "tipo": "l!",
+        "fa": "z!",
+        "phonation": "Voiced",
+        "place": "Alveolar",
+        "manner": "Lateral Click"
     },
     "a<": {
         "ipa": "a",
@@ -818,8 +828,8 @@ var info_dictionary = {
         "tipo": "a",
         "fa": "a<",
         "phonation": "Voiced",
-        "place": "Front Open",
-        "manner": "Unrounded Vowel"
+        "manner": "Unrounded Vowel",
+        "place": "Open Front"
     },
     "e<": {
         "ipa": "e",
@@ -828,8 +838,8 @@ var info_dictionary = {
         "tipo": "e",
         "fa": "e<",
         "phonation": "Voiced",
-        "place": "Front Close-mid",
-        "manner": "Unrounded Vowel"
+        "manner": "Unrounded Vowel",
+        "place": "Close-mid Front"
     },
     "i<": {
         "ipa": "i",
@@ -838,8 +848,8 @@ var info_dictionary = {
         "tipo": "i",
         "fa": "i<",
         "phonation": "Voiced",
-        "place": "Front Close",
-        "manner": "Unrounded Vowel"
+        "manner": "Unrounded Vowel",
+        "place": "Close Front"
     },
     "o>": {
         "ipa": "o",
@@ -848,8 +858,8 @@ var info_dictionary = {
         "tipo": "o",
         "fa": "o>",
         "phonation": "Voiced",
-        "place": "Back Close-mid",
-        "manner": "Rounded Vowel"
+        "manner": "Rounded Vowel",
+        "place": "Close-mid Back"
     },
     "u>": {
         "ipa": "u",
@@ -858,8 +868,8 @@ var info_dictionary = {
         "tipo": "u",
         "fa": "u>",
         "phonation": "Voiced",
-        "place": "Back Close",
-        "manner": "Rounded Vowel"
+        "manner": "Rounded Vowel",
+        "place": "Close Back"
     },
     "u<": {
         "ipa": "y",
@@ -868,8 +878,8 @@ var info_dictionary = {
         "tipo": "y",
         "fa": "u<",
         "phonation": "Voiced",
-        "place": "Front Close",
-        "manner": "Rounded Vowel"
+        "manner": "Rounded Vowel",
+        "place": "Close Front"
     },
     "a>": {
         "ipa": "\u0251",
@@ -878,8 +888,8 @@ var info_dictionary = {
         "tipo": "A",
         "fa": "a>",
         "phonation": "Voiced",
-        "place": "Back Open",
-        "manner": "Unrounded Vowel"
+        "manner": "Unrounded Vowel",
+        "place": "Open Back"
     },
     "E<": {
         "ipa": "\u025b",
@@ -888,8 +898,8 @@ var info_dictionary = {
         "tipo": "E",
         "fa": "E<",
         "phonation": "Voiced",
-        "place": "Front Open-mid",
-        "manner": "Unrounded Vowel"
+        "manner": "Unrounded Vowel",
+        "place": "Open-mid Front"
     },
     "I[": {
         "ipa": "\u026a",
@@ -898,8 +908,8 @@ var info_dictionary = {
         "tipo": "I",
         "fa": "I[",
         "phonation": "Voiced",
-        "place": "Near-front Near-close",
-        "manner": "Unrounded Vowel"
+        "manner": "Unrounded Vowel",
+        "place": "Near-close Near-front"
     },
     "O>": {
         "ipa": "\u0254",
@@ -908,8 +918,8 @@ var info_dictionary = {
         "tipo": "O",
         "fa": "O>",
         "phonation": "Voiced",
-        "place": "Back Open-mid",
-        "manner": "Rounded Vowel"
+        "manner": "Rounded Vowel",
+        "place": "Open-mid Back"
     },
     "U]": {
         "ipa": "\u028a",
@@ -918,8 +928,8 @@ var info_dictionary = {
         "tipo": "U",
         "fa": "U]",
         "phonation": "Voiced",
-        "place": "Near-back Near-close",
-        "manner": "Rounded Vowel"
+        "manner": "Rounded Vowel",
+        "place": "Near-close Near-back"
     },
     "U[": {
         "ipa": "\u028f",
@@ -928,8 +938,8 @@ var info_dictionary = {
         "tipo": "Y",
         "fa": "U[",
         "phonation": "Voiced",
-        "place": "Near-front Near-close",
-        "manner": "Rounded Vowel"
+        "manner": "Rounded Vowel",
+        "place": "Near-close Near-front"
     },
     "A<": {
         "ipa": "\u0276",
@@ -938,8 +948,8 @@ var info_dictionary = {
         "tipo": "a)",
         "fa": "A<",
         "phonation": "Voiced",
-        "place": "Front Open",
-        "manner": "Rounded Vowel"
+        "manner": "Rounded Vowel",
+        "place": "Open Front"
     },
     "o<": {
         "ipa": "\u00f8",
@@ -948,8 +958,8 @@ var info_dictionary = {
         "tipo": "e)",
         "fa": "o<",
         "phonation": "Voiced",
-        "place": "Front Close-mid",
-        "manner": "Rounded Vowel"
+        "manner": "Rounded Vowel",
+        "place": "Close-mid Front"
     },
     "e>": {
         "ipa": "\u0264",
@@ -958,8 +968,8 @@ var info_dictionary = {
         "tipo": "o(",
         "fa": "e>",
         "phonation": "Voiced",
-        "place": "Back Close-mid",
-        "manner": "Unrounded Vowel"
+        "manner": "Unrounded Vowel",
+        "place": "Close-mid Back"
     },
     "i>": {
         "ipa": "\u026f",
@@ -968,8 +978,8 @@ var info_dictionary = {
         "tipo": "u(",
         "fa": "i>",
         "phonation": "Voiced",
-        "place": "Back Close",
-        "manner": "Unrounded Vowel"
+        "manner": "Unrounded Vowel",
+        "place": "Close Back"
     },
     "A>": {
         "ipa": "\u0252",
@@ -978,8 +988,8 @@ var info_dictionary = {
         "tipo": "A)",
         "fa": "A>",
         "phonation": "Voiced",
-        "place": "Back Open",
-        "manner": "Rounded Vowel"
+        "manner": "Rounded Vowel",
+        "place": "Open Back"
     },
     "O<": {
         "ipa": "\u0153",
@@ -988,8 +998,8 @@ var info_dictionary = {
         "tipo": "E)",
         "fa": "O<",
         "phonation": "Voiced",
-        "place": "Front Open-mid",
-        "manner": "Rounded Vowel"
+        "manner": "Rounded Vowel",
+        "place": "Open-mid Front"
     },
     "E>": {
         "ipa": "\u028c",
@@ -998,18 +1008,18 @@ var info_dictionary = {
         "tipo": "O(",
         "fa": "E>",
         "phonation": "Voiced",
-        "place": "Back Open-mid",
-        "manner": "Unrounded Vowel"
+        "manner": "Unrounded Vowel",
+        "place": "Open-mid Back"
     },
-    "a|": {
+    "@|": {
         "ipa": "\u0250",
         "hex": "0x0250",
         "unicode": "LATIN SMALL LETTER TURNED A",
         "tipo": "a\"",
-        "fa": "a|",
+        "fa": "@|",
         "phonation": "Voiced",
-        "place": "Central Open",
-        "manner": "Unrounded Vowel"
+        "manner": "Unrounded Vowel",
+        "place": "Near-open Central"
     },
     ":|": {
         "ipa": "\u0259",
@@ -1018,8 +1028,8 @@ var info_dictionary = {
         "tipo": "e\"",
         "fa": ":|",
         "phonation": "Voiced",
-        "place": "Central Mid",
-        "manner": "Unrounded Vowel"
+        "manner": "Unrounded Vowel",
+        "place": "Mid Central"
     },
     "i|": {
         "ipa": "\u0268",
@@ -1028,8 +1038,8 @@ var info_dictionary = {
         "tipo": "i\"",
         "fa": "i|",
         "phonation": "Voiced",
-        "place": "Central Close",
-        "manner": "Unrounded Vowel"
+        "manner": "Unrounded Vowel",
+        "place": "Close Central"
     },
     "o|": {
         "ipa": "\u0275",
@@ -1038,8 +1048,8 @@ var info_dictionary = {
         "tipo": "o\"",
         "fa": "o|",
         "phonation": "Voiced",
-        "place": "Central Close-mid",
-        "manner": "Rounded Vowel"
+        "manner": "Rounded Vowel",
+        "place": "Close-mid Central"
     },
     "u|": {
         "ipa": "\u0289",
@@ -1048,8 +1058,8 @@ var info_dictionary = {
         "tipo": "u\"",
         "fa": "u|",
         "phonation": "Voiced",
-        "place": "Central Close",
-        "manner": "Rounded Vowel"
+        "manner": "Rounded Vowel",
+        "place": "Close Central"
     },
     "E|": {
         "ipa": "\u025c",
@@ -1058,8 +1068,8 @@ var info_dictionary = {
         "tipo": "E\"",
         "fa": "E|",
         "phonation": "Voiced",
-        "place": "Central Open-mid",
-        "manner": "Unrounded Vowel"
+        "manner": "Unrounded Vowel",
+        "place": "Open-mid Central"
     },
     "e|": {
         "ipa": "\u0258",
@@ -1068,8 +1078,8 @@ var info_dictionary = {
         "tipo": "e-",
         "fa": "e|",
         "phonation": "Voiced",
-        "place": "Central Close-mid",
-        "manner": "Unrounded Vowel"
+        "manner": "Unrounded Vowel",
+        "place": "Close-mid Central"
     },
     "O|": {
         "ipa": "\u025e",
@@ -1078,8 +1088,8 @@ var info_dictionary = {
         "tipo": "O\"",
         "fa": "O|",
         "phonation": "Voiced",
-        "place": "Central Open-mid",
-        "manner": "Rounded Vowel"
+        "manner": "Rounded Vowel",
+        "place": "Open-mid Central"
     },
     "@[": {
         "ipa": "\u00e6",
@@ -1088,8 +1098,8 @@ var info_dictionary = {
         "tipo": "@",
         "fa": "@[",
         "phonation": "Voiced",
-        "place": "Near-front Near-open",
-        "manner": "Unrounded Vowel"
+        "manner": "Unrounded Vowel",
+        "place": "Near-open Near-front"
     }
 }
 
