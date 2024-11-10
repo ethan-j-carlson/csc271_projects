@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="description"
-              content="Placeholder for a Quick Phonetics sound page">
+              content="Information about a particular IPA sound, from Quick Phonetics.">
         <meta name="keywords" 
               content="phonetics, IPA, International Phonetic Alphabet">
         <title>Sound Page - Quick Phonetics</title>
@@ -11,7 +11,32 @@
     </head>
 
     <body>
-        <h1>This page is a placeholder :)</h1>
-        <a href="ipa_chart_directory.html">Click here to return to the directory</a>
+        <div class="header">
+            <a class="header_logo" href="index.html">
+                <img class="header_logo" src="images/logo.png"
+                     alt="Quick Phonetics logo, a book with a speaking head">
+            </a>
+            <a href="index.html">Home</a>
+            <a href="phonetic_alphabet_guide.html">IPA Guide</a>
+            <a href="ipa_converter.html">ASCII to IPA</a>
+            <a class="current" href="ipa_chart_directory.html">IPA Chart</a>
+            <span class="clear"></span>
+        </div>
+        <div class="main_content">
+            <h1>This page is a placeholder :)</h1>
+            <div class="left_section">
+                <a id="ipa_sound" href=""></a>
+            </div>
+            <p class="info_p" id="ipa"></p>
+            <p class="info_p" id="tipo"></p>
+            <p class="info_p" id="place"></p>
+            <p class="info_p" id="manner"></p>
+            <p class="info_p" id="phonation"></p>
+            <p class="info_p" id="unicode"></p>
+            <p class="info_p" id="hex"></p>
+            <p class="info_p" id="fa"></p>
+        </div>
+        <script src="js/sound_title.js"></script>
+        <script src="js/sound_info.js"></script>
     </body>
 </html>
