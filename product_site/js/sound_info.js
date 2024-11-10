@@ -1104,6 +1104,8 @@ var info_dictionary = {
 }
 
 //Turn a 4 digit hex string into a 2 character ASCII string.
+//hex = A 4 character string representing a 4 digit hex number (e.g. "a9e2")
+//Returns the corresponding ASCII string of length 2.
 function hex_string_to_str(hex) {
     //Add "0x" to the string so it can be an proper literal and get converted.
     let number = Number("0x" + hex);
@@ -1121,6 +1123,8 @@ function hex_string_to_str(hex) {
 
 //Take in a description, label, and the key for the info being displayed that
 //serves as an element id and a key into an info dictionary.
+//label = A string that will go first in the label and be bold.
+//info = A string describing what info will be displayed.
 function update_info(label, info) {
     document.getElementById(info)
         .innerHTML = `<strong>${label}</strong>` + info_dictionary[fa_key][info]

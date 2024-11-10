@@ -78,7 +78,9 @@ var letter_info = {
     "~": {"class": 4, "descriptors": ["Nasal"]},
 };
 
-////Turn a 4 digit hex string into 2 ASCII characters in an array.
+//Turn a 4 digit hex string into 2 ASCII characters in an array.
+//hex = A 4 character string representing a 4 digit hex number (e.g. "a9e2")
+//Returns a 2 element array where each element is a one character string.
 function hex_string_to_chars(hex) {
     //Add "0x" to the string so it can be an proper literal and get converted.
     let number = Number("0x" + hex);
@@ -97,6 +99,8 @@ function hex_string_to_chars(hex) {
 
 //Given the first and second letter of an FA grapheme, generate a tile
 //for the website and update the header and meta title appropriately.
+//first = A one character string representing an FA grapheme's first letter.
+//second = A one character string representing an FA grapheme's second letter.
 function generate_title(first, second) {
     let first_info = letter_info[first];
     let second_info = letter_info[second];

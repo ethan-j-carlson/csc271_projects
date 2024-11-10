@@ -369,6 +369,10 @@ var current_font_class = 'arial';
 //there was an error here
 var parsing_error = false;
 
+//Generate an error message.
+//input = The erroneous input.
+//i = The index (number) where the error occurred in the input.
+//Returns an error message string meant to be put into an innerHTML.
 function error_message(input, i) {
     //https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals
     let error_msg = `There was an error at character ${i}:<br><br>`;
@@ -377,6 +381,9 @@ function error_message(input, i) {
     //erroneous character emphasized.
         
     //We must avoid users putting in html code that works.
+    //Thus, we replace all less than and greater than characters with a
+    //version of them that can't be used to create element tags.
+    //We do this to the characters left of the bad character first.
     let left = input.substring(0, i);
     //https://en.wikipedia.org/wiki/Private_Use_Areas
     //https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replaceAll
@@ -386,8 +393,11 @@ function error_message(input, i) {
     left = left.replaceAll("\uF8FF",
         "<pre style=\"display: inline\">&lt;</pre>");
     error_msg += left
+    //We wanna make the erroneous character stand out.
     error_msg += "<strong><em><u>" + input.substring(i, i+1);
     error_msg += "</strong></em></u>";
+    //If there is more input after the erroneous character, do to it what
+    //we did to the input left of the character.
     if (i != input.length - 1) {
         let right = input.substr(i + 1, input.length);
         right = right.replaceAll("<", "\uF8FF");
@@ -397,11 +407,14 @@ function error_message(input, i) {
             "<pre style=\"display: inline\">&lt;</pre>");
         error_msg += right;
     }
+
     return error_msg;
 }
 
 //https://www.w3schools.com/js/js_functions.asp
 //Convert the input TIPO string to IPA and return it.
+//input = A string. Meant to be valid TIPO, but will handle it if it's not.
+//Returns a string of IPA characters.
 function parse(input){
     //Some context for non-phoneticians:
     //Grapheme = unit of writing representing a single sound
@@ -514,6 +527,11 @@ function switch_fonts() {
     }
 }
 
+//Given the size of the TIPO input and IPA output in bytes, display a
+//message describing the difference between the two in detail.
+//The message will be put into the element with id #size_difference.
+//input_size = The number of bytes in the TIPO input.
+//output_size = The number of bytes in the IPA output.
 function display_size_difference(input_size, output_size) {
         let size_diff = output_size - input_size;
     
@@ -555,6 +573,7 @@ function clear_textareas() {
 
 //Take input from the text area, parse it, and display the corresponding IPA.
 //Additionally, display the difference in size between the input and output.
+//Returns false for the sake of staying on the page after form submission.
 function input_to_output() {
     let converter_form = document.getElementById("ascii_converter");
     //https://developer.mozilla.org/en-US/docs/Web/API/FormData/get
