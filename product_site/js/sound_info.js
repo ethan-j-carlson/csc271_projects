@@ -681,6 +681,16 @@ var info_dictionary = {
         "phonation": "Voiced",
         "place": "Labial-palatal"
     },
+    "lZ": {
+        "ipa": "\ua78e",
+        "hex": "0xa78e",
+        "unicode": "LATIN SMALL LETTER L WITH RETROFLEX HOOK AND BELT",
+        "tipo": "*S",
+        "fa": "lZ",
+        "manner": "Lateral Fricative",
+        "phonation": "Voiceless",
+        "place": "Retroflex"
+    },
     "xS": {
         "ipa": "\u0267",
         "hex": "0x0267",

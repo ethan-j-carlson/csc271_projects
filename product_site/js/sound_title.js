@@ -78,9 +78,13 @@ var letter_info = {
     "~": {"class": 4, "descriptors": ["Nasal"]},
 };
 
+////Turn a 4 digit hex string into 2 ASCII characters in an array.
 function hex_string_to_chars(hex) {
+    //Add "0x" to the string so it can be an proper literal and get converted.
     let number = Number("0x" + hex);
+    //Get the rightmost 8 digits.
     let second = number & 0xff;
+    //Get the leftmost 8 digits.
     let first = (number >> 8) & 0xff;
     let output = [];
     //https://www.tutorialspoint.com/convert-number-to-characters-in-javascript
@@ -91,10 +95,16 @@ function hex_string_to_chars(hex) {
     return output;
 }
 
+//Given the first and second letter of an FA grapheme, generate a tile
+//for the website and update the header and meta title appropriately.
 function generate_title(first, second) {
     let first_info = letter_info[first];
     let second_info = letter_info[second];
     let terms = ["", "", "", ""];
+    //These symbols are irregular in the IPA.
+    //The glottal stop is actually an ejective with no place of articulation
+    //ɧ is an ambiguous sound, so I had to choose an arbitrary representation.
+    //All other cases can be handled programmatically.
     if (first == "0" && second == "K") {
         terms = ["Glottal Stop"]
     } else if (first == "x" && second == "S") {
@@ -124,23 +134,27 @@ function generate_title(first, second) {
         };
     }
 
+    //Combine the descriptors to get a title.
     let label = ""
     for (const term of terms) {
         if (term != "") {
             label += term + " ";
         }
     };
-
+    //Populate the header with the label
     document.getElementsByTagName("h1")[0].textContent = label;
+    //Populate the webpage's title with the label and the site name.
     document.getElementsByTagName("title")[0].textContent = label + " - Quick Phonetics";
 }
 
-function set_title(){
+//Basically the main. Populate the page's header and title.
+function set_titles(){
     //https://www.sitepoint.com/get-url-parameters-with-javascript/
+    //This gives us the parameters stored in our URL.
     let params = new URLSearchParams(window.location.search);
-    let code = params.get('code');
+    let code = params.get('code'); //4 digit hex representation of FA grapheme.
     let letters = hex_string_to_chars(code);
     generate_title(letters[0], letters[1]);
 }
 
-set_title();
+set_titles();
