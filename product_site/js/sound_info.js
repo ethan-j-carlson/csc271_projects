@@ -1,5 +1,6 @@
 //This dictionary maps the Featural ASCII representation of every IPA sound
 //to a bunch of information about the symbol.
+//https://docs.google.com/document/d/1t2nbwt5Skm46R-5bR7zJ92Bn43Xmbyv1Gd_FZLGooX4/edit?usp=sharing
 //
 //ipa = the IPA symbol of the character.
 //hex = the UTF-8 of the character in hexadecimal.
