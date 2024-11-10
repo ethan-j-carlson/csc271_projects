@@ -29,8 +29,8 @@ p {
     font-family: Verdana, sans-serif;
     color: #0c1742;
     font-size: 1em;
-    margin-left: 5%;
-    margin-right: 5%;
+    margin-left: 1%;
+    margin-right: 1%;
 }
 
 label {
@@ -55,15 +55,15 @@ table.default, td.default, th.default {
     font-family: Verdana, sans-serif;
     color: #0c1742;
     border: 1px solid;
-    margin-left: 5%;
-    margin-right: 5%;
+    margin-left: 1%;
+    margin-right: 1%;
 }
 
 td.arial, td.noto_sans {
     color: #0c1742;
     border: 1px solid;
-    margin-left: 5%;
-    margin-right: 5%;
+    margin-left: 1%;
+    margin-right: 1%;
 }
 
 table.default {
@@ -160,8 +160,8 @@ p.img_footer {
     color: #0c1742;
     margin-top: 0px;
     font-size: 10px;
-    margin-left: 5%;
-    margin-right: 5%;
+    margin-left: 1%;
+    margin-right: 1%;
 }
 
 
@@ -364,10 +364,12 @@ div.main_content {
 
 div.left_section {
     float: left;
+    overflow-y: hidden;
 }
 
 div.right_section {
     float: right;
+    overflow-y: hidden;
 }
 
 div.footer {
@@ -397,8 +399,8 @@ img.default {
     height: auto;
     float: none;
     margin: 20px;
-    margin-left: 5%;
-    margin-right: 5%;
+    margin-left: 1%;
+    margin-right: 1%;
 }
 
 /*https://stackoverflow.com/questions/2062258/floating-elements-within-a-div-floats-outside-of-div-why*/
@@ -419,6 +421,11 @@ p.copyright_footer {
     font-size: 12px;
 }
 
+p.inline_left {
+    display: inline-block;
+    text-align: left;
+}
+
 #ipa_sound {
     font-size: 300px;
     font-family: Arial, Helvetica, sans-serif;
@@ -427,15 +434,19 @@ p.copyright_footer {
     padding-left: 50px;
     padding-right: 50px;
     margin-top: 100px;
+    margin-bottom: 10px;
     margin-right: 20px;
+    margin-left: 10px;
     text-decoration: none;
     color: #022add;
     background-color: #ffe7a5;
+    text-align: center;
 }
 
 #ipa_sound:hover {
     color: #2f125d;
 }
+
 p.info_p {
     font-size: 20px;
 }
@@ -559,8 +570,8 @@ p.info_p {
         color: #0c1742;
         margin-top: 0px;
         font-size: 12px;
-        margin-left: 5%;
-        margin-right: 5%;
+        margin-left: 1%;
+        margin-right: 1%;
     }
 
     label {
@@ -587,5 +598,13 @@ p.info_p {
     input[type=radio] {
         height: 2em;
         width: 2em;
+    }
+
+    p.info_p {
+        font-size: 30px;
+    }
+
+    #ipa_sound {
+        font-size: 500px;
     }
 }
