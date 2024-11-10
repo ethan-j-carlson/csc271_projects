@@ -300,23 +300,43 @@ var info_dictionary = {
         "phonation": "Voiced",
         "place": "Retroflex"
     },
-    "lH": {
+    "$S": {
+        "ipa": "\u0283",
+        "hex": "0x0283",
+        "unicode": "LATIN SMALL LETTER ESH",
+        "tipo": "sH",
+        "fa": "$S",
+        "manner": "Sibilant",
+        "phonation": "Voiceless",
+        "place": "Postalveolar"
+    },
+    "nS": {
+        "ipa": "\u0292",
+        "hex": "0x0292",
+        "unicode": "LATIN SMALL LETTER EZH",
+        "tipo": "zH",
+        "fa": "nS",
+        "manner": "Sibilant",
+        "phonation": "Voiced",
+        "place": "Postalveolar"
+    },
+    "lS": {
         "ipa": "\u0282",
         "hex": "0x0282",
         "unicode": "LATIN SMALL LETTER S WITH HOOK",
         "tipo": "s-",
-        "fa": "lH",
-        "manner": "Fricative",
+        "fa": "lS",
+        "manner": "Sibilant",
         "phonation": "Voiceless",
         "place": "Retroflex"
     },
-    "rH": {
+    "rS": {
         "ipa": "\u0290",
         "hex": "0x0290",
         "unicode": "LATIN SMALL LETTER Z WITH RETROFLEX HOOK",
         "tipo": "z-",
-        "fa": "rH",
-        "manner": "Fricative",
+        "fa": "rS",
+        "manner": "Sibilant",
         "phonation": "Voiced",
         "place": "Retroflex"
     },
