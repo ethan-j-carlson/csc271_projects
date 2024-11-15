@@ -131,14 +131,14 @@ a:active {
 }
 
 .submit {
-    font-size: 20px;
+    font-size: 1.25em;
     background-color: #fdc288;
     color: blue;
 }
 
 input[type="button"] {
-    margin: 5px;
-    font-size: 16px;
+    margin: 0.3125em;
+    font-size: 1em;
     background-color: #fdc288;
     color: blue;
 }
@@ -159,7 +159,7 @@ p.img_footer {
     font-family: Verdana, sans-serif;
     color: #0c1742;
     margin-top: 0px;
-    font-size: 10px;
+    font-size: 0.625em;
     margin-left: 1%;
     margin-right: 1%;
 }
@@ -171,19 +171,19 @@ p.img_footer {
 
 #directory_title_left_image {
     float: left;
-    max-width: 125px;
-    margin-right: 10px;
+    max-width: 11.5625em;
+    margin-right: 0.625em;
 }
 
 #directory_title_right_image {
     float: right;
-    max-width: 125px;
-    margin-left: 10px;
+    max-width: 11.5625em;
+    margin-left: 0.625em;
 }
 
 #directory_title_header {
     margin-top: 0px;
-    padding-top: 25px;
+    padding-top: 1.5625em;
     text-align: center;
     margin-bottom: 0px;
 }
@@ -198,20 +198,20 @@ p.img_footer {
 
 #consonant_table_title {
     text-align: center;
-    font-size: 30px;
-    margin-left: 115px;
+    font-size: 1.875em;
+    margin-left: 8.5%;
     margin-bottom: 0px;
     color: #0c1742;
 }
 
 #consonant_table {
-    margin-left: 25px;
-    margin-bottom: 20px;
+    margin-left: 1.5625em;
+    margin-bottom: 1.25em;
 }
 
 #consonant_table th {
     max-width: 6ch;
-    font-size: 12px;
+    font-size: 0.75em;
     word-wrap: break-word;
     background-color: #ffc890;
 }
@@ -222,15 +222,15 @@ p.img_footer {
 
 #vowel_table_title {
     text-align: center;
-    font-size: 30px;
+    font-size: 1.875em;
     margin-left: 3px;
     margin-bottom: 0px;
     color: #0c1742;
 }
 
 #vowel_table {
-    margin-bottom: 20px;
-    margin-right: 25px;
+    margin-bottom: 1.25em;
+    margin-right: 1.5625em;
     margin-left: 0px;
 }
 
@@ -239,7 +239,7 @@ p.img_footer {
 }
 
 #vowel_table th {
-    font-size: 18px;
+    font-size: 1.125em;
     text-align: center;
     word-wrap: break-word;
     background-color: #ffc890;
@@ -247,7 +247,7 @@ p.img_footer {
 
 #vowel_table td.left {
     max-width: 6ch;
-    font-size: 18px;
+    font-size: 1.125em;
     padding-left: 2px;
     text-align: right;
     word-wrap: break-word;
@@ -257,23 +257,23 @@ p.img_footer {
 #other_consonant_table_title {
     text-align: center;
     color: #0c1742;
-    font-size: 20px;
+    font-size: 1.25em;
     margin-left: 0px;
     margin-bottom: 0px;
 }
 
 #other_consonant_table {
-    margin-bottom: 20px;
-    margin-left: 25px;
+    margin-bottom: 1.25em;
+    margin-left: 1.5625em;
     margin-right: auto;
 }
 
 #other_consonant_table td.linked{
-    font-size: 15px;
+    font-size: 1em;
 }
 
 #other_consonant_table th {
-    font-size: 12px;
+    font-size: 0.75em;
     word-wrap: break-word;
     background-color: #ffc890;
 }
@@ -289,7 +289,7 @@ p.img_footer {
 th.corner {
     background-color: transparent;
     max-width: 6ch;
-    font-size: 12px;
+    font-size: 0.75em;
     word-wrap: break-word;
 }
 
@@ -297,31 +297,31 @@ td.possible {
     text-align: center;
     background-color: #fff9c9;
     text-decoration: none;
-    font-size: 30px;
-    padding-bottom: 5px;
+    font-size: 1.875em;
+    padding-bottom: 0.3125em;
 }
 
 td.linked {
     text-align: center;
     background-color: #ffe7a5;
     text-decoration: none;
-    font-size: 20px;
-    padding-bottom: 5px;
+    font-size: 1.25em;
+    padding-bottom: 0.3125em;
 }
 
 td.impossible {
     text-align: center;
     background-color: #b1aea5;
     text-decoration: none;
-    font-size: 20px;
-    padding-bottom: 5px;
+    font-size: 1.25em;
+    padding-bottom: 0.3125em;
 }
 
 td.left {
     text-align: right;
     padding-left: 2px;
     background-color: #ffc890;
-    font-size: 16px;
+    font-size: 1em;
 }
 
 a.current {
@@ -330,19 +330,19 @@ a.current {
 }
 
 div.header {
-    padding-left:10px;
+    padding-left:0.625em;
     margin-top: auto;
-    margin-bottom: 5px;
+    margin-bottom: 0.3125em;
     background-color: #ffb265;
     white-space: nowrap;
 }
 
 div.header a{
     float: right;
-    margin-top: 35px;
-    margin-left: 20px;
+    margin-top: 2.5%;
+    margin-left: 1.5%;
     white-space: nowrap;
-    font-size: 20px;
+    font-size: 1.25em;
 }
 
 div.header a.header_logo{
@@ -352,7 +352,7 @@ div.header a.header_logo{
 }
 
 div.header a:hover, a:active{
-    font-size: 25px;
+    font-size: 1.5625em;
 }
 
 div.main_content {
@@ -379,11 +379,11 @@ div.footer {
 td.blank{
     text-align: center;
     text-decoration: none;
-    padding-bottom: 5px;
+    padding-bottom: 0.3125em;
 }
 
 a.symbol_link {
-    font-size: 30px;
+    font-size: 1.875em;
     text-decoration: none;
 }
 
@@ -391,14 +391,14 @@ img {
     max-width: 100%;
     height: auto;
     float: none;
-    margin: 20px;
+    margin: 1.25em;
 }
 
 img.default {
     max-width: 100%;
     height: auto;
     float: none;
-    margin: 20px;
+    margin: 1.25em;
     margin-left: 1%;
     margin-right: 1%;
 }
@@ -411,14 +411,14 @@ span.clear {
 
 #converter_output {
     background-color: white;
-    margin-left: 150px;
-    margin-right: 150px;
-    padding: 10px;
-    font-size: 20px;
+    margin-left: 10%;
+    margin-right: 10%;
+    padding: 0.625em;
+    font-size: 1.25em;
 }
 
 p.copyright_footer {
-    font-size: 12px;
+    font-size: 0.75em;
 }
 
 p.inline_left {
@@ -427,16 +427,16 @@ p.inline_left {
 }
 
 #ipa_sound {
-    font-size: 300px;
+    font-size: 18.75em;
     font-family: Arial, Helvetica, sans-serif;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-left: 50px;
-    padding-right: 50px;
-    margin-top: 100px;
-    margin-bottom: 10px;
-    margin-right: 20px;
-    margin-left: 10px;
+    padding-top: 0.625em;
+    padding-bottom: 0.625em;
+    padding-left: 4%;
+    padding-right: 4%;
+    margin-top: 7.5%;
+    margin-bottom: 0.625em;
+    margin-right: 1.25em;
+    margin-left: 0.625em;
     text-decoration: none;
     color: #022add;
     background-color: #ffe7a5;
@@ -448,7 +448,7 @@ p.inline_left {
 }
 
 p.info_p {
-    font-size: 20px;
+    font-size: 1.25em;
 }
 
 @media only screen and ((max-width: 900px) or (max-aspect-ratio: 1/1)) {
@@ -457,11 +457,11 @@ p.info_p {
     }
 
     h2 {
-        font-size: 40px;
+        font-size: 2.5em;
     }
 
     h3 {
-        font-size: 35px;
+        font-size: 2.1875em;
     }
 
     div.right_section {
@@ -477,11 +477,11 @@ p.info_p {
     }
 
     td.linked, td.possible, td.impossible {
-        font-size: 40px;
+        font-size: 2.5em;
     }
 
     a.symbol_link {
-        font-size: 40px;
+        font-size: 2.5em;
         text-decoration: none;
     }
 
@@ -495,7 +495,7 @@ p.info_p {
     }
 
     #consonant_table, #vowel_table, #other_consonant_table {
-        margin-bottom: 20px;
+        margin-bottom: 1.25em;
         padding: 0px;
         margin-left: auto;
         margin-right: auto;
@@ -514,24 +514,24 @@ p.info_p {
 
     #other_consonant_table_title {
         text-align: center;
-        font-size: 30px;
-        margin-left: 40px;
+        font-size: 1.875em;
+        margin-left: 2.5em;
     }
 
     #other_consonant_table th {
-        font-size: 20px;
+        font-size: 1.25em;
     }
 
     #consonant_table th {
-        font-size: 20px;
+        font-size: 1.25em;
     }
 
     #other_consonant_table td.linked{
-        font-size: 20px;
+        font-size: 1.25em;
     }
 
     td.left {
-        font-size: 20px;
+        font-size: 1.25em;
     }
     
     div.right_section {
@@ -550,32 +550,32 @@ p.info_p {
         float: none;
         display: inline-block;
         text-align: left;
-        font-size: 30px;
+        font-size: 1.875em;
     }
 
     div.header a:hover, a:active{
-        font-size: 35px;
+        font-size: 2.1875em;
     }
 
     ol, ul, p, td, th, textarea{
-        font-size: 25px;
+        font-size: 1.5625em;
     }
 
     p.copyright_footer {
-        font-size: 16px;
+        font-size: 1em;
     }
 
     p.img_footer {
         font-family: Verdana, sans-serif;
         color: #0c1742;
         margin-top: 0px;
-        font-size: 12px;
+        font-size: 0.75em;
         margin-left: 1%;
         margin-right: 1%;
     }
 
     label {
-        font-size: 30px;
+        font-size: 1.875em;
     }
 
     table {
@@ -583,15 +583,15 @@ p.info_p {
     }
 
     #converter_output {
-        font-size: 30px;
+        font-size: 1.875em;
     }
 
     input[type=button] {
-        font-size: 25px;
+        font-size: 1.5625em;
     }
 
     .submit {
-        font-size: 30px;
+        font-size: 1.875em;
     }
     
     /*https://stackoverflow.com/questions/4920281/how-to-change-the-size-of-the-radio-button-using-css*/
@@ -601,7 +601,7 @@ p.info_p {
     }
 
     p.info_p {
-        font-size: 30px;
+        font-size: 1.875em;
     }
 
     #ipa_sound {
