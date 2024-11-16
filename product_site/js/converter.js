@@ -360,7 +360,10 @@ var graphemes = {" ": " ",
     "zJ": "ʑ",
     "zL": "ɮ",
     "z-": "ʐ",
-    "zH": "ʒ"} 
+    "zH": "ʒ",
+    "\n": "\n",
+    "\t": "\t",
+    "\r": "\r"} 
     
 //When the page first loads, all the text boxes with IPA text start as
 //having the "arial" class.
