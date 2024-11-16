@@ -28,7 +28,7 @@ h4 {
 p {
     font-family: Verdana, sans-serif;
     color: #0c1742;
-    font-size: 1em;
+    font-size: 1rem;
     margin-left: 1%;
     margin-right: 1%;
 }
@@ -36,7 +36,7 @@ p {
 label {
     font-family: Verdana, sans-serif;
     color: #0c1742;
-    font-size: 1em;
+    font-size: 1rem;
 }
 
 p.center {
@@ -46,7 +46,7 @@ p.center {
 ul, ol {
     font-family: Verdana, sans-serif;
     color: #0c1742;
-    font-size: 1em;
+    font-size: 1rem;
     margin-left: 2%;
     list-style-position: inside;
 }
@@ -81,7 +81,7 @@ th.navbar_title {
     color: #022add;
     font-weight: bold;
     font-family: 'Trebuchet MS', sans-serif;
-    font-size: 1.25em;
+    font-size: 1.25rem;
 }
 
 td.technical {
@@ -131,14 +131,14 @@ a:active {
 }
 
 .submit {
-    font-size: 1.25em;
+    font-size: 1.25rem;
     background-color: #fdc288;
     color: blue;
 }
 
 input[type="button"] {
-    margin: 0.3125em;
-    font-size: 1em;
+    margin: 0.3125rem;
+    font-size: 1rem;
     background-color: #fdc288;
     color: blue;
 }
@@ -159,7 +159,7 @@ p.img_footer {
     font-family: Verdana, sans-serif;
     color: #0c1742;
     margin-top: 0px;
-    font-size: 0.625em;
+    font-size: 0.625rem;
     margin-left: 1%;
     margin-right: 1%;
 }
@@ -171,19 +171,19 @@ p.img_footer {
 
 #directory_title_left_image {
     float: left;
-    max-width: 11.5625em;
-    margin-right: 0.625em;
+    max-height: 5rem;
+    margin-right: 0.7%;
 }
 
 #directory_title_right_image {
     float: right;
-    max-width: 11.5625em;
-    margin-left: 0.625em;
+    max-height: 5rem;
+    margin-left: 0.7%;
 }
 
 #directory_title_header {
     margin-top: 0px;
-    padding-top: 1.5625em;
+    padding-top: 1.5625rem;
     text-align: center;
     margin-bottom: 0px;
 }
@@ -198,20 +198,20 @@ p.img_footer {
 
 #consonant_table_title {
     text-align: center;
-    font-size: 1.875em;
+    font-size: 1.875rem;
     margin-left: 8.5%;
     margin-bottom: 0px;
     color: #0c1742;
 }
 
 #consonant_table {
-    margin-left: 1.5625em;
-    margin-bottom: 1.25em;
+    margin-left: 1.5625rem;
+    margin-bottom: 1.25rem;
 }
 
 #consonant_table th {
     max-width: 6ch;
-    font-size: 0.75em;
+    font-size: 0.75rem;
     word-wrap: break-word;
     background-color: #ffc890;
 }
@@ -222,15 +222,15 @@ p.img_footer {
 
 #vowel_table_title {
     text-align: center;
-    font-size: 1.875em;
+    font-size: 1.875rem;
     margin-left: 3px;
     margin-bottom: 0px;
     color: #0c1742;
 }
 
 #vowel_table {
-    margin-bottom: 1.25em;
-    margin-right: 1.5625em;
+    margin-bottom: 1.25rem;
+    margin-right: 1.5625rem;
     margin-left: 0px;
 }
 
@@ -239,7 +239,7 @@ p.img_footer {
 }
 
 #vowel_table th {
-    font-size: 1.125em;
+    font-size: 1.125rem;
     text-align: center;
     word-wrap: break-word;
     background-color: #ffc890;
@@ -247,7 +247,7 @@ p.img_footer {
 
 #vowel_table td.left {
     max-width: 6ch;
-    font-size: 1.125em;
+    font-size: 1.125rem;
     padding-left: 2px;
     text-align: right;
     word-wrap: break-word;
@@ -257,23 +257,23 @@ p.img_footer {
 #other_consonant_table_title {
     text-align: center;
     color: #0c1742;
-    font-size: 1.25em;
+    font-size: 1.25rem;
     margin-left: 0px;
     margin-bottom: 0px;
 }
 
 #other_consonant_table {
-    margin-bottom: 1.25em;
-    margin-left: 1.5625em;
+    margin-bottom: 1.25rem;
+    margin-left: 1.5625rem;
     margin-right: auto;
 }
 
 #other_consonant_table td.linked{
-    font-size: 1em;
+    font-size: 1rem;
 }
 
 #other_consonant_table th {
-    font-size: 0.75em;
+    font-size: 0.75rem;
     word-wrap: break-word;
     background-color: #ffc890;
 }
@@ -289,7 +289,7 @@ p.img_footer {
 th.corner {
     background-color: transparent;
     max-width: 6ch;
-    font-size: 0.75em;
+    font-size: 0.75rem;
     word-wrap: break-word;
 }
 
@@ -297,31 +297,31 @@ td.possible {
     text-align: center;
     background-color: #fff9c9;
     text-decoration: none;
-    font-size: 1.875em;
-    padding-bottom: 0.3125em;
+    font-size: 1.875rem;
+    padding-bottom: 5px;
 }
 
 td.linked {
     text-align: center;
     background-color: #ffe7a5;
     text-decoration: none;
-    font-size: 1.25em;
-    padding-bottom: 0.3125em;
+    font-size: 1rem;
+    padding-bottom: 5px;
 }
 
 td.impossible {
     text-align: center;
     background-color: #b1aea5;
     text-decoration: none;
-    font-size: 1.25em;
-    padding-bottom: 0.3125em;
+    font-size: 1.25rem;
+    padding-bottom: 5px;
 }
 
 td.left {
     text-align: right;
     padding-left: 2px;
     background-color: #ffc890;
-    font-size: 1em;
+    font-size: 1rem;
 }
 
 a.current {
@@ -330,29 +330,17 @@ a.current {
 }
 
 div.header {
-    padding-left:0.625em;
+    padding-left:0.5%;
+    margin-bottom: 0.5%;
     margin-top: auto;
-    margin-bottom: 0.3125em;
     background-color: #ffb265;
     white-space: nowrap;
-}
-
-div.header a{
-    float: right;
-    margin-top: 2.5%;
-    margin-left: 1.5%;
-    white-space: nowrap;
-    font-size: 1.25em;
 }
 
 div.header a.header_logo{
     float: left;
     margin-top: 0px;
     margin-left: 0px;
-}
-
-div.header a:hover, a:active{
-    font-size: 1.5625em;
 }
 
 div.main_content {
@@ -364,12 +352,11 @@ div.main_content {
 
 div.left_section {
     float: left;
-    overflow-y: hidden;
+    margin-right: 2.5%;
 }
 
 div.right_section {
     float: right;
-    overflow-y: hidden;
 }
 
 div.footer {
@@ -379,11 +366,11 @@ div.footer {
 td.blank{
     text-align: center;
     text-decoration: none;
-    padding-bottom: 0.3125em;
+    padding-bottom: 0.3125rem;
 }
 
 a.symbol_link {
-    font-size: 1.875em;
+    font-size: 1.875rem;
     text-decoration: none;
 }
 
@@ -391,14 +378,14 @@ img {
     max-width: 100%;
     height: auto;
     float: none;
-    margin: 1.25em;
+    margin: 1.25rem;
 }
 
 img.default {
     max-width: 100%;
     height: auto;
     float: none;
-    margin: 1.25em;
+    margin: 1.5%;
     margin-left: 1%;
     margin-right: 1%;
 }
@@ -413,12 +400,12 @@ span.clear {
     background-color: white;
     margin-left: 10%;
     margin-right: 10%;
-    padding: 0.625em;
-    font-size: 1.25em;
+    padding: 0.625rem;
+    font-size: 1.25rem;
 }
 
 p.copyright_footer {
-    font-size: 0.75em;
+    font-size: 0.75rem;
 }
 
 p.inline_left {
@@ -427,12 +414,12 @@ p.inline_left {
 }
 
 #ipa_sound {
-    font-size: 18.75em;
+    font-size: 16rem;
     font-family: Arial, Helvetica, sans-serif;
-    padding-top: 0.625em;
-    padding-bottom: 0.625em;
-    padding-left: 4%;
-    padding-right: 4%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    padding-left: 10%;
+    padding-right: 10%;
     margin-top: 7.5%;
     margin-bottom: 0.7%;
     margin-right: 1.3%;
@@ -448,20 +435,69 @@ p.inline_left {
 }
 
 p.info_p {
-    font-size: 1.25em;
+    font-size: 1.25rem;
 }
 
+input[type=radio] {
+    margin-right: 10px;    
+}
+
+div.header_links {
+    display:flex;
+    justify-content: end;
+    padding-top: 1%;
+    padding-bottom: 1%;
+}
+
+div.header_links > div {
+    margin-left: 1.5%;
+    white-space: nowrap;
+    font-size: 1.5rem;
+    margin-right: 0.5%;
+}
+
+div.search {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+div.search label {
+    color:#0b1e74;
+}
+
+div.search div{
+    margin-right: 0.5%;
+    padding-bottom: 1%;
+}
+
+div.search > label {
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+div.search_choice {
+    order: 1;
+}
+
+div.search_input {
+    order: 2;
+}
+
+div.search_submit {
+    order: 3;
+}
 @media only screen and ((max-width: 900px) or (max-aspect-ratio: 1/1)) {
     h1{
         font-size: 50px;
     }
 
     h2 {
-        font-size: 2.5em;
+        font-size: 2.5rem;
     }
 
     h3 {
-        font-size: 2.1875em;
+        font-size: 2.1875rem;
     }
 
     div.right_section {
@@ -476,18 +512,18 @@ p.info_p {
         border: 2px solid;
     }
 
-    td.linked, td.possible, td.impossible {
-        font-size: 2.5em;
+    td.possible, td.impossible {
+        font-size: 2.5rem;
     }
 
     a.symbol_link {
-        font-size: 2.5em;
+        margin-top: 0px;
+        font-size: 2.5rem;
         text-decoration: none;
     }
 
     div.header{
         padding-bottom: 0px;
-        overflow-x: scroll;
     }
 
     #tipo_input {
@@ -495,7 +531,7 @@ p.info_p {
     }
 
     #consonant_table, #vowel_table, #other_consonant_table {
-        margin-bottom: 1.25em;
+        margin-bottom: 1.25rem;
         padding: 0px;
         margin-left: auto;
         margin-right: auto;
@@ -514,24 +550,24 @@ p.info_p {
 
     #other_consonant_table_title {
         text-align: center;
-        font-size: 1.875em;
-        margin-left: 2.5em;
+        font-size: 1.875rem;
+        margin-left: 2.5rem;
     }
 
     #other_consonant_table th {
-        font-size: 1.25em;
+        font-size: 1.25rem;
     }
 
     #consonant_table th {
-        font-size: 1.25em;
+        font-size: 1.25rem;
     }
 
     #other_consonant_table td.linked{
-        font-size: 1.25em;
+        font-size: 1.25rem;
     }
 
     td.left {
-        font-size: 1.25em;
+        font-size: 1.25rem;
     }
     
     div.right_section {
@@ -550,32 +586,29 @@ p.info_p {
         float: none;
         display: inline-block;
         text-align: left;
-        font-size: 1.875em;
-    }
-
-    div.header a:hover, a:active{
-        font-size: 2.1875em;
+        font-size: 1.75rem;
+        margin-top: 4%;
     }
 
     ol, ul, p, td, th, textarea{
-        font-size: 1.5625em;
+        font-size: 1.5625rem;
     }
 
     p.copyright_footer {
-        font-size: 1em;
+        font-size: 1rem;
     }
 
     p.img_footer {
         font-family: Verdana, sans-serif;
         color: #0c1742;
         margin-top: 0px;
-        font-size: 0.75em;
+        font-size: 0.75rem;
         margin-left: 1%;
         margin-right: 1%;
     }
 
     label {
-        font-size: 1.875em;
+        font-size: 1.5rem;
     }
 
     table {
@@ -583,28 +616,39 @@ p.info_p {
     }
 
     #converter_output {
-        font-size: 1.875em;
+        font-size: 1.875rem;
     }
 
     input[type=button] {
-        font-size: 1.5625em;
+        font-size: 1.5625rem;
     }
 
     .submit {
-        font-size: 1.875em;
+        font-size: 1.875rem;
     }
     
     /*https://stackoverflow.com/questions/4920281/how-to-change-the-size-of-the-radio-button-using-css*/
     input[type=radio] {
-        height: 2em;
-        width: 2em;
+        height: 1.4rem;
+        width: 1.4rem;
+        margin-right: 10px;
     }
 
     p.info_p {
-        font-size: 1.875em;
+        font-size: 1.875rem;
     }
 
     #ipa_sound {
         font-size: 500px;
+    }
+
+    #search_choice_label {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    div.header{
+        overflow-x: scroll;
     }
 }

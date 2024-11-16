@@ -11,17 +11,46 @@
     </head>
 
     <body>
-        <div class = "header">
+        <div class="header">
             <a class="header_logo" href="index.html">
                 <img class="header_logo" src="images/logo.png"
                      alt="Quick Phonetics logo, a book with a speaking head">
             </a>
-            <a href="index.html">Home</a>
-            <a class="current" href="phonetic_alphabet_guide.html">IPA Guide</a>
-            <a href="ipa_converter.html">ASCII to IPA</a>
-            <a href="ipa_chart_directory.html">IPA Chart</a>
+            <div class="header_links">
+                <div>
+                    <a href="index.html">Home</a>
+                </div>
+                <div>
+                    <a class="current" href="phonetic_alphabet_guide.html">IPA Guide</a>
+                </div>
+                <div>
+                    <a href="ipa_converter.html">ASCII to IPA</a>
+                </div>
+                <div>
+                    <a href="ipa_chart_directory.html">IPA Chart</a>
+                </div>
+            </div>
+            <form  action="" method="post">
+                <div class="search">
+                    <div class="search_input">
+                        <textarea id="search_text" name="search_text" rows="1" cols="5" required></textarea>
+                    </div>
+                    <div class="search_choice">
+                        <label id="search_choice_label" for="phonetic_script"><strong>Sound search method: </strong></label>
+                        <label for="tipo">TIPO</label>
+                        <input type="radio" id="tipo" name="phonetic_script" value="tipo" checked>
+                        <label for="apostrophes">Featural ASCII</label>
+                        <input type="radio" id="fa" name="phonetic_script" value="fa">
+                    </div>
+                    <div class="search_submit">
+                        <input class="submit" type="submit" value="Search!">
+                    </div>
+                    <div class="search_message"></div>
+                </div>
+            </form>
             <span class="clear"></span>
         </div>
+
         <div class="main_content">
             <h1 id="main_title">International Phonetic Alphabet Guide</h1>
             <img class="default"
@@ -538,5 +567,7 @@
                 under the CC BY-SA 3.0 License.
             </em></p>
         </div>
+        
+        <script src="js/sound_search.js"></script>
     </body>
 </html>
