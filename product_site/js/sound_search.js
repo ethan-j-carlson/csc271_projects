@@ -137,14 +137,9 @@ var tipo_button = document.querySelector("#search_tipo");
 var fa_button = document.querySelector("#search_fa");
 var search_form = document.querySelector("#search_form");
 
-const search_button_color = search_button.style.color;
-const search_button_bg_color = search_button.style.backgroundColor;
-
 search_text.value = "Sound"
 //https://stackoverflow.com/questions/17925577/change-text-color-with-javascript
 search_text.style.color = "grey";
-search_button.style.backgroundColor = "grey";
-search_button.style.color = "grey";
 
 function set_tipo_mode () {search_mode = "tipo"};
 function set_fa_mode () {search_mode = "fa"};
@@ -170,7 +165,7 @@ search_text.addEventListener("focus", input_on_focus);
 var valid_sound = false;
 var valid_length = false;
 
-function input_on_blur() {
+function validate_input() {
     valid_length = search_text.value.length == 1 || search_text.value.length == 2;
     if (valid_length) {
         if (search_mode == "fa" && fa_sound_set.has(search_text.value)) {
@@ -184,8 +179,6 @@ function input_on_blur() {
     }
 
     if (valid_length && valid_sound) {
-        search_button.style.color = search_button_color;
-        search_button.style.backgroundColor = search_button_bg_color;
         search_message.style.display = "none";
         search_text.style.borderColor = "black";
     } else {
@@ -196,14 +189,13 @@ function input_on_blur() {
         }
         search_text.style.borderColor = "red";
         search_message.style.display = "inline";
-        search_button.style.color = "grey";
-        search_button.style.backgroundColor = "grey";
     }
 }
 
-search_text.addEventListener("blur", input_on_blur);
+search_text.addEventListener("blur", validate_input);
 
 search_form.addEventListener('submit', function(event){
+    validate_input();
     event.preventDefault();
     if (valid_length && valid_sound) {
         let href = "sound_page.html?code="
