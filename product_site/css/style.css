@@ -356,10 +356,12 @@ div.main_content {
 div.left_section {
     float: left;
     margin-right: 2.5%;
+    margin-bottom: 1%;
 }
 
 div.right_section {
     float: right;
+    margin-bottom: 1%;
 }
 
 div.footer {
