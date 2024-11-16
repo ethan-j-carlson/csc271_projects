@@ -201,6 +201,7 @@ p.img_footer {
     font-size: 1.875rem;
     margin-left: 8.5%;
     margin-bottom: 0px;
+    margin-top: 1%;
     color: #0c1742;
 }
 
@@ -225,6 +226,7 @@ p.img_footer {
     font-size: 1.875rem;
     margin-left: 3px;
     margin-bottom: 0px;
+    margin-top: 1%;
     color: #0c1742;
 }
 
@@ -260,6 +262,7 @@ p.img_footer {
     font-size: 1.25rem;
     margin-left: 0px;
     margin-bottom: 0px;
+    margin-top: 1%;
 }
 
 #other_consonant_table {
@@ -482,11 +485,32 @@ div.search_choice {
 
 div.search_input {
     order: 2;
+    position: relative
 }
 
 div.search_submit {
     order: 3;
 }
+
+/*
+//https://www.w3schools.com/css/css_tooltip.asp
+*/
+#search_message {
+    position: absolute;
+    text-align: center;
+    top: 75%;
+    left: -50%;
+    width: 200%;
+    background-color: rgb(41, 41, 41);
+    color: white;
+    /*https://www.w3schools.com/css/css3_borders.asp*/
+    border-radius: 10%;
+    padding: 0.5em;
+    /*https://stackoverflow.com/questions/41169791/word-break-on-whitespace-pre*/
+    white-space: pre-wrap;
+    display: none;
+}
+
 @media only screen and ((max-width: 900px) or (max-aspect-ratio: 1/1)) {
     h1{
         font-size: 50px;

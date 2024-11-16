@@ -31,22 +31,22 @@
                     <a class="current" href="ipa_chart_directory.html">IPA Chart</a>
                 </div>
             </div>
-            <form  action="" method="post">
+            <form  id="search_form" action="" method="post">
                 <div class="search">
                     <div class="search_input">
                         <textarea id="search_text" name="search_text" rows="1" cols="5" required></textarea>
+                        <div id="search_message"></div>
                     </div>
                     <div class="search_choice">
                         <label id="search_choice_label" for="phonetic_script"><strong>Sound search method: </strong></label>
                         <label for="tipo">TIPO</label>
-                        <input type="radio" id="tipo" name="phonetic_script" value="tipo" checked>
+                        <input type="radio" id="search_tipo" name="phonetic_script" value="tipo" checked>
                         <label for="apostrophes">Featural ASCII</label>
-                        <input type="radio" id="fa" name="phonetic_script" value="fa">
+                        <input type="radio" id="search_fa" name="phonetic_script" value="fa">
                     </div>
                     <div class="search_submit">
-                        <input class="submit" type="submit" value="Search!">
+                        <input id="search_button" class="submit" type="submit" value="Search!">
                     </div>
-                    <div class="search_message"></div>
                 </div>
             </form>
             <span class="clear"></span>
@@ -997,5 +997,6 @@
             </p>
         </div>        
 
+        <script src="js/sound_search.js"></script>
     </body>
 </html>
