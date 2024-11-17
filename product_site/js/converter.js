@@ -702,8 +702,6 @@ function validate_input() {
 //session.
 validate_input();
 
-
-
 //Generate an error message.
 //input = The erroneous input.
 //i = The index (number) where the error occurred in the input.
@@ -990,7 +988,6 @@ function input_to_output() {
             output = parse_fa(form_data.get("text_input"));
             break;
     }
-    
 
     //https://labex.io/tutorials/javascript-calculating-string-byte-size-28182
     display_size_difference(new Blob([input]).size, new Blob([output]).size);
@@ -1025,7 +1022,6 @@ function input_to_output() {
         //However, there is formatting in the error message.
         document.getElementById("converter_output").innerHTML = output;
     }
-
 
     //https://www.w3schools.com/howto/howto_js_copy_clipboard.asp
     //We don't want to have the user copy something unexpectedly.
