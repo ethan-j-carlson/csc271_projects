@@ -677,7 +677,7 @@ function validate_input() {
     //Block if the input is empty.
     if (input_string.length == 0) {
         block_submit = true;
-        let hint = "Your input contains nothing, please input something before conversion.";
+        let hint = "Your input contains nothing. Please input something before conversion.";
         document.querySelector("#converter_output").textContent = hint;
         return;
     } 
@@ -1057,7 +1057,7 @@ document.querySelector("#ascii_converter").addEventListener("submit", function(e
 converter_textarea.addEventListener("focus", function(){
     console.log(converter_textarea.value);
     if (converter_textarea.value == "") {
-        let hint = "Type something in the box to convert.";
+        let hint = "Type something in the box to convert. ";
         hint += "The input must only be in ASCII. It should also match ";
         hint += "the writing system you chose. Otherwise, you will get an ";
         hint += "error message.";
