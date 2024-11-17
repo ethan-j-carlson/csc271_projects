@@ -686,7 +686,7 @@ function validate_input() {
         //All Unicode characters that aren't ASCII are greater than 127.
         if (input_string.charCodeAt(i) > 127){
             block_submit = true;
-            let hint = "Your input contains non-ASCII characters, which is invalid";
+            let hint = "Your input contains non-ASCII characters, which is invalid.";
             document.querySelector("#converter_output").textContent = hint;
             return;
         }
