@@ -680,6 +680,8 @@ function validate_input() {
     block_submit = false;
 };
 
+//We validate on page start incase the browser keeps the input from last
+//session.
 validate_input();
 
 
