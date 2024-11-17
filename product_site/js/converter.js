@@ -665,19 +665,37 @@ var block_submit = true;
 document.getElementById("input_tipo_mode").checked = true;
 document.getElementById("input_fa_mode").checked = false;
 
-//Make sure the input has no Unicode characters.
-//If it does, block form submission.
+//Make sure the input has text, but no Unicode characters.
+//If it has unicode characters or no text, block form submission.
+//A hint will be displayed when submission is blocked.
 function validate_input() {
     let input_string = converter_textarea.value;
+    let blocked = block_submit;
+    //Default to enabling conversion.
+    block_submit = false;
+
+    //Block if the input is empty.
+    if (input_string.length == 0) {
+        block_submit = true;
+        let hint = "Your input contains nothing, please input something before conversion.";
+        document.querySelector("#converter_output").textContent = hint;
+        return;
+    } 
     //https://stackoverflow.com/questions/1966476/how-can-i-process-each-letter-of-text-using-javascript
     for (let i = 0; i < input_string.length; i++) {
+        //All Unicode characters that aren't ASCII are greater than 127.
         if (input_string.charCodeAt(i) > 127){
             block_submit = true;
             let hint = "Your input contains non-ASCII characters, which is invalid";
             document.querySelector("#converter_output").textContent = hint;
+            return;
         }
     }
-    block_submit = false;
+    //We only want to clear the output if the input was invalid beforehand.
+    //Otherwise, we might clear a previous conversion.
+    if (blocked) {
+        document.querySelector("#converter_output").textContent = "";
+    }
 };
 
 //We validate on page start incase the browser keeps the input from last
@@ -1044,6 +1062,7 @@ converter_textarea.addEventListener("focus", function(){
         hint += "the writing system you chose. Otherwise, you will get an";
         hint += "error message.";
         document.querySelector("#converter_output").textContent = hint;
+        block_submit=true;
     }
 });
 
