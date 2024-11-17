@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <script src="js/converter.js"></script>
         <meta charset="utf-8">
         <meta name="description"
         content="A converter that lets you use ASCII to transcribe IPA, from Quick Phonetics">
@@ -39,9 +38,9 @@
                     </div>
                     <div class="search_choice">
                         <label id="search_choice_label" for="phonetic_script"><strong>Sound search method: </strong></label>
-                        <label for="tipo">TIPO</label>
+                        <label for="search_tipo"><a href="https://docs.google.com/document/d/1iQWEtJ35SSIBtPZA9xKoJoD6rnc6tHB_05NQ4WwEPW0/edit?usp=sharing">TIPO</a></label>
                         <input type="radio" id="search_tipo" name="phonetic_script" value="tipo" checked>
-                        <label for="apostrophes">Featural ASCII</label>
+                        <label for="search_fa"><a href="https://docs.google.com/document/d/1-CyNvwR1_rhjHadXS3ph9-NSp25RyVNgANfu9MxTMCg/edit?usp=sharing">Featural ASCII</a></label>
                         <input type="radio" id="search_fa" name="phonetic_script" value="fa">
                     </div>
                     <div class="search_submit">
@@ -58,25 +57,31 @@
                 <img src="images/sh.png" alt="Arrow from s H to esh">
                 <p>
                     This page allows you to convert a custom ASCII writing system
-                    called TIPO (Typeable International Phonetic Orthography)
+                    called
+                    <a href="https://docs.google.com/document/d/1iQWEtJ35SSIBtPZA9xKoJoD6rnc6tHB_05NQ4WwEPW0/edit?usp=sharing">TIPO</a>
+                    (Typeable International Phonetic Orthography)
                     into usable IPA (International Phonetic Alphabet) text.
                     Using TIPO to transcribe the IPA is far more convenient
                     than manual IPA transcription, since TIPO was designed to
                     only use printable ASCII characters.<br>
-                    A Google Doc that explains how the system is used can be
-                    found
-                    <a href="https://docs.google.com/document/d/1iQWEtJ35SSIBtPZA9xKoJoD6rnc6tHB_05NQ4WwEPW0/edit?usp=sharing">
-                        here.
-                    </a> 
+                    Alternatively, one can use
+                    <a href="https://docs.google.com/document/d/1-CyNvwR1_rhjHadXS3ph9-NSp25RyVNgANfu9MxTMCg/edit?usp=sharing">Featural ASCII</a>
+                    , a more systematic but verbose system used in this site's
+                    backend.
                 </p>
             </div>
 
-            <form id="ascii_converter" action="ipa_converter.html" method="post"
-                  onsubmit="return input_to_output()">
-                <label for="tipo_input"><strong>TIPO Input:</strong></label><br>
-                <textarea id="tipo_input" name="tipo_input" rows="10" cols="120" required></textarea>
+            <form id="ascii_converter" action="ipa_converter.html" method="post">
+                <label id="input_system" for="phonetic_script"><strong>Input System: </strong></label>
+                <label for="input_tipo_mode"><a href="https://docs.google.com/document/d/1iQWEtJ35SSIBtPZA9xKoJoD6rnc6tHB_05NQ4WwEPW0/edit?usp=sharing">TIPO</a></label>
+                <input type="radio" id="input_tipo_mode" name="phonetic_script" value="tipo" checked>
+                <label for="input_fa_mode"><a href="https://docs.google.com/document/d/1-CyNvwR1_rhjHadXS3ph9-NSp25RyVNgANfu9MxTMCg/edit?usp=sharing">Featural ASCII</a></label>
+                <input type="radio" id="input_fa_mode" name="phonetic_script" value="fa">
                 <br>
-                <input type="button" value="Clear input" onclick="clear_textareas()">
+                <label for="text_input"><strong>Input:</strong></label><br>
+                <textarea id="text_input" name="text_input" rows="10" cols="120" required></textarea>
+                <br>
+                <input id="clear_button" type="button" value="Clear input">
                 <br>
 
                 <label for="wrapper"><strong>Put text between...</strong></label>
@@ -104,11 +109,9 @@
                 
                 <label for="font"><strong>IPA Font: </strong></label>
                 <label for="arial">Arial</label>
-                <input type="radio" id="arial" name="font" value="arial" checked
-                       onclick="switch_fonts()">
+                <input type="radio" id="arial_button" name="font" value="arial" checked>
                 <label for="no">Noto Sans</label>
-                <input type="radio" id="noto_sans" name="font" value="noto_sans"
-                       onclick="switch_fonts()">
+                <input type="radio" id="noto_sans_button" name="font" value="noto_sans">
             </form>
 
             <p>
@@ -159,5 +162,6 @@
         </div>
 
         <script src="js/sound_search.js"></script>
+        <script src="js/converter.js"></script>
     </body>
 </html>

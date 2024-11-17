@@ -1,3 +1,6 @@
+//This file is for the search bar found in the navbar.
+
+//We need this for the TIPO searching option
 var tipo_to_fa = {
     "p" : "pP",
     "b" : "bP",
@@ -116,8 +119,15 @@ var tipo_to_fa = {
 }
 
 //https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set
+//This is a quick way of checking if a Featural ASCII sound is valid.
 var fa_sound_set = new Set(['"H', '$S', '(H', '(R', '0K', ':|', '?H', '?P', '?R', '@[', '@|', 'A<', 'A>', 'E<', 'E>', 'E|', 'GB', 'GH', 'GN', 'GP', 'GR', 'I[', 'O<', 'O>', 'O|', 'U[', 'U]', 'a<', 'a>', 'bB', 'bH', 'bN', 'bP', 'bR', 'cH', 'cP', 'cQ', 'cS', 'dH', 'e<', 'e>', 'e|', 'fH', 'gB', 'gH', 'gL', 'gN', 'gP', 'gW', 'hH', 'i<', 'i>', 'i|', 'jB', 'jH', 'jL', 'jN', 'jP', 'jS', 'jW', 'kH', 'kP', 'lP', 'lQ', 'lS', 'lZ', 'nS', 'o<', 'o>', 'o|', 'pH', 'pP', 'pQ', 'qH', 'qP', 'rL', 'rN', 'rP', 'rS', 'rT', 'rW', 'sP', 'sQ', 'sS', 'sZ', 'tH', 'tQ', 'u<', 'u>', 'u|', 'vH', 'vN', 'vT', 'vW', 'wW', 'xH', 'xS', 'yW', 'z!', 'z6', 'zB', 'zL', 'zN', 'zP', 'zR', 'zS', 'zT', 'zW', 'zZ'])
 
+//Given an FA digraph, return the corresponding hex code used in the sound
+//page URl.
+//
+//str: a valid FA digraph, which has a length of 2.
+//
+//Returns a string of length 4 representing a 2 byte hex code.
 function string_to_hex (str) {
     let hex = ""
     //https://stackoverflow.com/questions/20580045/javascript-character-ascii-to-hex
@@ -127,26 +137,37 @@ function string_to_hex (str) {
     return hex;
 }
 
+//False if the search textarea was never clicked, true otherwise.
 var textarea_clicked = false;
-var search_div = document.querySelector("div.search");
+//The text input for the search bar.
 var search_text = document.querySelector("#search_text");
+//The feedback for the search input that appears below the search bar.
 var search_message = document.querySelector("#search_message");
+//The "Search!" button which submits the form.
 var search_button = document.querySelector("#search_button");
+//This can either be "tipo" or "fa", for TIPO and Featural ASCII.
 var search_mode = "tipo";
+//The radio button corresponding to TIPO
 var tipo_button = document.querySelector("#search_tipo");
+//The radio button corresponding to Featural ASCII
 var fa_button = document.querySelector("#search_fa");
 var search_form = document.querySelector("#search_form");
 
+//Default to some text in the textarea to convey its purpose.
 search_text.value = "Sound"
 //https://stackoverflow.com/questions/17925577/change-text-color-with-javascript
 search_text.style.color = "grey";
 
+//Set up the radio buttons to actually switch how the input is interpreted.
 function set_tipo_mode () {search_mode = "tipo"};
 function set_fa_mode () {search_mode = "fa"};
 
 tipo_button.addEventListener("click", set_tipo_mode);
 fa_button.addEventListener("click", set_fa_mode);
 
+//The event that happens when the user clicks the search textarea.
+//Shows a hint on how its used, removes the placeholder text and corrects
+//the color.
 function input_on_focus () {
     if (!textarea_clicked) {
         search_text.value = ""
@@ -162,9 +183,14 @@ function input_on_focus () {
 
 search_text.addEventListener("focus", input_on_focus);
 
+//Is the grapheme actually a grapheme that exists in the IPA chart?
 var valid_sound = false;
+//Is the grapheme either a monograph or digraph, as required by FA and TIPO?
 var valid_length = false;
 
+//Depending on the input, either display an error hint or enable submission
+//while removing any hint. Also, adjusts the search textarea's style depending
+//on if the input is valid.
 function validate_input() {
     valid_length = search_text.value.length == 1 || search_text.value.length == 2;
     if (valid_length) {
@@ -192,12 +218,16 @@ function validate_input() {
     }
 }
 
+//Check the input after the user is done putting it in.
 search_text.addEventListener("blur", validate_input);
 
 search_form.addEventListener('submit', function(event){
+    //We need this here for if the user tries to search with an empty input.
     validate_input();
+    //We want to manually redirect to a link that we make.
     event.preventDefault();
     if (valid_length && valid_sound) {
+        //Generate the proper sound page link.
         let href = "sound_page.html?code="
         if (search_mode == "fa") {
             href += string_to_hex(search_text.value)
@@ -205,6 +235,7 @@ search_form.addEventListener('submit', function(event){
             href += string_to_hex(tipo_to_fa[search_text.value]);
         }
         //https://www.w3schools.com/howto/howto_js_redirect_webpage.asp
+        //We now redirect to the sound page.
         window.location.href = href;
     }
 })
