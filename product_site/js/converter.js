@@ -1027,7 +1027,7 @@ document.querySelector("#noto_sans_button").addEventListener("click", switch_fon
 document.querySelector("#clear_button").addEventListener("click", clear_textareas);
 document.querySelector("#ascii_converter").addEventListener("submit", function(event){
     event.preventDefault();
-    if (!block_submit){
+    if (block_submit){
         input_to_output();
     }
 });
