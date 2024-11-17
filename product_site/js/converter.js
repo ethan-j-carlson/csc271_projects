@@ -1058,8 +1058,8 @@ converter_textarea.addEventListener("focus", function(){
     console.log(converter_textarea.value);
     if (converter_textarea.value == "") {
         let hint = "Type something in the box to convert.";
-        hint += "The input must only be in ASCII. It should also match";
-        hint += "the writing system you chose. Otherwise, you will get an";
+        hint += "The input must only be in ASCII. It should also match ";
+        hint += "the writing system you chose. Otherwise, you will get an ";
         hint += "error message.";
         document.querySelector("#converter_output").textContent = hint;
         block_submit=true;
