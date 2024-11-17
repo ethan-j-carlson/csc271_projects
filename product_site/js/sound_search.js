@@ -227,6 +227,8 @@ search_form.addEventListener('submit', function(event){
     //We want to manually redirect to a link that we make.
     event.preventDefault();
     if (valid_length && valid_sound) {
+        search_message.style.display = "inline";
+        search_message.textContent = "Search successful! Redirecting...";
         //Generate the proper sound page link.
         let href = "sound_page.html?code="
         if (search_mode == "fa") {
