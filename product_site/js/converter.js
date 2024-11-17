@@ -929,6 +929,7 @@ function switch_fonts() {
 
 //Given the size of the TIPO input and IPA output in bytes, display a
 //message describing the difference between the two in detail.
+//Also, mention that the conversion was either a failure or success.
 //The message will be put into the element with id #size_difference.
 //input_size = The number of bytes in the TIPO input.
 //output_size = The number of bytes in the IPA output.
@@ -937,10 +938,11 @@ function display_size_difference(input_size, output_size) {
     
         //Generate the string for the size difference, wrapping the difference in
         //a <strong> tag.
-        let size_str = "";
+        let size_str = "Conversion failed; there's no difference to show.";
         //There's no point in making a comparison with an error message.
         if (!parsing_error) {
-            size_str = "The output has <strong>";
+            size_str = "<strong>Conversion successful!</strong>";
+            size_str += "<br>The output has <strong>";
             if (size_diff > 0) {
                 size_str += size_diff + "</strong> more bytes than the input";
                 //https://stackoverflow.com/questions/11832914/how-to-round-to-at-most-2-decimal-places-if-necessary
