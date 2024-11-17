@@ -1029,7 +1029,7 @@ document.querySelector("#noto_sans_button").addEventListener("click", switch_fon
 document.querySelector("#clear_button").addEventListener("click", clear_textareas);
 document.querySelector("#ascii_converter").addEventListener("submit", function(event){
     event.preventDefault();
-    if (block_submit){
+    if (!block_submit){
         input_to_output();
     }
 });
@@ -1040,6 +1040,9 @@ converter_textarea.addEventListener("focus", function(){
     console.log(converter_textarea.value);
     if (converter_textarea.value == "") {
         let hint = "Type something in the box to convert.";
+        hint += "The input must only be in ASCII. It should also match";
+        hint += "the writing system you chose. Otherwise, you will get an";
+        hint += "error message.";
         document.querySelector("#converter_output").textContent = hint;
     }
 });
