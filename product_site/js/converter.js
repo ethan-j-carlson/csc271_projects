@@ -847,11 +847,12 @@ function parse_fa(input){
     //amount every iteration
     while (i < input.length - 1) {
         let substr = input.substring(i,i+2);
+        console.log(substr.charAt(0));
         //Whitespace characters are the only single byte graphemes.
-        if (whitespace.has(substr.substring(0))) {
-            output += substr.substring(0)
-            i += 1
-            continue
+        if (whitespace.has(substr.charAt(0))) {
+            output += substr.charAt(0);
+            i += 1;
+            continue;
         }
         let digraph_result = fa_graphemes[substr];
         
