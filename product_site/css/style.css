@@ -529,6 +529,7 @@ div.search_submit {
     margin: auto;
     width: 90vw;
     height: 20vh;
+    max-width: 90%;
     margin-bottom: 1%;
 }
 
