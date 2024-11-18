@@ -651,7 +651,7 @@ div.search_submit {
         font-size: 2rem;
     }
 
-    ol, ul, p, td, th, textarea, label{
+    ol, ul, p, td, th, textarea, label, a{
         font-size: 1.5625rem;
     }
 
@@ -686,8 +686,8 @@ div.search_submit {
     
     /*https://stackoverflow.com/questions/4920281/how-to-change-the-size-of-the-radio-button-using-css*/
     input[type=radio] {
-        height: 2rem;
-        width: 2rem;
+        height: 1.5625rem;
+        width: 1.5625rem;
         margin-right: 10px;
     }
 
