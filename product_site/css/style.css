@@ -651,7 +651,7 @@ div.search_submit {
         font-size: 2rem;
     }
 
-    ol, ul, p, td, th, textarea, label, a{
+    ol, ul, p, td, th, textarea, label, a, div{
         font-size: 1.5625rem;
     }
 
