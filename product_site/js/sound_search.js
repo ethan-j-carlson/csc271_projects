@@ -1,5 +1,23 @@
 //This file is for the search bar found in the navbar.
-
+var search_form = document.querySelector("#search_form");
+//We do this to reduce copy-pasting across pages
+search_form.innerHTML = 
+`                <div class="search">
+                    <div class="search_input">
+                        <textarea id="search_text" name="search_text" rows="1" cols="5" required></textarea>
+                        <div id="search_message"></div>
+                    </div>
+                    <div class="search_choice">
+                        <label id="search_choice_label"><strong>Sound search method: </strong></label>
+                        <label for="search_tipo"><a href="https://docs.google.com/document/d/1iQWEtJ35SSIBtPZA9xKoJoD6rnc6tHB_05NQ4WwEPW0/edit?usp=sharing">TIPO</a></label>
+                        <input type="radio" id="search_tipo" name="phonetic_script" value="tipo" checked>
+                        <label for="search_fa"><a href="https://docs.google.com/document/d/1-CyNvwR1_rhjHadXS3ph9-NSp25RyVNgANfu9MxTMCg/edit?usp=sharing">Featural ASCII</a></label>
+                        <input type="radio" id="search_fa" name="phonetic_script" value="fa">
+                    </div>
+                    <div class="search_submit">
+                        <input id="search_button" class="submit" type="submit" value="Search!">
+                    </div>
+                </div>`;
 //We need this for the TIPO searching option
 var tipo_to_fa = {
     "p" : "pP",
