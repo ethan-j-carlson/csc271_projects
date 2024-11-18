@@ -473,8 +473,11 @@ div.header_links {
 div.header_links > div {
     margin-left: 1.5%;
     white-space: nowrap;
-    font-size: 1.5rem;
     margin-right: 0.5%;
+}
+
+div.header_links > div > a{
+    font-size: 1.5rem;
 }
 
 div.search {
