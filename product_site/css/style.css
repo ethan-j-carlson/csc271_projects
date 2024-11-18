@@ -399,6 +399,12 @@ img.default {
     margin-right: 1%;
 }
 
+img.centered {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 /*https://stackoverflow.com/questions/2062258/floating-elements-within-a-div-floats-outside-of-div-why*/
 span.clear {
     clear: both;
@@ -519,6 +525,18 @@ div.search_submit {
     display: none;
 }
 
+#converter_text_input_div {
+    margin: auto;
+    width: 90vw;
+    height: 20vh;
+    margin-bottom: 1%;
+}
+
+#text_input {
+    width: 100%;
+    height: 100%;
+}
+
 @media only screen and ((max-width: 900px) or (max-aspect-ratio: 1/1)) {
     h1{
         font-size: 50px;
@@ -556,10 +574,6 @@ div.search_submit {
 
     div.header{
         padding-bottom: 0px;
-    }
-
-    #tipo_input {
-        max-width: 98%;
     }
 
     #consonant_table, #vowel_table, #other_consonant_table {

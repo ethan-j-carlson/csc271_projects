@@ -54,7 +54,6 @@
         <div class="main_content">
             <div id="converter_intro">
                 <h1>ASCII to International Phonetic Alphabet Converter</h1>
-                <img src="images/sh.png" alt="Arrow from s H to esh">
                 <p>
                     This page allows you to convert a custom ASCII writing system
                     called
@@ -79,8 +78,9 @@
                 <input type="radio" id="input_fa_mode" name="phonetic_script" value="fa">
                 <br>
                 <label for="text_input"><strong>Input:</strong></label><br>
-                <textarea id="text_input" name="text_input" rows="10" cols="20" required></textarea>
-                <br>
+                <div id="converter_text_input_div">
+                    <textarea id="text_input" name="text_input" required></textarea>
+                </div>
                 <input id="clear_button" type="button" value="Clear input">
                 <br>
 
@@ -159,6 +159,7 @@
                     </td>
                 </tr>
             </table>
+            <img class="centered" src="images/sh.png" alt="Arrow from s H to esh">
         </div>
 
         <script src="js/sound_search.js"></script>
