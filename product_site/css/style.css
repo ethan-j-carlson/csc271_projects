@@ -528,6 +528,7 @@ div.search_submit {
 #converter_text_input_div {
     margin: auto;
     width: 90vw;
+    max-width: 90%;
     height: 20vh;
     margin-bottom: 1%;
 }
