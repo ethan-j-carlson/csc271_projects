@@ -655,6 +655,10 @@ div.search_submit {
         font-size: 1.5625rem;
     }
 
+    a {
+        word-wrap: break-word;
+    }
+
     p.copyright_footer {
         font-size: 1rem;
     }
