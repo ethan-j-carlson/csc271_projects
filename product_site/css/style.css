@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css?family=Noto+Sans&display=swap');
 
 html {
-    font-size: 100%;
+    font-size: 1.11vw;
 }
 
 body {
@@ -545,6 +545,10 @@ div.search_submit {
 }
 
 @media only screen and ((max-width: 900px) or (max-aspect-ratio: 1/1)) {
+    html {
+        font-size: 100%;
+    }
+    
     h1 {
         font-size: 2.75rem;
     } 
@@ -641,6 +645,10 @@ div.search_submit {
         text-align: left;
         font-size: 1.75rem;
         margin-top: 4%;
+    }
+
+    div.header_links > div > a{
+        font-size: 2rem;
     }
 
     ol, ul, p, td, th, textarea{
