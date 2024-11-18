@@ -1067,3 +1067,6 @@ converter_textarea.addEventListener("focus", function(){
 //After blurring, make sure the input has no Unicode characters.
 //If it does, block form submission.
 converter_textarea.addEventListener("blur", validate_input);
+
+converter_textarea.cols = window.innerWidth/12;
+converter_textarea.rows = converter_textarea.cols/8;
