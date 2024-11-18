@@ -71,7 +71,7 @@
             </div>
 
             <form id="ascii_converter" action="ipa_converter.html" method="post">
-                <label id="input_system" for="phonetic_script"><strong>Input System: </strong></label>
+                <label id="input_system"><strong>Input System: </strong></label>
                 <label for="input_tipo_mode"><a href="https://docs.google.com/document/d/1iQWEtJ35SSIBtPZA9xKoJoD6rnc6tHB_05NQ4WwEPW0/edit?usp=sharing">TIPO</a></label>
                 <input type="radio" id="input_tipo_mode" name="phonetic_script" value="tipo" checked>
                 <label for="input_fa_mode"><a href="https://docs.google.com/document/d/1-CyNvwR1_rhjHadXS3ph9-NSp25RyVNgANfu9MxTMCg/edit?usp=sharing">Featural ASCII</a></label>
@@ -107,10 +107,10 @@
                 <p class="arial" id="converter_output">(The output will go here.)</p>
                 <p id="size_difference"></p>
                 
-                <label for="font"><strong>IPA Font: </strong></label>
-                <label for="arial">Arial</label>
+                <label><strong>IPA Font: </strong></label>
+                <label for="arial_button">Arial</label>
                 <input type="radio" id="arial_button" name="font" value="arial" checked>
-                <label for="no">Noto Sans</label>
+                <label for="noto_sans_button">Noto Sans</label>
                 <input type="radio" id="noto_sans_button" name="font" value="noto_sans">
             </form>
 
