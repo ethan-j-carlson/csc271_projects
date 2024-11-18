@@ -679,8 +679,8 @@ div.search_submit {
     
     /*https://stackoverflow.com/questions/4920281/how-to-change-the-size-of-the-radio-button-using-css*/
     input[type=radio] {
-        height: 1.4rem;
-        width: 1.4rem;
+        height: 2rem;
+        width: 2rem;
         margin-right: 10px;
     }
 
