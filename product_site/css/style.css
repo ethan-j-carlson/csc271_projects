@@ -706,6 +706,12 @@ div.search_submit {
     #search_choice_label {
         display: none;
     }
+
+    #search_message {
+        top: 100%;
+        left: -125%;
+        width: 300%;
+    }
 }
 
 @media only screen and (max-width: 700px) {
