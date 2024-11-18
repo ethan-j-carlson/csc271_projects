@@ -37,6 +37,10 @@ p {
     margin-right: 1%;
 }
 
+a {
+    font-size: 1rem;
+}
+
 label {
     font-family: Verdana, sans-serif;
     color: #0c1742;
@@ -538,9 +542,9 @@ div.search_submit {
 }
 
 @media only screen and ((max-width: 900px) or (max-aspect-ratio: 1/1)) {
-    h1{
-        font-size: 50px;
-    }
+    h1 {
+        font-size: 2.75rem;
+    } 
 
     h2 {
         font-size: 2.5rem;
@@ -685,7 +689,7 @@ div.search_submit {
     }
 
     #ipa_sound {
-        font-size: 500px;
+        font-size: 24rem;
     }
 
     #search_choice_label {
