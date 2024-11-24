@@ -193,12 +193,11 @@ function TitleInfo(first, second) {
     }
 }
 
-//Generate the TitleInfo for the 2 irregular phonemes.
-let glottal_stop = new TitleInfo("0","K");
-let sj_sound = new TitleInfo("x","S");
+function sound_title_main() {
+    //Generate the TitleInfo for the 2 irregular phonemes.
+    let glottal_stop = new TitleInfo("0","K");
+    let sj_sound = new TitleInfo("x","S");
 
-//Basically the main. Populate the page's header and title.
-function set_titles(){
     //https://www.sitepoint.com/get-url-parameters-with-javascript/
     //This gives us the parameters stored in our URL.
     let params = new URLSearchParams(window.location.search);
@@ -206,17 +205,29 @@ function set_titles(){
     let letters = hex_string_to_chars(code);
     let first = letters[0];
     let second = letters[1];
+    let title_info = null;
 
     //Use the already generated TitleInfo objects for the irregulars and
     //construct a new title_info for the rest.
     if (first == "0" && second == "K") {
-        glottal_stop.populate_titles();
+        title_info = glottal_stop;
     } else if (first == "x" && second == "S") {
-        sj_sound.populate_titles();
+        title_info = sj_sound;
     } else {
-        let title_info = new TitleInfo(first, second);
-        title_info.populate_titles();
+        title_info = new TitleInfo(first, second);
+    }
+    title_info.populate_titles();
+
+    //For the sake of Assignment 10, populate the search bar with the first and
+    //second properties, matching the search input with the current page.
+    let search_bar_element = document.querySelector("#search_text");
+
+    //The search bar is not natively a part of the HTML, and instead is generated
+    //by sound_search.js. Thus, we only populate it if it exists.
+    if (search_bar_element) {
+        search_bar_element.value = title_info.first + title_info.second;
     }
 }
 
-set_titles();
+sound_title_main()
+
