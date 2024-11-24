@@ -193,6 +193,7 @@ function TitleInfo(first, second) {
     }
 }
 
+//We make this to not spill too many global variables.
 function sound_title_main() {
     //Generate the TitleInfo for the 2 irregular phonemes.
     let glottal_stop = new TitleInfo("0","K");
@@ -229,5 +230,5 @@ function sound_title_main() {
     }
 }
 
-sound_title_main()
+sound_title_main();
 
