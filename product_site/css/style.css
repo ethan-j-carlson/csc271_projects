@@ -744,6 +744,12 @@ div.search_submit {
         margin-left: 0.5rem;
         position: relative
     }
+
+    #ipa_guide_chart {
+        max-width: unset;
+        width: 97%;
+        height: auto;
+    }
 }
 
 @media only screen and (max-width: 700px) {
