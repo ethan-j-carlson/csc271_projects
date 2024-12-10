@@ -704,10 +704,15 @@ div.search_submit {
     }
     
     /*https://stackoverflow.com/questions/4920281/how-to-change-the-size-of-the-radio-button-using-css*/
-    input[type=radio], input[type="checkbox"] {
+    input[type=radio] {
         height: 2rem;
         width: 2rem;
         margin-right: 10px;
+    }
+
+    input[type="checkbox"] {
+        height: 1.5rem;
+        width: 1.5rem;
     }
 
     p.info_p {
@@ -733,6 +738,7 @@ div.search_submit {
         bottom:unset;
         right:unset;
     }
+
     div.search_input {
         order: 2;
         margin-left: 0.5rem;
