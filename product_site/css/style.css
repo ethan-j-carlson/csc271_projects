@@ -727,6 +727,12 @@ div.search_submit {
         left: -125%;
         width: 300%;
     }
+
+    #search_text_label{
+        position: static;
+        bottom:unset;
+        right:unset;
+    }
 }
 
 @media only screen and (max-width: 700px) {
