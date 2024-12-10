@@ -215,7 +215,7 @@ p.img_footer a{
     background-color: #ffc890;
 }
 
-#consonant_table th.corner {
+#consonant_table td.corner {
     background-color: transparent;
 }
 
@@ -234,7 +234,7 @@ p.img_footer a{
     margin-left: 0px;
 }
 
-#vowel_table th.corner {
+#vowel_table td.corner {
     background-color: transparent;
 }
 
@@ -287,7 +287,7 @@ p.img_footer a{
     font-family: 'Noto Sans', Arial, sans-serif;
 }
 
-th.corner {
+td.corner {
     background-color: transparent;
     max-width: 6ch;
     font-size: 0.75rem;
@@ -456,7 +456,9 @@ p.info_p {
 }
 
 input[type=radio], input[type="checkbox"] {
-    margin-right: 10px;    
+    margin-right: 10px;
+    height: 1.25rem;
+    width: 1.25rem;
 }
 
 div.header_links {
@@ -500,8 +502,19 @@ div.search_choice {
     order: 1;
 }
 
+#search_text {
+    position: relative;
+}
+
+#search_text_label{
+    position: absolute;
+    bottom:38%;
+    right:110%;
+}
+
 div.search_input {
     order: 2;
+    margin-left: 4rem;
     position: relative
 }
 

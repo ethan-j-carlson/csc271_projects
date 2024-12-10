@@ -4,6 +4,7 @@ var search_form = document.querySelector("#search_form");
 search_form.innerHTML = 
 `                <div class="search">
                     <div class="search_input">
+                        <label id="search_text_label" for="search_text"><strong>Sound: </strong></label>
                         <textarea id="search_text" name="search_text" rows="1" cols="5" required></textarea>
                         <div id="search_message"></div>
                     </div>
