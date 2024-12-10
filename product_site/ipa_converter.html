@@ -56,11 +56,15 @@
             </div>
 
             <form id="ascii_converter" action="ipa_converter.html" method="post">
-                <label id="input_system"><strong>Input System: </strong></label>
-                <label for="input_tipo_mode"><a href="https://docs.google.com/document/d/1iQWEtJ35SSIBtPZA9xKoJoD6rnc6tHB_05NQ4WwEPW0/edit?usp=sharing">TIPO</a></label>
-                <input type="radio" id="input_tipo_mode" name="phonetic_script" value="tipo" checked>
-                <label for="input_fa_mode"><a href="https://docs.google.com/document/d/1-CyNvwR1_rhjHadXS3ph9-NSp25RyVNgANfu9MxTMCg/edit?usp=sharing">Featural ASCII</a></label>
-                <input type="radio" id="input_fa_mode" name="phonetic_script" value="fa">
+                <label for="input_system_select" id="input_system_label">
+                    <a href="https://docs.google.com/document/d/1iQWEtJ35SSIBtPZA9xKoJoD6rnc6tHB_05NQ4WwEPW0/edit?usp=sharing">
+                        <strong>Input System:</strong>
+                    </a>
+                </label>
+                <select name="input_system" id="input_system_select" required>
+                    <option value="tipo" selected="selected">TIPO</option>
+                    <option value="fa">Featural ASCII (FA)</option>
+                </select>
                 <br>
                 <label for="text_input"><strong>Input:</strong></label><br>
                 <div id="converter_text_input_div">
@@ -69,34 +73,29 @@
                 <input id="clear_button" type="button" value="Clear input">
                 <br>
 
-                <label><strong>Put text between...</strong></label>
-                <label for="nothing">Nothing</label>
-                <input type="radio" id="nothing" name="wrapper" value="nothing" checked>
-                <label for="apostrophes">' '</label>
-                <input type="radio" id="apostrophes" name="wrapper" value="apostrophes">
-                <label for="quotes">" "</label>
-                <input type="radio" id="quotes" name="wrapper" value="quotes">
-                <label for="slashes">/ /</label>
-                <input type="radio" id="slashes" name="wrapper" value="slashes">
-                <label for="brackets">[ ]</label>
-                <input type="radio" id="brackets" name="wrapper" value="brackets"><br>
+                <label for="wrapper_select"><strong>Put text between...</strong></label>
+                <select name="wrapper" id="wrapper_select" required>
+                    <option value="nothing" selected="selected">Nothing</option>
+                    <option value="apostrophes">' '</option>
+                    <option value="quotes">" "</option>
+                    <option value="slashes">/ /</option>
+                    <option value="brackets">[ ]</option>
+                </select>
+                <br>
 
-                <label><strong>Copy output to clipboard?</strong></label>
-                <label for="yes">Yes</label>
-                <input type="radio" id="yes" name="copy" value="yes" checked>
-                <label for="no">No</label>
-                <input type="radio" id="no" name="copy" value="no">
+                <label for="copy_checkbox"><strong>Copy output to clipboard?</strong></label>
+                <input type="checkbox" id="copy_checkbox" name="copy" value="yes" checked>
 
                 <br><br>
                 <input class="submit" type="submit" value="Convert!">
                 <p class="arial" id="converter_output">(The output will go here.)</p>
                 <p id="size_difference"></p>
                 
-                <label><strong>IPA Font: </strong></label>
-                <label for="arial_button">Arial</label>
-                <input type="radio" id="arial_button" name="font" value="arial" checked>
-                <label for="noto_sans_button">Noto Sans</label>
-                <input type="radio" id="noto_sans_button" name="font" value="noto_sans">
+                <label for="ipa_font_select"><strong>IPA Font: </strong></label>
+                <select name="ipa_font" id="ipa_font_select" required>
+                    <option value="arial" selected="selected">Arial</option>
+                    <option value="noto_sans">Noto Sans</option>
+                </select>
             </form>
 
             <p>

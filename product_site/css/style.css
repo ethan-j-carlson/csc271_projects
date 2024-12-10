@@ -11,27 +11,27 @@ body {
 
 h1 {
     font-family: 'Trebuchet MS', sans-serif;
-    color: #022add;
-    background-color: #fdc288;
+    color: #001664;
+    background-color: #ffce9d;
 }
 
 h2 {
-    background-color: #fddab6;
-    color: #0b1e74;
+    background-color: #ffdab5;
+    color: #001664;
 }
 
 h3 {
-    background-color: #fddab6;
-    color: #0b1e74;
+    background-color: #f7d6b5;
+    color: #001664;
 }
 
 h4 {
-    color: #0c1742;
+    color: #001664;
 }
 
-p {
+p, select {
     font-family: Verdana, sans-serif;
-    color: #0c1742;
+    color: #121a3b;
     font-size: 1rem;
     margin-left: 1%;
     margin-right: 1%;
@@ -78,20 +78,6 @@ table.default {
     border-collapse: collapse;
 }
 
-table.navbar {
-    position: fixed;
-    top: 0;
-    right: 0;
-    background-color: #ff8936;
-}
-
-th.navbar_title {
-    color: #022add;
-    font-weight: bold;
-    font-family: 'Trebuchet MS', sans-serif;
-    font-size: 1.25rem;
-}
-
 td.technical {
     font-family: 'Courier New', Courier, monospace;
     color: #0c1742;
@@ -104,11 +90,11 @@ textarea {
 }
 
 a:link {
-    color: #008cff;
+    color: #003f64;
 }
 
 a:visited {
-    color: #000080;
+    color: #001664;
 }
 
 a:hover {
@@ -117,8 +103,8 @@ a:hover {
 }
 
 a:active {
-    color: blue;
-    background-color: orange;
+    color: #fff460;
+    background-color: #2f125d;
 }
 
 #homepage {
@@ -140,8 +126,8 @@ a:active {
 
 .submit {
     font-size: 1.25rem;
-    background-color: #fdc288;
-    color: blue;
+    background-color: #f8c38e;
+    color: #001664;
 }
 
 input[type="button"] {
@@ -178,7 +164,7 @@ p.img_footer a{
 
 
 #directory_title {
-    background-color: #fdc288;
+    background-color: #ffce9d;
 }
 
 #directory_title_left_image {
@@ -203,8 +189,8 @@ p.img_footer a{
 #directory_title_subheader {
     margin-top: 0px;
     text-align: center;
-    color: #022add;
-    background-color: #fdc288;
+    color: #001664;
+    background-color: #ffce9d;
     padding-bottom: 0px;
 }
 
@@ -318,7 +304,7 @@ td.possible {
 
 td.linked {
     text-align: center;
-    background-color: #ffe7a5;
+    background-color: #ffecb7;
     text-decoration: none;
     font-size: 1rem;
     padding-bottom: 5px;
@@ -340,15 +326,15 @@ td.left {
 }
 
 a.current {
-    color: purple;
-    background-color: orange;
+    color: rgb(46, 0, 46);
+    background-color: rgb(255, 232, 132);
 }
 
 div.header {
     padding-left:0.5%;
     margin-bottom: 0.5%;
     margin-top: auto;
-    background-color: #ffb265;
+    background-color: #fcbe80;
     white-space: nowrap;
 }
 
@@ -456,20 +442,20 @@ p.inline_left {
     margin-right: 1.3%;
     margin-left: 0%;
     text-decoration: none;
-    color: #022add;
-    background-color: #ffe7a5;
+    background-color: #ffdab5;
+    color: #001664;
     text-align: center;
 }
 
 #ipa_sound:hover {
-    color: #2f125d;
+    color: #381f61;
 }
 
 p.info_p {
     font-size: 1.25rem;
 }
 
-input[type=radio] {
+input[type=radio], input[type="checkbox"] {
     margin-right: 10px;    
 }
 
@@ -497,7 +483,7 @@ div.search {
 }
 
 div.search label {
-    color:#0b1e74;
+    color:#04114e;
 }
 
 div.search div{
@@ -661,7 +647,7 @@ div.search_submit {
         font-size: 2rem;
     }
 
-    ol, ul, p, td, th, textarea, label, a, div{
+    ol, ul, p, td, th, textarea, label, a, div, select{
         font-size: 1.5625rem;
     }
 
@@ -678,8 +664,6 @@ div.search_submit {
     }
 
     p.img_footer {
-        font-family: Verdana, sans-serif;
-        color: #0c1742;
         margin-top: 0px;
         font-size: 0.75rem;
         margin-left: 1%;
@@ -707,9 +691,9 @@ div.search_submit {
     }
     
     /*https://stackoverflow.com/questions/4920281/how-to-change-the-size-of-the-radio-button-using-css*/
-    input[type=radio] {
-        height: 1rem;
-        width: 1rem;
+    input[type=radio], input[type="checkbox"] {
+        height: 2rem;
+        width: 2rem;
         margin-right: 10px;
     }
 

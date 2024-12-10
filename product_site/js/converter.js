@@ -664,8 +664,6 @@ var current_font_class = 'arial';
 var parsing_error = false;
 var converter_textarea = document.querySelector("#text_input");
 var block_submit = true;
-document.getElementById("input_tipo_mode").checked = true;
-document.getElementById("input_fa_mode").checked = false;
 
 //Make sure the input has text, but no Unicode characters.
 //If it has unicode characters or no text, block form submission.
@@ -914,7 +912,7 @@ function switch_fonts() {
     //Cache the old font class for comparison.
     let old_font_class = current_font_class
     let ipa_texts = document.getElementsByClassName(old_font_class);
-    current_font_class = form_data.get("font");
+    current_font_class = form_data.get("ipa_font");
 
     //If we don't make this check, the while loop inside could go infinitely
     if (old_font_class != current_font_class) {
@@ -983,6 +981,7 @@ function input_to_output() {
     //https://developer.mozilla.org/en-US/docs/Web/API/FormData/get
     let form_data = new FormData(converter_form);
     let input = form_data.get("text_input");
+    let input_mode = form_data.get("input_system");
     var output = "";
     switch (input_mode) {
         case "tipo":
@@ -990,6 +989,9 @@ function input_to_output() {
             break;
         case "fa":
             output = parse_fa(form_data.get("text_input"));
+            break;
+        default:
+            output = parse_tipo(form_data.get("text_input"));
             break;
     }
 
@@ -1037,13 +1039,25 @@ function input_to_output() {
     return false;
 }
 
-function set_tipo_mode () {input_mode = "tipo"};
-function set_fa_mode () {input_mode = "fa"};
+var input_system_dropdown = document.querySelector("#input_system_select")
+function set_input_mode () {
+    input_mode = input_system_dropdown.value
+    let input_label = document.querySelector("#input_system_label");
+    switch (input_mode) {
+        case "tipo":
+            input_label.firstChild.href = "https://docs.google.com/document/d/1iQWEtJ35SSIBtPZA9xKoJoD6rnc6tHB_05NQ4WwEPW0/edit?usp=sharing";
+            break;
+        case "fa":
+            input_label.firstChild.href = "https://docs.google.com/document/d/1-CyNvwR1_rhjHadXS3ph9-NSp25RyVNgANfu9MxTMCg/edit?usp=sharing";
+            break;
+        default:
+            input_label.firstChild.href = "https://docs.google.com/document/d/1iQWEtJ35SSIBtPZA9xKoJoD6rnc6tHB_05NQ4WwEPW0/edit?usp=sharing";
+            break;
+    }
+};
 
-document.querySelector("#input_tipo_mode").addEventListener("click", set_tipo_mode);
-document.querySelector("#input_fa_mode").addEventListener("click", set_fa_mode);
-document.querySelector("#arial_button").addEventListener("click", switch_fonts);
-document.querySelector("#noto_sans_button").addEventListener("click", switch_fonts);
+input_system_dropdown.addEventListener("change", set_input_mode);
+document.querySelector("#ipa_font_select").addEventListener("change", switch_fonts);
 document.querySelector("#clear_button").addEventListener("click", clear_textareas);
 document.querySelector("#ascii_converter").addEventListener("submit", function(event){
     event.preventDefault();
